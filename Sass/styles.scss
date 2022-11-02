@@ -1,0 +1,92 @@
+@import "other_scss/variables"; //변수는 맨 위에
+@import "other_scss/responsive"; //반응형 사이즈 설정
+
+@import url("https://fonts.googleapis.com/css2?family=Concert+One&display=swap"); //사용 폰트
+
+body {
+  width: 100%;
+  height: 90vh;
+  margin: 0;
+}
+
+header {
+  width: 100%;
+  height: 8vh;
+
+  display: flex;
+  justify-content: space-between;
+
+  color: $themeColor02;
+  @include responsive("mobile") {
+    background-color: $mobileColor;
+  }
+  @include responsive("mobile-l") {
+    background-color: $mobile-lColor;
+  }
+  @include responsive("tablet") {
+    background-color: $tabletColor;
+  }
+  @include responsive("window") {
+    background-color: $themeColor01;
+  }
+
+  #titleLogo {
+    width: minmax(max-conent, 5%);
+    height: 100%;
+    padding-left: 1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: "Concert One", cursive;
+    font-size: 2em;
+    font-weight: bold;
+
+    color: $themeColor02;
+  }
+
+  #headerIcons {
+    width: 20%;
+    height: 100%;
+    margin: 0;
+
+    color: $themeColor02;
+    @include responsive("window") {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      li {
+        margin-right: 10px;
+      }
+    }
+    @include responsive("mobile") {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    @include responsive("tablet") {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    @include responsive("mobile-l") {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    list-style: none;
+    li {
+      width: max-content;
+      height: max-content;
+      font-size: 1.2em;
+
+      padding: 0.2em;
+      padding-left: 0.3em;
+      padding-right: 0.3em;
+      border-radius: 15% / 15%;
+
+      color: $themeColor01;
+      background-color: $themeColor02;
+    }
+  }
+}
