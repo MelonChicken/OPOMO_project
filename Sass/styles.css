@@ -6,8 +6,13 @@ body {
 }
 
 header {
+  top: 0;
+  left: 0;
+  position: fixed;
   width: 100%;
-  height: 8vh;
+  height: minmax(-webkit-max-content, 8vh);
+  height: minmax(-moz-max-content, 8vh);
+  height: minmax(max-content, 8vh);
   display: flex;
   justify-content: space-between;
   color: #f5d042;
@@ -32,9 +37,9 @@ header {
     background-color: navy;
   }
 }
-header #titleLogo {
+header #header__titleLogo {
   width: minmax(max-conent, 5%);
-  height: 100%;
+  height: 7vh;
   padding-left: 1vw;
   display: flex;
   justify-content: center;
@@ -44,45 +49,53 @@ header #titleLogo {
   font-weight: bold;
   color: #f5d042;
 }
-header #headerIcons {
-  width: 20%;
-  height: 100%;
+header #header__icons {
+  height: max-content1vw;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
   margin: 0;
-  color: #f5d042;
   list-style: none;
+  color: #f5d042;
 }
 @media screen and (min-width: 1024px) {
-  header #headerIcons {
+  header #header__icons {
+    width: 15%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
   }
-  header #headerIcons li {
-    margin-right: 10px;
+  header #header__icons li {
+    margin-right: 1vw;
   }
 }
 @media screen and (max-width: 480px) {
-  header #headerIcons {
+  header #header__icons {
+    width: 30%;
+    padding-right: 5vw;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-  header #headerIcons {
+  header #header__icons {
+    width: 20%;
+    padding-right: 1vw;
     display: flex;
     justify-content: space-around;
     align-items: center;
   }
 }
 @media screen and (min-width: 480px) and (max-width: 767px) {
-  header #headerIcons {
+  header #header__icons {
+    width: 20%;
+    padding-right: 1vw;
     display: flex;
     justify-content: space-around;
     align-items: center;
   }
 }
-header #headerIcons li {
+header #header__icons li {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -96,4 +109,282 @@ header #headerIcons li {
   border-radius: 15%/15%;
   color: navy;
   background-color: #f5d042;
+}
+
+section {
+  padding-top: 8vh;
+  width: 100%;
+  height: 92vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #f5d042;
+}
+@media screen and (max-width: 480px) {
+  section .section__leftContainer,
+section .section__rightContainer {
+    width: 35%;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  section .section__leftContainer,
+section .section__rightContainer {
+    width: 30%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  section .section__leftContainer,
+section .section__rightContainer {
+    width: 25%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  section .section__leftContainer,
+section .section__rightContainer {
+    width: 20%;
+  }
+}
+section .section__leftContainer__customBox,
+section .section__rightContainer__fourCutBox {
+  border-radius: 15%/10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (max-width: 480px) {
+  section .section__leftContainer__customBox,
+section .section__rightContainer__fourCutBox {
+    aspect-ratio: 2/5;
+    background-color: navy;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  section .section__leftContainer__customBox,
+section .section__rightContainer__fourCutBox {
+    aspect-ratio: 1/2;
+    background-color: navy;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  section .section__leftContainer__customBox,
+section .section__rightContainer__fourCutBox {
+    aspect-ratio: 1/2;
+    background-color: navy;
+  }
+}
+@media screen and (min-width: 1024px) {
+  section .section__leftContainer__customBox,
+section .section__rightContainer__fourCutBox {
+    aspect-ratio: 1/2;
+    background-color: navy;
+  }
+}
+section .section__leftContainer__customBox .section__leftContainer__customBox__title,
+section .section__leftContainer__customBox .section__rightContainer__fourCutBox__title,
+section .section__rightContainer__fourCutBox .section__leftContainer__customBox__title,
+section .section__rightContainer__fourCutBox .section__rightContainer__fourCutBox__title {
+  width: minmax(100%, -webkit-max-content);
+  width: minmax(100%, -moz-max-content);
+  width: minmax(100%, max-content);
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 480px) {
+  section .section__leftContainer__customBox .section__leftContainer__customBox__title #chooseTitle,
+section .section__leftContainer__customBox .section__rightContainer__fourCutBox__title #chooseTitle,
+section .section__rightContainer__fourCutBox .section__leftContainer__customBox__title #chooseTitle,
+section .section__rightContainer__fourCutBox .section__rightContainer__fourCutBox__title #chooseTitle {
+    font-size: 1.6em;
+    font-weight: bold;
+    font-family: "Concert One", cursive;
+    color: #f5d042;
+  }
+  section .section__leftContainer__customBox .section__leftContainer__customBox__title #chooseExplanation,
+section .section__leftContainer__customBox .section__rightContainer__fourCutBox__title #chooseExplanation,
+section .section__rightContainer__fourCutBox .section__leftContainer__customBox__title #chooseExplanation,
+section .section__rightContainer__fourCutBox .section__rightContainer__fourCutBox__title #chooseExplanation {
+    font-size: 0.4em;
+    color: #f5d042;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  section .section__leftContainer__customBox .section__leftContainer__customBox__title #chooseTitle,
+section .section__leftContainer__customBox .section__rightContainer__fourCutBox__title #chooseTitle,
+section .section__rightContainer__fourCutBox .section__leftContainer__customBox__title #chooseTitle,
+section .section__rightContainer__fourCutBox .section__rightContainer__fourCutBox__title #chooseTitle {
+    font-size: 2.5em;
+    font-weight: bold;
+    font-family: "Concert One", cursive;
+    color: #f5d042;
+  }
+  section .section__leftContainer__customBox .section__leftContainer__customBox__title #chooseExplanation,
+section .section__leftContainer__customBox .section__rightContainer__fourCutBox__title #chooseExplanation,
+section .section__rightContainer__fourCutBox .section__leftContainer__customBox__title #chooseExplanation,
+section .section__rightContainer__fourCutBox .section__rightContainer__fourCutBox__title #chooseExplanation {
+    font-size: 0.4em;
+    color: #f5d042;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  section .section__leftContainer__customBox .section__leftContainer__customBox__title #chooseTitle,
+section .section__leftContainer__customBox .section__rightContainer__fourCutBox__title #chooseTitle,
+section .section__rightContainer__fourCutBox .section__leftContainer__customBox__title #chooseTitle,
+section .section__rightContainer__fourCutBox .section__rightContainer__fourCutBox__title #chooseTitle {
+    font-size: 3em;
+    font-weight: bold;
+    font-family: "Concert One", cursive;
+    color: #f5d042;
+  }
+  section .section__leftContainer__customBox .section__leftContainer__customBox__title #chooseExplanation,
+section .section__leftContainer__customBox .section__rightContainer__fourCutBox__title #chooseExplanation,
+section .section__rightContainer__fourCutBox .section__leftContainer__customBox__title #chooseExplanation,
+section .section__rightContainer__fourCutBox .section__rightContainer__fourCutBox__title #chooseExplanation {
+    font-size: 1em;
+    color: #f5d042;
+  }
+}
+@media screen and (min-width: 1024px) {
+  section .section__leftContainer__customBox .section__leftContainer__customBox__title #chooseTitle,
+section .section__leftContainer__customBox .section__rightContainer__fourCutBox__title #chooseTitle,
+section .section__rightContainer__fourCutBox .section__leftContainer__customBox__title #chooseTitle,
+section .section__rightContainer__fourCutBox .section__rightContainer__fourCutBox__title #chooseTitle {
+    font-size: 3em;
+    font-weight: bold;
+    font-family: "Concert One", cursive;
+    color: #f5d042;
+  }
+  section .section__leftContainer__customBox .section__leftContainer__customBox__title #chooseExplanation,
+section .section__leftContainer__customBox .section__rightContainer__fourCutBox__title #chooseExplanation,
+section .section__rightContainer__fourCutBox .section__leftContainer__customBox__title #chooseExplanation,
+section .section__rightContainer__fourCutBox .section__rightContainer__fourCutBox__title #chooseExplanation {
+    color: #f5d042;
+  }
+}
+section .section__leftContainer__customBox .section__leftContainer__customBox__content,
+section .section__leftContainer__customBox .section__rightContainer__fourCutBox__content,
+section .section__rightContainer__fourCutBox .section__leftContainer__customBox__content,
+section .section__rightContainer__fourCutBox .section__rightContainer__fourCutBox__content {
+  width: 64%;
+  aspect-ratio: 2/5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+section .section__leftContainer__customBox .section__leftContainer__customBox__content .section__leftContainer__customBox__content__pic,
+section .section__leftContainer__customBox .section__leftContainer__customBox__content .section__rightContainer__fourCutBox__content__pic,
+section .section__leftContainer__customBox .section__rightContainer__fourCutBox__content .section__leftContainer__customBox__content__pic,
+section .section__leftContainer__customBox .section__rightContainer__fourCutBox__content .section__rightContainer__fourCutBox__content__pic,
+section .section__rightContainer__fourCutBox .section__leftContainer__customBox__content .section__leftContainer__customBox__content__pic,
+section .section__rightContainer__fourCutBox .section__leftContainer__customBox__content .section__rightContainer__fourCutBox__content__pic,
+section .section__rightContainer__fourCutBox .section__rightContainer__fourCutBox__content .section__leftContainer__customBox__content__pic,
+section .section__rightContainer__fourCutBox .section__rightContainer__fourCutBox__content .section__rightContainer__fourCutBox__content__pic {
+  width: 100%;
+  height: 70%;
+  display: grid;
+  grid-template-rows: repeat(1fr, 4);
+  gap: 2%;
+}
+section .section__leftContainer__customBox .section__leftContainer__customBox__content .section__leftContainer__customBox__content__pic #chooseDisplayCuts,
+section .section__leftContainer__customBox .section__leftContainer__customBox__content .section__rightContainer__fourCutBox__content__pic #chooseDisplayCuts,
+section .section__leftContainer__customBox .section__rightContainer__fourCutBox__content .section__leftContainer__customBox__content__pic #chooseDisplayCuts,
+section .section__leftContainer__customBox .section__rightContainer__fourCutBox__content .section__rightContainer__fourCutBox__content__pic #chooseDisplayCuts,
+section .section__rightContainer__fourCutBox .section__leftContainer__customBox__content .section__leftContainer__customBox__content__pic #chooseDisplayCuts,
+section .section__rightContainer__fourCutBox .section__leftContainer__customBox__content .section__rightContainer__fourCutBox__content__pic #chooseDisplayCuts,
+section .section__rightContainer__fourCutBox .section__rightContainer__fourCutBox__content .section__leftContainer__customBox__content__pic #chooseDisplayCuts,
+section .section__rightContainer__fourCutBox .section__rightContainer__fourCutBox__content .section__rightContainer__fourCutBox__content__pic #chooseDisplayCuts {
+  grid-row: span 1;
+  background-color: white;
+}
+section .section__leftContainer__customBox .section__leftContainer__customBox__content .section__leftContainer__customBox__content__button,
+section .section__leftContainer__customBox .section__leftContainer__customBox__content .section__rightContainer__fourCutBox__content__button,
+section .section__leftContainer__customBox .section__rightContainer__fourCutBox__content .section__leftContainer__customBox__content__button,
+section .section__leftContainer__customBox .section__rightContainer__fourCutBox__content .section__rightContainer__fourCutBox__content__button,
+section .section__rightContainer__fourCutBox .section__leftContainer__customBox__content .section__leftContainer__customBox__content__button,
+section .section__rightContainer__fourCutBox .section__leftContainer__customBox__content .section__rightContainer__fourCutBox__content__button,
+section .section__rightContainer__fourCutBox .section__rightContainer__fourCutBox__content .section__leftContainer__customBox__content__button,
+section .section__rightContainer__fourCutBox .section__rightContainer__fourCutBox__content .section__rightContainer__fourCutBox__content__button {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section .section__leftContainer__customBox .section__leftContainer__customBox__content .section__leftContainer__customBox__content__button .chooseButton,
+section .section__leftContainer__customBox .section__leftContainer__customBox__content .section__rightContainer__fourCutBox__content__button .chooseButton,
+section .section__leftContainer__customBox .section__rightContainer__fourCutBox__content .section__leftContainer__customBox__content__button .chooseButton,
+section .section__leftContainer__customBox .section__rightContainer__fourCutBox__content .section__rightContainer__fourCutBox__content__button .chooseButton,
+section .section__rightContainer__fourCutBox .section__leftContainer__customBox__content .section__leftContainer__customBox__content__button .chooseButton,
+section .section__rightContainer__fourCutBox .section__leftContainer__customBox__content .section__rightContainer__fourCutBox__content__button .chooseButton,
+section .section__rightContainer__fourCutBox .section__rightContainer__fourCutBox__content .section__leftContainer__customBox__content__button .chooseButton,
+section .section__rightContainer__fourCutBox .section__rightContainer__fourCutBox__content .section__rightContainer__fourCutBox__content__button .chooseButton {
+  width: 100%;
+  aspect-ratio: 3/1;
+  border-style: none;
+  border-radius: 15%/30%;
+  font-weight: bold;
+  background-color: #f5d042;
+  color: navy;
+}
+section .section__leftContainer__customBox .section__leftContainer__customBox__content .section__leftContainer__customBox__content__button .chooseButton:hover,
+section .section__leftContainer__customBox .section__leftContainer__customBox__content .section__rightContainer__fourCutBox__content__button .chooseButton:hover,
+section .section__leftContainer__customBox .section__rightContainer__fourCutBox__content .section__leftContainer__customBox__content__button .chooseButton:hover,
+section .section__leftContainer__customBox .section__rightContainer__fourCutBox__content .section__rightContainer__fourCutBox__content__button .chooseButton:hover,
+section .section__rightContainer__fourCutBox .section__leftContainer__customBox__content .section__leftContainer__customBox__content__button .chooseButton:hover,
+section .section__rightContainer__fourCutBox .section__leftContainer__customBox__content .section__rightContainer__fourCutBox__content__button .chooseButton:hover,
+section .section__rightContainer__fourCutBox .section__rightContainer__fourCutBox__content .section__leftContainer__customBox__content__button .chooseButton:hover,
+section .section__rightContainer__fourCutBox .section__rightContainer__fourCutBox__content .section__rightContainer__fourCutBox__content__button .chooseButton:hover {
+  background-color: purple;
+  color: #f5d042;
+}
+@media screen and (max-width: 480px) {
+  section .section__leftContainer__customBox .section__leftContainer__customBox__content .section__leftContainer__customBox__content__button .chooseButton,
+section .section__leftContainer__customBox .section__leftContainer__customBox__content .section__rightContainer__fourCutBox__content__button .chooseButton,
+section .section__leftContainer__customBox .section__rightContainer__fourCutBox__content .section__leftContainer__customBox__content__button .chooseButton,
+section .section__leftContainer__customBox .section__rightContainer__fourCutBox__content .section__rightContainer__fourCutBox__content__button .chooseButton,
+section .section__rightContainer__fourCutBox .section__leftContainer__customBox__content .section__leftContainer__customBox__content__button .chooseButton,
+section .section__rightContainer__fourCutBox .section__leftContainer__customBox__content .section__rightContainer__fourCutBox__content__button .chooseButton,
+section .section__rightContainer__fourCutBox .section__rightContainer__fourCutBox__content .section__leftContainer__customBox__content__button .chooseButton,
+section .section__rightContainer__fourCutBox .section__rightContainer__fourCutBox__content .section__rightContainer__fourCutBox__content__button .chooseButton {
+    font-size: 0.9em;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  section .section__leftContainer__customBox .section__leftContainer__customBox__content .section__leftContainer__customBox__content__button .chooseButton,
+section .section__leftContainer__customBox .section__leftContainer__customBox__content .section__rightContainer__fourCutBox__content__button .chooseButton,
+section .section__leftContainer__customBox .section__rightContainer__fourCutBox__content .section__leftContainer__customBox__content__button .chooseButton,
+section .section__leftContainer__customBox .section__rightContainer__fourCutBox__content .section__rightContainer__fourCutBox__content__button .chooseButton,
+section .section__rightContainer__fourCutBox .section__leftContainer__customBox__content .section__leftContainer__customBox__content__button .chooseButton,
+section .section__rightContainer__fourCutBox .section__leftContainer__customBox__content .section__rightContainer__fourCutBox__content__button .chooseButton,
+section .section__rightContainer__fourCutBox .section__rightContainer__fourCutBox__content .section__leftContainer__customBox__content__button .chooseButton,
+section .section__rightContainer__fourCutBox .section__rightContainer__fourCutBox__content .section__rightContainer__fourCutBox__content__button .chooseButton {
+    font-size: 1.6em;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  section .section__leftContainer__customBox .section__leftContainer__customBox__content .section__leftContainer__customBox__content__button .chooseButton,
+section .section__leftContainer__customBox .section__leftContainer__customBox__content .section__rightContainer__fourCutBox__content__button .chooseButton,
+section .section__leftContainer__customBox .section__rightContainer__fourCutBox__content .section__leftContainer__customBox__content__button .chooseButton,
+section .section__leftContainer__customBox .section__rightContainer__fourCutBox__content .section__rightContainer__fourCutBox__content__button .chooseButton,
+section .section__rightContainer__fourCutBox .section__leftContainer__customBox__content .section__leftContainer__customBox__content__button .chooseButton,
+section .section__rightContainer__fourCutBox .section__leftContainer__customBox__content .section__rightContainer__fourCutBox__content__button .chooseButton,
+section .section__rightContainer__fourCutBox .section__rightContainer__fourCutBox__content .section__leftContainer__customBox__content__button .chooseButton,
+section .section__rightContainer__fourCutBox .section__rightContainer__fourCutBox__content .section__rightContainer__fourCutBox__content__button .chooseButton {
+    font-size: 1.8em;
+  }
+}
+@media screen and (min-width: 1024px) {
+  section .section__leftContainer__customBox .section__leftContainer__customBox__content .section__leftContainer__customBox__content__button .chooseButton,
+section .section__leftContainer__customBox .section__leftContainer__customBox__content .section__rightContainer__fourCutBox__content__button .chooseButton,
+section .section__leftContainer__customBox .section__rightContainer__fourCutBox__content .section__leftContainer__customBox__content__button .chooseButton,
+section .section__leftContainer__customBox .section__rightContainer__fourCutBox__content .section__rightContainer__fourCutBox__content__button .chooseButton,
+section .section__rightContainer__fourCutBox .section__leftContainer__customBox__content .section__leftContainer__customBox__content__button .chooseButton,
+section .section__rightContainer__fourCutBox .section__leftContainer__customBox__content .section__rightContainer__fourCutBox__content__button .chooseButton,
+section .section__rightContainer__fourCutBox .section__rightContainer__fourCutBox__content .section__leftContainer__customBox__content__button .chooseButton,
+section .section__rightContainer__fourCutBox .section__rightContainer__fourCutBox__content .section__rightContainer__fourCutBox__content__button .chooseButton {
+    font-size: 1.8em;
+  }
 }/*# sourceMappingURL=styles.css.map */

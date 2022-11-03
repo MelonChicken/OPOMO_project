@@ -1,0 +1,28 @@
+@mixin chooseButtons {
+  width: 100%;
+  aspect-ratio: 3 / 1;
+  border-style: none;
+  border-radius: 15% / 30%;
+
+  font-weight: bold;
+
+  background-color: $themeColor02;
+  color: $themeColor01;
+
+  &:hover {
+    background-color: purple;
+    color: $themeColor02;
+  }
+  @include responsive("mobile") {
+    font-size: 0.9em;
+  }
+  @include responsive("mobile-l") {
+    font-size: 1.6em;
+  }
+  @include responsive("tablet") {
+    font-size: 1.8em;
+  }
+  @include responsive("window") {
+    font-size: 1.8em;
+  }
+}
