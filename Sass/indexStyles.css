@@ -193,7 +193,7 @@ section .section__rightContainer__fourCutBox .section__rightContainer__fourCutBo
   height: 30%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
 }
 @media screen and (max-width: 480px) {
@@ -210,7 +210,6 @@ section .section__rightContainer__fourCutBox .section__rightContainer__fourCutBo
 section .section__leftContainer__customBox .section__rightContainer__fourCutBox__title #chooseExplanation,
 section .section__rightContainer__fourCutBox .section__leftContainer__customBox__title #chooseExplanation,
 section .section__rightContainer__fourCutBox .section__rightContainer__fourCutBox__title #chooseExplanation {
-    margin-top: 1vh;
     font-size: 0.4em;
     color: #f5d042;
   }
@@ -229,8 +228,7 @@ section .section__rightContainer__fourCutBox .section__rightContainer__fourCutBo
 section .section__leftContainer__customBox .section__rightContainer__fourCutBox__title #chooseExplanation,
 section .section__rightContainer__fourCutBox .section__leftContainer__customBox__title #chooseExplanation,
 section .section__rightContainer__fourCutBox .section__rightContainer__fourCutBox__title #chooseExplanation {
-    margin-top: 1vh;
-    font-size: 0.4em;
+    font-size: 0.6em;
     color: #f5d042;
   }
 }
@@ -248,7 +246,6 @@ section .section__rightContainer__fourCutBox .section__rightContainer__fourCutBo
 section .section__leftContainer__customBox .section__rightContainer__fourCutBox__title #chooseExplanation,
 section .section__rightContainer__fourCutBox .section__leftContainer__customBox__title #chooseExplanation,
 section .section__rightContainer__fourCutBox .section__rightContainer__fourCutBox__title #chooseExplanation {
-    margin-top: 1vh;
     font-size: 1em;
     color: #f5d042;
   }
@@ -267,7 +264,6 @@ section .section__rightContainer__fourCutBox .section__rightContainer__fourCutBo
 section .section__leftContainer__customBox .section__rightContainer__fourCutBox__title #chooseExplanation,
 section .section__rightContainer__fourCutBox .section__leftContainer__customBox__title #chooseExplanation,
 section .section__rightContainer__fourCutBox .section__rightContainer__fourCutBox__title #chooseExplanation {
-    margin-top: 1vh;
     color: #f5d042;
   }
 }
