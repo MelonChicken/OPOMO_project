@@ -5,6 +5,10 @@ body {
   margin: 0;
 }
 
+.linkbtns {
+  cursor: pointer;
+}
+
 header {
   top: 0;
   left: 0;
@@ -206,6 +210,7 @@ section .section__rightContainer__fourCutBox .section__rightContainer__fourCutBo
 section .section__leftContainer__customBox .section__rightContainer__fourCutBox__title #chooseExplanation,
 section .section__rightContainer__fourCutBox .section__leftContainer__customBox__title #chooseExplanation,
 section .section__rightContainer__fourCutBox .section__rightContainer__fourCutBox__title #chooseExplanation {
+    margin-top: 1vh;
     font-size: 0.4em;
     color: #f5d042;
   }
@@ -224,6 +229,7 @@ section .section__rightContainer__fourCutBox .section__rightContainer__fourCutBo
 section .section__leftContainer__customBox .section__rightContainer__fourCutBox__title #chooseExplanation,
 section .section__rightContainer__fourCutBox .section__leftContainer__customBox__title #chooseExplanation,
 section .section__rightContainer__fourCutBox .section__rightContainer__fourCutBox__title #chooseExplanation {
+    margin-top: 1vh;
     font-size: 0.4em;
     color: #f5d042;
   }
@@ -242,6 +248,7 @@ section .section__rightContainer__fourCutBox .section__rightContainer__fourCutBo
 section .section__leftContainer__customBox .section__rightContainer__fourCutBox__title #chooseExplanation,
 section .section__rightContainer__fourCutBox .section__leftContainer__customBox__title #chooseExplanation,
 section .section__rightContainer__fourCutBox .section__rightContainer__fourCutBox__title #chooseExplanation {
+    margin-top: 1vh;
     font-size: 1em;
     color: #f5d042;
   }
@@ -260,6 +267,7 @@ section .section__rightContainer__fourCutBox .section__rightContainer__fourCutBo
 section .section__leftContainer__customBox .section__rightContainer__fourCutBox__title #chooseExplanation,
 section .section__rightContainer__fourCutBox .section__leftContainer__customBox__title #chooseExplanation,
 section .section__rightContainer__fourCutBox .section__rightContainer__fourCutBox__title #chooseExplanation {
+    margin-top: 1vh;
     color: #f5d042;
   }
 }
