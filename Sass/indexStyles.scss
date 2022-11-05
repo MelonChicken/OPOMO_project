@@ -1,6 +1,8 @@
 @import "other_scss/variables"; //변수는 맨 위에
 @import "other_scss/responsive"; //반응형 사이즈 설정
 @import "other_scss/buttons";
+@import "other_scss/linkBtns";
+
 @import url("https://fonts.googleapis.com/css2?family=Concert+One&display=swap"); //사용 폰트
 
 body {
@@ -10,7 +12,7 @@ body {
 }
 
 .linkbtns {
-  cursor: pointer;
+  @extend %link;
 }
 
 header {

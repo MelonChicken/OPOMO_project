@@ -26,3 +26,23 @@
     font-size: 1.8em;
   }
 }
+
+%scrollbar {
+  @include responsive("window") {
+    &::-webkit-scrollbar {
+      width: 5%;
+    }
+    &::-webkit-scrollbar-button {
+      //스크롤바 버튼
+      display: none;
+    }
+    &::-webkit-scrollbar-thumb {
+      //스크롤바 손잡이
+      background-color: $themeColor01;
+    }
+    &::-webkit-scrollbar-track {
+      //스크롤바 손잡이 이외의 부분
+      background-color: rgba(0, 21, 255, 0.16);
+    }
+  }
+}

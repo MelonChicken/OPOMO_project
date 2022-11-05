@@ -1,12 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Concert+One&display=swap");
+.linkbtns {
+  cursor: pointer;
+}
+.linkbtns:visited {
+  color: navy;
+}
+
 body {
   width: 100%;
   height: 90vh;
   margin: 0;
-}
-
-.linkbtns {
-  cursor: pointer;
 }
 
 header {
