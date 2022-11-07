@@ -23,13 +23,18 @@
 
 body {
   width: 100%;
-  height: 90vh;
   margin: 0;
+  display: flex;
+  justify-content: center;
 }
 
+.customPage {
+  width: 100%;
+  height: 100vh;
+}
 header {
-  top: 0;
-  left: 0;
+  top: 0%;
+  left: 0%;
   position: fixed;
   width: 100%;
   height: minmax(-webkit-max-content, 8vh);
@@ -37,11 +42,12 @@ header {
   height: minmax(max-content, 8vh);
   display: flex;
   justify-content: space-between;
+  box-shadow: 0px 10px 5px 1px rgba(0, 0, 0, 0.2);
   color: #f5d042;
 }
 @media screen and (max-width: 480px) {
   header {
-    background-color: red;
+    background-color: navy;
   }
 }
 @media screen and (min-width: 480px) and (max-width: 767px) {
@@ -137,10 +143,9 @@ section {
   padding-top: 8vh;
   width: 100%;
   height: 92vh;
-  background-color: #f5d042;
+  background-color: navy;
 }
 section .customPage__choosePoseText {
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -149,22 +154,26 @@ section .customPage__choosePoseText {
 }
 @media screen and (max-width: 480px) {
   section .customPage__choosePoseText {
+    width: 100%;
     height: 10%;
   }
 }
 @media screen and (min-width: 480px) and (max-width: 767px) {
   section .customPage__choosePoseText {
+    width: 100%;
     height: 10%;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   section .customPage__choosePoseText {
+    width: 100%;
     height: 10%;
   }
 }
 @media screen and (min-width: 1024px) {
   section .customPage__choosePoseText {
-    height: 5%;
+    width: 100%;
+    height: 10%;
   }
 }
 section .customPage__choosePoseText p {
@@ -191,13 +200,12 @@ section .customPage__choosePoseText p {
   }
 }
 section .customPage__myPoseContainer {
-  width: 98%;
-  padding-left: 2%;
   background-color: navy;
 }
 @media screen and (max-width: 480px) {
   section .customPage__myPoseContainer {
-    height: 68%;
+    width: 100%;
+    height: 83vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -206,25 +214,28 @@ section .customPage__myPoseContainer {
 }
 @media screen and (min-width: 480px) and (max-width: 767px) {
   section .customPage__myPoseContainer {
+    width: 100%;
     height: 50%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   section .customPage__myPoseContainer {
+    width: 100%;
     height: 70%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
   }
 }
 @media screen and (min-width: 1024px) {
   section .customPage__myPoseContainer {
-    height: 60%;
+    width: 100%;
+    height: 90%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
   }
 }
@@ -250,20 +261,17 @@ section .customPage__myPoseContainer .customPage__myPoseContainer__picBox {
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   section .customPage__myPoseContainer .customPage__myPoseContainer__picBox {
-    width: 60%;
-    aspect-ratio: 29/40;
+    width: 45vh;
+    aspect-ratio: auto 29/40;
     border-radius: 8%/6%;
   }
 }
 @media screen and (min-width: 1024px) {
   section .customPage__myPoseContainer .customPage__myPoseContainer__picBox {
-    width: 80%;
-    aspect-ratio: 11/3;
-    border-radius: 2%/8%;
+    width: 55vh;
+    aspect-ratio: 29/40;
+    border-radius: 8%/6%;
   }
-}
-section .customPage__myPoseContainer .customPage__myPoseContainer__picBox .customPage__myPoseContainer__picBox__grid {
-  overflow-x: scroll;
 }
 @media screen and (max-width: 480px) {
   section .customPage__myPoseContainer .customPage__myPoseContainer__picBox .customPage__myPoseContainer__picBox__grid {
@@ -281,6 +289,7 @@ section .customPage__myPoseContainer .customPage__myPoseContainer__picBox .custo
     aspect-ratio: 3/1;
     display: flex;
     flex-wrap: nowrap;
+    overflow-x: scroll;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -296,9 +305,11 @@ section .customPage__myPoseContainer .customPage__myPoseContainer__picBox .custo
 @media screen and (min-width: 1024px) {
   section .customPage__myPoseContainer .customPage__myPoseContainer__picBox .customPage__myPoseContainer__picBox__grid {
     width: 92%;
-    aspect-ratio: 11/3;
-    display: flex;
-    flex-wrap: nowrap;
+    aspect-ratio: 29/40;
+    display: grid;
+    gap: 1em;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(1fr, 4);
   }
 }
 section .customPage__myPoseContainer .customPage__myPoseContainer__picBox .customPage__myPoseContainer__picBox__grid .customPage__myPoseContainer__picBox__grid__pic {
@@ -329,9 +340,8 @@ section .customPage__myPoseContainer .customPage__myPoseContainer__picBox .custo
 }
 @media screen and (min-width: 1024px) {
   section .customPage__myPoseContainer .customPage__myPoseContainer__picBox .customPage__myPoseContainer__picBox__grid .customPage__myPoseContainer__picBox__grid__pic {
-    width: 40%;
-    aspect-ratio: 4/3;
-    margin-right: 5%;
+    grid-column: span 1;
+    grid-row: span 1;
   }
 }
 section .customPage__myPoseContainer .customPage__myPoseContainer__picBox .customPage__myPoseContainer__picBox__grid .customPage__myPoseContainer__picBox__grid__pic .customPage__myPoseContainer__picBox__grid__pic__innerText {
@@ -342,32 +352,23 @@ section .customPage__myPoseContainer .customPage__myPoseContainer__picBox .custo
   align-items: center;
   color: navy;
 }
-@media screen and (max-width: 480px) {
-  section .customPage__myPoseContainer .customPage__myPoseContainer__tools {
-    width: 90%;
-    height: 10%;
-    background-color: red;
-  }
+section .customPage__myPictures__nav {
+  width: 50px;
+  aspect-ratio: 1/1;
+  border-radius: 50%/50%;
+  right: 1%;
+  bottom: 1%;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  color: navy;
+  background-color: #f5d042;
 }
-@media screen and (min-width: 480px) and (max-width: 767px) {
-  section .customPage__myPoseContainer .customPage__myPoseContainer__tools {
-    width: 15%;
-    aspect-ratio: 3/5;
-    background-color: purple;
-  }
+section .customPage__myPictures__nav #customPageNav01 {
+  color: navy;
 }
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  section .customPage__myPoseContainer .customPage__myPoseContainer__tools {
-    width: 30%;
-    aspect-ratio: 1/1;
-    border-radius: 8%/8%;
-    background-color: green;
-  }
-}
-@media screen and (min-width: 1024px) {
-  section .customPage__myPoseContainer .customPage__myPoseContainer__tools {
-    width: 15%;
-    aspect-ratio: 3/5;
-    background-color: aqua;
-  }
+section .customPage__myPictures__nav #customPageNav02 {
+  display: none;
 }/*# sourceMappingURL=customPageStyles.css.map */
