@@ -371,4 +371,19 @@ section .customPage__myPictures__nav #customPageNav01 {
 }
 section .customPage__myPictures__nav #customPageNav02 {
   display: none;
+}
+
+.navArrow {
+  top: 50%;
+  left: 0%;
+  position: fixed;
+  width: 98%;
+  height: 60px;
+  padding-left: 1%;
+  padding-right: 1%;
+  font-size: 3em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #f5d042;
 }/*# sourceMappingURL=customPageStyles.css.map */

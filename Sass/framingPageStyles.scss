@@ -1,0 +1,149 @@
+@import "other_scss/variables"; //변수는 맨 위에
+@import "other_scss/responsive"; //반응형 사이즈 설정
+@import "other_scss/buttons";
+@import "other_scss/linkBtns";
+
+@import url("https://fonts.googleapis.com/css2?family=Concert+One&display=swap"); //사용 폰트
+
+body {
+  width: 100%;
+  margin: 0;
+
+  display: flex;
+  justify-content: center;
+}
+.linkbtns {
+  @extend %link;
+}
+
+.framingPage {
+  width: 100%;
+  height: 100vh;
+  @include responsive("window") {
+  }
+}
+header {
+  top: 0%;
+  left: 0%;
+  position: fixed;
+
+  width: 100%;
+  height: minmax(max-content, $headerHeight);
+
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0px 10px 5px 1px rgb(0, 0, 0, 0.2);
+  color: $themeColor02;
+  @include responsive("mobile") {
+    background-color: $themeColor01;
+  }
+  @include responsive("mobile-l") {
+    background-color: $mobile-lColor;
+  }
+  @include responsive("tablet") {
+    background-color: $tabletColor;
+  }
+  @include responsive("window") {
+    background-color: $themeColor01;
+  }
+
+  #header__titleLogo {
+    width: minmax(max-conent, 5%);
+    height: 7vh;
+    padding-left: 1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: $logoFont;
+    font-size: 2em;
+    font-weight: bold;
+
+    color: $themeColor02;
+  }
+
+  #header__icons {
+    height: max-content + 1vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    margin: 0;
+
+    list-style: none;
+    color: $themeColor02;
+    @include responsive("window") {
+      width: 15%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      li {
+        margin-right: 1vw;
+      }
+    }
+    @include responsive("mobile") {
+      width: 30%;
+      padding-right: 5vw;
+
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+    @include responsive("tablet") {
+      width: 20%;
+      padding-right: 1vw;
+
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    @include responsive("mobile-l") {
+      width: 20%;
+      padding-right: 1vw;
+
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    li {
+      width: max-content;
+      height: max-content;
+      font-size: 1.2em;
+
+      padding: 0.2em;
+      padding-left: 0.3em;
+      padding-right: 0.3em;
+      border-radius: 15% / 15%;
+
+      color: $themeColor01;
+      background-color: $themeColor02;
+    }
+  }
+}
+
+section {
+  padding-top: $headerHeight;
+  width: 100%;
+  height: $sectionHeight;
+
+  background-color: $backgroundColor02;
+
+}
+
+.navArrow{
+  top:50%;
+  left:0%;
+  position: fixed;
+  
+  width:98%;
+  height: 60px;
+  padding-left: 1%;
+  padding-right:1%;
+
+  font-size: 3em;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  color:$themeColor02;
+
+}
