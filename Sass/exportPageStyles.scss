@@ -265,20 +265,13 @@ section {
   width: max-content;
   height: 60px;
   padding-left: 1%;
-  padding-right: 1%;
 
-  font-size: 3em;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  color: $themeColor02;
-
-  cursor: pointer;
-}
-.navArrow_left {
   top: 50%;
   left: 0%;
   position: fixed;
+
+  font-size: 3em;
+  color: $themeColor02;
+
+  cursor: pointer;
 }
