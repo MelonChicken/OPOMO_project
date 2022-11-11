@@ -301,7 +301,9 @@ section .exportPage__submissionContainer .exportPage__submissionContainer__share
 }
 
 .navArrow_left {
-  width: 98%;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   height: 60px;
   padding-left: 1%;
   padding-right: 1%;
