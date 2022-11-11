@@ -336,15 +336,12 @@ section {
   }
 }
 
-.navArrow{
-  top:50%;
-  left:0%;
-  position: fixed;
-  
-  width:98%;
+.navArrow_left,
+.navArrow_right {
+  width: 98%;
   height: 60px;
   padding-left: 1%;
-  padding-right:1%;
+  padding-right: 1%;
 
   font-size: 3em;
 
@@ -352,7 +349,17 @@ section {
   justify-content: space-between;
   align-items: center;
 
-  cursor: pointer;
-  color:$themeColor02;
+  color: $themeColor02;
 
+  cursor: pointer;
+}
+.navArrow_left {
+  top: 50%;
+  left: 0%;
+  position: fixed;
+}
+.navArrow_right {
+  top: 50%;
+  right: 0%;
+  position: fixed;
 }

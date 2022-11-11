@@ -122,33 +122,27 @@ section {
   width: 100%;
   height: $sectionHeight;
 
-
   display: flex;
   justify-content: center;
   align-items: center;
 
   background-color: $backgroundColor02;
-  .framingPage__picContainer{
-
-    @include responsive('mobile'){
-      width:70%;
+  .framingPage__picContainer {
+    @include responsive("mobile") {
+      width: 70%;
       aspect-ratio: 29 / 40;
-
     }
-    @include responsive('mobile-l'){
-      width:70%;
+    @include responsive("mobile-l") {
+      width: 70%;
       aspect-ratio: 29 / 40;
-
     }
-    @include responsive('tablet'){
-      width:70%;
+    @include responsive("tablet") {
+      width: 70%;
       aspect-ratio: 29 / 40;
-
     }
-    @include responsive('window'){
-      width:30%;
+    @include responsive("window") {
+      width: 30%;
       aspect-ratio: 29 / 40;
-
     }
 
     display: flex;
@@ -156,24 +150,24 @@ section {
     align-items: flex-start;
 
     background-color: $themeColor02;
-    .framingPage__picContainer__grid{
-      width:96%;
+    .framingPage__picContainer__grid {
+      width: 96%;
       aspect-ratio: 29 / 33;
       margin-top: 1vh;
 
-      display:grid;
+      display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(4, 1fr);
-      gap:1%;
+      gap: 1%;
 
-      .framingPage__picContainer__grid__pic{
+      .framingPage__picContainer__grid__pic {
         grid-column: span 1;
         grid-row: span 1;
         background-color: white;
       }
     }
   }
-  
+
   .framingPage__myPictures__nav {
     width: 50px;
     aspect-ratio: 1 / 1;
@@ -200,15 +194,12 @@ section {
   }
 }
 
-.navArrow{
-  top:50%;
-  left:0%;
-  position: fixed;
-  
-  width:98%;
+.navArrow_left,
+.navArrow_right {
+  width: 98%;
   height: 60px;
   padding-left: 1%;
-  padding-right:1%;
+  padding-right: 1%;
 
   font-size: 3em;
 
@@ -216,8 +207,17 @@ section {
   justify-content: space-between;
   align-items: center;
 
-  color:$themeColor02;
+  color: $themeColor02;
 
   cursor: pointer;
-
+}
+.navArrow_left {
+  top: 50%;
+  left: 0%;
+  position: fixed;
+}
+.navArrow_right {
+  top: 50%;
+  right: 0%;
+  position: fixed;
 }

@@ -300,10 +300,7 @@ section .exportPage__submissionContainer .exportPage__submissionContainer__share
   }
 }
 
-.navArrow {
-  top: 50%;
-  left: 0%;
-  position: fixed;
+.navArrow_left {
   width: 98%;
   height: 60px;
   padding-left: 1%;
@@ -314,4 +311,10 @@ section .exportPage__submissionContainer .exportPage__submissionContainer__share
   align-items: center;
   color: #f5d042;
   cursor: pointer;
+}
+
+.navArrow_left {
+  top: 50%;
+  left: 0%;
+  position: fixed;
 }/*# sourceMappingURL=exportPageStyles.css.map */

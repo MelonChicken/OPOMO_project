@@ -373,10 +373,8 @@ section .customPage__myPictures__nav #customPageNav02 {
   display: none;
 }
 
-.navArrow {
-  top: 50%;
-  left: 0%;
-  position: fixed;
+.navArrow_left,
+.navArrow_right {
   width: 98%;
   height: 60px;
   padding-left: 1%;
@@ -385,6 +383,18 @@ section .customPage__myPictures__nav #customPageNav02 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  cursor: pointer;
   color: #f5d042;
+  cursor: pointer;
+}
+
+.navArrow_left {
+  top: 50%;
+  left: 0%;
+  position: fixed;
+}
+
+.navArrow_right {
+  top: 50%;
+  right: 0%;
+  position: fixed;
 }/*# sourceMappingURL=customPageStyles.css.map */
