@@ -13,7 +13,7 @@ body {
   justify-content: center;
 }
 
-.framingPage {
+.exportPage {
   width: 100%;
   height: 100vh;
 }
@@ -130,41 +130,42 @@ section {
   width: 100%;
   height: 92vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: navy;
 }
-section .framingPage__picContainer {
+section .exportPage__picContainer {
   display: flex;
   justify-content: center;
   align-items: flex-start;
   background-color: #f5d042;
 }
 @media screen and (max-width: 480px) {
-  section .framingPage__picContainer {
+  section .exportPage__picContainer {
     width: 70%;
     aspect-ratio: 29/40;
   }
 }
 @media screen and (min-width: 480px) and (max-width: 767px) {
-  section .framingPage__picContainer {
+  section .exportPage__picContainer {
     width: 70%;
     aspect-ratio: 29/40;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-  section .framingPage__picContainer {
+  section .exportPage__picContainer {
     width: 70%;
     aspect-ratio: 29/40;
   }
 }
 @media screen and (min-width: 1024px) {
-  section .framingPage__picContainer {
-    width: 30%;
+  section .exportPage__picContainer {
+    width: 25%;
     aspect-ratio: 29/40;
   }
 }
-section .framingPage__picContainer .framingPage__picContainer__grid {
+section .exportPage__picContainer .exportPage__picContainer__grid {
   width: 96%;
   aspect-ratio: 29/33;
   margin-top: 1vh;
@@ -173,30 +174,130 @@ section .framingPage__picContainer .framingPage__picContainer__grid {
   grid-template-rows: repeat(4, 1fr);
   gap: 1%;
 }
-section .framingPage__picContainer .framingPage__picContainer__grid .framingPage__picContainer__grid__pic {
+section .exportPage__picContainer .exportPage__picContainer__grid .exportPage__picContainer__grid__pic {
   grid-column: span 1;
   grid-row: span 1;
   background-color: white;
 }
-section .framingPage__myPictures__nav {
-  width: 50px;
+section .exportPage__submissionContainer {
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 480px) {
+  section .exportPage__submissionContainer {
+    margin-top: 1.5vh;
+    width: 70%;
+    aspect-ratio: 20/1;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  section .exportPage__submissionContainer {
+    margin-top: 1.5vh;
+    width: 70%;
+    aspect-ratio: 20/1;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  section .exportPage__submissionContainer {
+    margin-top: 1.5vh;
+    width: 70%;
+    aspect-ratio: 20/1;
+  }
+}
+@media screen and (min-width: 1024px) {
+  section .exportPage__submissionContainer {
+    margin-top: 1.5vh;
+    width: 25%;
+    aspect-ratio: 22/1;
+  }
+}
+section .exportPage__submissionContainer .exportPage__submissionContainer__save {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #f5d042;
+  cursor: pointer;
+}
+@media screen and (max-width: 480px) {
+  section .exportPage__submissionContainer .exportPage__submissionContainer__save {
+    border-radius: 10%/50%;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  section .exportPage__submissionContainer .exportPage__submissionContainer__save {
+    border-radius: 10%/50%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  section .exportPage__submissionContainer .exportPage__submissionContainer__save {
+    border-radius: 10%/50%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  section .exportPage__submissionContainer .exportPage__submissionContainer__save {
+    border-radius: 10%/50%;
+  }
+}
+section .exportPage__submissionContainer .exportPage__submissionContainer__save p {
+  height: auto;
+  font-weight: bold;
+  color: navy;
+}
+@media screen and (max-width: 480px) {
+  section .exportPage__submissionContainer .exportPage__submissionContainer__save p {
+    margin: 5%;
+    font-size: 1.5em;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  section .exportPage__submissionContainer .exportPage__submissionContainer__save p {
+    margin: 5%;
+    font-size: 1.3em;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  section .exportPage__submissionContainer .exportPage__submissionContainer__save p {
+    margin: 3%;
+    font-size: 2em;
+  }
+}
+@media screen and (min-width: 1024px) {
+  section .exportPage__submissionContainer .exportPage__submissionContainer__save p {
+    margin: 5%;
+    font-size: 1.5em;
+  }
+}
+section .exportPage__submissionContainer .exportPage__submissionContainer__share {
+  height: 100%;
   aspect-ratio: 1/1;
   border-radius: 50%/50%;
-  right: 1%;
-  bottom: 1%;
-  position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 25px;
   color: navy;
   background-color: #f5d042;
+  cursor: pointer;
 }
-section .framingPage__myPictures__nav #framingPageNav01 {
-  color: navy;
+@media screen and (max-width: 480px) {
+  section .exportPage__submissionContainer .exportPage__submissionContainer__share {
+    font-size: 1.5em;
+  }
 }
-section .framingPage__myPictures__nav #framingPageNav02 {
-  display: none;
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  section .exportPage__submissionContainer .exportPage__submissionContainer__share {
+    font-size: 1.3em;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  section .exportPage__submissionContainer .exportPage__submissionContainer__share {
+    font-size: 2em;
+  }
+}
+@media screen and (min-width: 1024px) {
+  section .exportPage__submissionContainer .exportPage__submissionContainer__share {
+    font-size: 1.1em;
+  }
 }
 
 .navArrow {
@@ -213,4 +314,4 @@ section .framingPage__myPictures__nav #framingPageNav02 {
   align-items: center;
   color: #f5d042;
   cursor: pointer;
-}/*# sourceMappingURL=framingPageStyles.css.map */
+}/*# sourceMappingURL=exportPageStyles.css.map */

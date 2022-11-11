@@ -385,5 +385,6 @@ section .customPage__myPictures__nav #customPageNav02 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
   color: #f5d042;
 }/*# sourceMappingURL=customPageStyles.css.map */
