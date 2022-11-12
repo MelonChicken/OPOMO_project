@@ -1,0 +1,264 @@
+@import url("https://fonts.googleapis.com/css2?family=Concert+One&display=swap");
+.linkbtns {
+  cursor: pointer;
+}
+.linkbtns:visited {
+  color: navy;
+}
+
+.publicPage .publicPage__picContainer .publicPictureBox .pulicPicture__tags .tag, .publicPage section .publicPage__filterContainer .publicPage__filterContainer__filters .chosenFilter {
+  cursor: pointer;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: auto;
+  padding-left: 10px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-right: 10px;
+  border-radius: 15%/50%;
+  color: #f5d042;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+header {
+  top: 0%;
+  left: 0%;
+  position: fixed;
+  width: 100%;
+  height: minmax(-webkit-max-content, 8vh);
+  height: minmax(-moz-max-content, 8vh);
+  height: minmax(max-content, 8vh);
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0px 10px 5px 1px rgba(0, 0, 0, 0.2);
+  color: #f5d042;
+}
+@media screen and (max-width: 480px) {
+  header {
+    background-color: navy;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  header {
+    background-color: purple;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  header {
+    background-color: green;
+  }
+}
+@media screen and (min-width: 1024px) {
+  header {
+    background-color: navy;
+  }
+}
+header #header__titleLogo {
+  width: minmax(max-conent, 5%);
+  height: 7vh;
+  padding-left: 1vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Concert One", cursive;
+  font-size: 2em;
+  font-weight: bold;
+  color: #f5d042;
+}
+header #header__icons {
+  height: max-content1vw;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  margin: 0;
+  list-style: none;
+  color: #f5d042;
+}
+@media screen and (min-width: 1024px) {
+  header #header__icons {
+    width: 15%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  header #header__icons li {
+    margin-right: 1vw;
+  }
+}
+@media screen and (max-width: 480px) {
+  header #header__icons {
+    width: 30%;
+    padding-right: 5vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  header #header__icons {
+    width: 20%;
+    padding-right: 1vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  header #header__icons {
+    width: 20%;
+    padding-right: 1vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+header #header__icons li {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  font-size: 1.2em;
+  padding: 0.2em;
+  padding-left: 0.3em;
+  padding-right: 0.3em;
+  border-radius: 15%/15%;
+  color: navy;
+  background-color: #f5d042;
+}
+
+.publicPage {
+  width: 100%;
+  height: 100vh;
+}
+.publicPage section {
+  padding-top: 8vh;
+  width: 100%;
+  height: 92vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: navy;
+}
+.publicPage section .publicPage__filterContainer {
+  width: 100%;
+  height: 7%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.publicPage section .publicPage__filterContainer .publicPage__filterContainer__filters {
+  width: 83%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: auto;
+  align-items: center;
+}
+.publicPage section .publicPage__filterContainer .publicPage__filterContainer__choose {
+  height: 90%;
+  aspect-ratio: 1/1;
+  border-radius: 15%/15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3.3vh;
+  color: navy;
+  background-color: #f5d042;
+}
+.publicPage .publicPage__picContainer {
+  width: 100%;
+  height: 93%;
+  overflow-y: auto;
+  display: grid;
+  gap: 5px;
+  background-color: navy;
+}
+@media screen and (max-width: 480px) {
+  .publicPage .publicPage__picContainer {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 30vh;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .publicPage .publicPage__picContainer {
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 30vh;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .publicPage .publicPage__picContainer {
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 30vh;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .publicPage .publicPage__picContainer {
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: 55vh;
+  }
+}
+.publicPage .publicPage__picContainer .publicPictureBox {
+  grid-row: span 1;
+  grid-column: span 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(5, 5, 146, 0.397);
+}
+.publicPage .publicPage__picContainer .publicPictureBox .publicPicture {
+  height: 80%;
+  aspect-ratio: 29/40;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.publicPage .publicPage__picContainer .publicPictureBox .pulicPicture__tags {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  overflow-y: auto;
+}
+.publicPage .publicPage__picContainer .publicPictureBox .pulicPicture__tags .tag {
+  font-size: 0.9em;
+}
+
+#vulture {
+  background-image: url("../testImages/vulture.jpg");
+}
+
+#dog01 {
+  background-image: url("../testImages/dog01.jpg");
+}
+
+#dog02 {
+  background-image: url("../testImages/dog02.jpg");
+}
+
+#dog03 {
+  background-image: url("../testImages/dog03.jpg");
+}
+
+#dog04 {
+  background-image: url("../testImages/dog04.jpg");
+}
+
+#dog05 {
+  background-image: url("../testImages/dog05.jpg");
+}
+
+#dog06 {
+  background-image: url("../testImages/dog06.jpg");
+}/*# sourceMappingURL=publicPage.css.map */
