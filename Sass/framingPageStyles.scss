@@ -176,6 +176,7 @@ section {
     right: 1%;
     bottom: 1%;
     position: fixed;
+    z-index: 2;
 
     display: flex;
     justify-content: center;
@@ -184,12 +185,36 @@ section {
     font-size: 25px;
     color: $themeColor01;
     background-color: $themeColor02;
-
     #framingPageNav01 {
       color: $themeColor01;
     }
     #framingPageNav02 {
       display: none;
+    }
+  }
+  .framing__myPictures_nav__menu {
+    position: fixed;
+    z-index: 1;
+    bottom: 0;
+    right: 0;
+
+    background-color: rgba(0, 0, 0, 0.4);
+
+    @include responsive("mobile") {
+      width: 100%;
+      height: 80%;
+    }
+    @include responsive("mobile-l") {
+      width: 30%;
+      height: 89%;
+    }
+    @include responsive("tablet") {
+      width: 40%;
+      height: $sectionHeight;
+    }
+    @include responsive("window") {
+      width: 35%;
+      height: $sectionHeight;
     }
   }
 }
@@ -199,6 +224,7 @@ section {
   width: max-content;
   height: 60px;
 
+  z-index: 100;
   font-size: 3em;
 
   color: $themeColor02;

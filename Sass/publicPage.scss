@@ -43,7 +43,7 @@ header {
   }
 
   #header__titleLogo {
-    width: minmax(max-conent, 5%);
+    width: minmax(max-content, 5%);
     height: 7vh;
     padding-left: 1vw;
     display: flex;
@@ -56,61 +56,61 @@ header {
 
     color: $themeColor02;
   }
+  .header__menu {
+    cursor: pointer;
 
-  #header__icons {
-    height: max-content + 1vw;
-    padding-top: 1vh;
-    padding-bottom: 1vh;
+    height: auto;
+    aspect-ratio: 1 / 1;
     margin: 0;
 
-    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: none;
     color: $themeColor02;
-    @include responsive("window") {
-      width: 15%;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      li {
-        margin-right: 1vw;
-      }
-    }
+    background-color: $themeColor01;
     @include responsive("mobile") {
-      width: 30%;
-      padding-right: 5vw;
-
-      display: flex;
-      justify-content: space-evenly;
-      align-items: center;
-    }
-    @include responsive("tablet") {
-      width: 20%;
-      padding-right: 1vw;
-
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
+      font-size: 2em;
     }
     @include responsive("mobile-l") {
-      width: 20%;
-      padding-right: 1vw;
-
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
+      font-size: 2em;
     }
-    li {
-      width: max-content;
-      height: max-content;
-      font-size: 1.2em;
-
-      padding: 0.2em;
-      padding-left: 0.3em;
-      padding-right: 0.3em;
-      border-radius: 15% / 15%;
-
-      color: $themeColor01;
-      background-color: $themeColor02;
+    @include responsive("tablet") {
+      font-size: 2em;
     }
+    @include responsive("window") {
+      font-size: 2em;
+    }
+  }
+}
+
+.navMenu {
+  width: 100%;
+  height: 10%;
+  max-height: 0;
+
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+
+  position: fixed;
+  right: 0;
+  top: $headerHeight;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  background-color: rgba(0, 0, 128, 0.575);
+
+  cursor: pointer;
+  .navMenu__link {
+    width: auto;
+    height: auto;
+
+    font-size: 1em;
+    font-weight: bold;
+    color: $themeColor02;
   }
 }
 
@@ -173,6 +173,7 @@ header {
     height: 93%;
 
     overflow-y: auto;
+    @extend %scrollbar;
 
     display: grid;
     gap: 5px;
@@ -209,6 +210,7 @@ header {
         aspect-ratio: 29 / 40;
         background-repeat: no-repeat;
         background-size: cover;
+        background-position: center;
       }
       .pulicPicture__tags {
         width: 100%;

@@ -11,6 +11,7 @@
     ></script>
     <title>OPOMO</title>
   </head>
+  <script src="./js/collapsible.js"></script>
   <body>
     <header>
       <span
@@ -19,23 +20,14 @@
         id="header__titleLogo"
         ><p>OPOMO</p></span
       >
-      <ul id="header__icons">
-        <li>
-          <a href="https://lifefourcuts.com/" class="linkbtns"
-            ><i class="fa-brands fa-instagram"></i
-          ></a>
-        </li>
-        <li>
-          <a href="" class="linkbtns"
-            ><i class="fa-solid fa-circle-info"></i
-          ></a>
-        </li>
-        <li>
-          <a href="" class="linkbtns"
-            ><i class="fa-solid fa-circle-user"></i
-          ></a>
-        </li>
-      </ul>
+      <button type="button" class="header__menu" onclick="collapse(this)">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <div class="navMenu">
+        <span class="navMenu__link" onclick="location.href='/customPage'"
+          >직접 만들기</span
+        >
+      </div>
     </header>
     <div class="publicPage">
       <section>

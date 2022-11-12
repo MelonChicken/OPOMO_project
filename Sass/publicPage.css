@@ -1,4 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Concert+One&display=swap");
+@media screen and (min-width: 1024px) {
+  .publicPage .publicPage__picContainer::-webkit-scrollbar {
+    width: 5%;
+  }
+  .publicPage .publicPage__picContainer::-webkit-scrollbar-button {
+    display: none;
+  }
+  .publicPage .publicPage__picContainer::-webkit-scrollbar-thumb {
+    background-color: navy;
+  }
+  .publicPage .publicPage__picContainer::-webkit-scrollbar-track {
+    background-color: rgba(0, 21, 255, 0.16);
+  }
+}
+
 .linkbtns {
   cursor: pointer;
 }
@@ -62,7 +77,9 @@ header {
   }
 }
 header #header__titleLogo {
-  width: minmax(max-conent, 5%);
+  width: minmax(-webkit-max-content, 5%);
+  width: minmax(-moz-max-content, 5%);
+  width: minmax(max-content, 5%);
   height: 7vh;
   padding-left: 1vw;
   display: flex;
@@ -73,66 +90,60 @@ header #header__titleLogo {
   font-weight: bold;
   color: #f5d042;
 }
-header #header__icons {
-  height: max-content1vw;
-  padding-top: 1vh;
-  padding-bottom: 1vh;
+header .header__menu {
+  cursor: pointer;
+  height: auto;
+  aspect-ratio: 1/1;
   margin: 0;
-  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
   color: #f5d042;
-}
-@media screen and (min-width: 1024px) {
-  header #header__icons {
-    width: 15%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  }
-  header #header__icons li {
-    margin-right: 1vw;
-  }
+  background-color: navy;
 }
 @media screen and (max-width: 480px) {
-  header #header__icons {
-    width: 30%;
-    padding-right: 5vw;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  header #header__icons {
-    width: 20%;
-    padding-right: 1vw;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+  header .header__menu {
+    font-size: 2em;
   }
 }
 @media screen and (min-width: 480px) and (max-width: 767px) {
-  header #header__icons {
-    width: 20%;
-    padding-right: 1vw;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+  header .header__menu {
+    font-size: 2em;
   }
 }
-header #header__icons li {
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  height: -webkit-max-content;
-  height: -moz-max-content;
-  height: max-content;
-  font-size: 1.2em;
-  padding: 0.2em;
-  padding-left: 0.3em;
-  padding-right: 0.3em;
-  border-radius: 15%/15%;
-  color: navy;
-  background-color: #f5d042;
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  header .header__menu {
+    font-size: 2em;
+  }
+}
+@media screen and (min-width: 1024px) {
+  header .header__menu {
+    font-size: 2em;
+  }
+}
+
+.navMenu {
+  width: 100%;
+  height: 10%;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  position: fixed;
+  right: 0;
+  top: 8vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: rgba(0, 0, 128, 0.575);
+  cursor: pointer;
+}
+.navMenu .navMenu__link {
+  width: auto;
+  height: auto;
+  font-size: 1em;
+  font-weight: bold;
+  color: #f5d042;
 }
 
 .publicPage {
@@ -223,6 +234,7 @@ header #header__icons li {
   aspect-ratio: 29/40;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 .publicPage .publicPage__picContainer .publicPictureBox .pulicPicture__tags {
   width: 100%;
