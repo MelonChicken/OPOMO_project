@@ -1,0 +1,1 @@
+function shiftIcon(element) {}
