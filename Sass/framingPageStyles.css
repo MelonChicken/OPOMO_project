@@ -3,7 +3,7 @@
   cursor: pointer;
 }
 .linkbtns:visited {
-  color: navy;
+  color: #9481a1;
 }
 
 body {
@@ -29,11 +29,11 @@ header {
   display: flex;
   justify-content: space-between;
   box-shadow: 0px 10px 5px 1px rgba(0, 0, 0, 0.2);
-  color: #f5d042;
+  color: #d5cff5;
 }
 @media screen and (max-width: 480px) {
   header {
-    background-color: navy;
+    background-color: #9481a1;
   }
 }
 @media screen and (min-width: 480px) and (max-width: 767px) {
@@ -48,7 +48,7 @@ header {
 }
 @media screen and (min-width: 1024px) {
   header {
-    background-color: navy;
+    background-color: #9481a1;
   }
 }
 header #header__titleLogo {
@@ -61,7 +61,7 @@ header #header__titleLogo {
   font-family: "Concert One", cursive;
   font-size: 2em;
   font-weight: bold;
-  color: #f5d042;
+  color: #d5cff5;
 }
 header #header__icons {
   height: max-content1vw;
@@ -69,7 +69,7 @@ header #header__icons {
   padding-bottom: 1vh;
   margin: 0;
   list-style: none;
-  color: #f5d042;
+  color: #d5cff5;
 }
 @media screen and (min-width: 1024px) {
   header #header__icons {
@@ -121,8 +121,8 @@ header #header__icons li {
   padding-left: 0.3em;
   padding-right: 0.3em;
   border-radius: 15%/15%;
-  color: navy;
-  background-color: #f5d042;
+  color: #9481a1;
+  background-color: #d5cff5;
 }
 
 section {
@@ -138,7 +138,7 @@ section .framingPage__picContainer {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  background-color: #f5d042;
+  background-color: #d5cff5;
 }
 @media screen and (max-width: 480px) {
   section .framingPage__picContainer {
@@ -190,11 +190,11 @@ section .framingPage__myPictures__nav {
   justify-content: center;
   align-items: center;
   font-size: 25px;
-  color: navy;
-  background-color: #f5d042;
+  color: #9481a1;
+  background-color: #d5cff5;
 }
 section .framingPage__myPictures__nav #framingPageNav01 {
-  color: navy;
+  color: #9481a1;
 }
 section .framingPage__myPictures__nav #framingPageNav02 {
   display: none;
@@ -239,7 +239,7 @@ section .framing__myPictures_nav__menu {
   height: 60px;
   z-index: 100;
   font-size: 3em;
-  color: #f5d042;
+  color: #d5cff5;
   cursor: pointer;
 }
 

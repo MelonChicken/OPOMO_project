@@ -8,7 +8,7 @@
     display: none;
   }
   .publicPage .publicPage__picContainer::-webkit-scrollbar-thumb {
-    background-color: navy;
+    background-color: #9481a1;
   }
   .publicPage .publicPage__picContainer::-webkit-scrollbar-track {
     background-color: rgba(0, 21, 255, 0.16);
@@ -19,7 +19,7 @@
   cursor: pointer;
 }
 .linkbtns:visited {
-  color: navy;
+  color: #9481a1;
 }
 
 .publicPage .publicPage__picContainer .publicPictureBox .pulicPicture__tags .tag, .publicPage section .publicPage__filterContainer .publicPage__filterContainer__filters .chosenFilter {
@@ -33,7 +33,7 @@
   padding-bottom: 2px;
   padding-right: 10px;
   border-radius: 15%/50%;
-  color: #f5d042;
+  color: #d5cff5;
   background-color: rgba(0, 0, 0, 0.6);
 }
 
@@ -55,11 +55,11 @@ header {
   display: flex;
   justify-content: space-between;
   box-shadow: 0px 10px 5px 1px rgba(0, 0, 0, 0.2);
-  color: #f5d042;
+  color: #d5cff5;
 }
 @media screen and (max-width: 480px) {
   header {
-    background-color: navy;
+    background-color: #9481a1;
   }
 }
 @media screen and (min-width: 480px) and (max-width: 767px) {
@@ -74,7 +74,7 @@ header {
 }
 @media screen and (min-width: 1024px) {
   header {
-    background-color: navy;
+    background-color: #9481a1;
   }
 }
 header #header__titleLogo {
@@ -89,7 +89,7 @@ header #header__titleLogo {
   font-family: "Concert One", cursive;
   font-size: 2em;
   font-weight: bold;
-  color: #f5d042;
+  color: #d5cff5;
 }
 header .header__menu {
   cursor: pointer;
@@ -100,8 +100,8 @@ header .header__menu {
   justify-content: center;
   align-items: center;
   border: none;
-  color: #f5d042;
-  background-color: navy;
+  color: #d5cff5;
+  background-color: #9481a1;
 }
 @media screen and (max-width: 480px) {
   header .header__menu {
@@ -144,7 +144,7 @@ header .header__menu {
   height: auto;
   font-size: 1em;
   font-weight: bold;
-  color: #f5d042;
+  color: #d5cff5;
 }
 
 .publicPage {
@@ -186,8 +186,8 @@ header .header__menu {
   justify-content: center;
   align-items: center;
   font-size: 3.3vh;
-  color: navy;
-  background-color: #f5d042;
+  color: #9481a1;
+  background-color: #d5cff5;
 }
 .publicPage .publicPage__picContainer {
   width: 100%;
@@ -195,7 +195,7 @@ header .header__menu {
   overflow-y: auto;
   display: grid;
   gap: 5px;
-  background-color: navy;
+  background-color: #9481a1;
 }
 @media screen and (max-width: 480px) {
   .publicPage .publicPage__picContainer {

@@ -7,7 +7,7 @@
     display: none;
   }
   section .customPage__myPoseContainer .customPage__myPoseContainer__picBox .customPage__myPoseContainer__picBox__grid::-webkit-scrollbar-thumb {
-    background-color: navy;
+    background-color: #9481a1;
   }
   section .customPage__myPoseContainer .customPage__myPoseContainer__picBox .customPage__myPoseContainer__picBox__grid::-webkit-scrollbar-track {
     background-color: rgba(0, 21, 255, 0.16);
@@ -18,7 +18,7 @@
   cursor: pointer;
 }
 .linkbtns:visited {
-  color: navy;
+  color: #9481a1;
 }
 
 body {
@@ -32,6 +32,7 @@ body {
   width: 100%;
   height: 100vh;
 }
+
 header {
   top: 0%;
   left: 0%;
@@ -42,12 +43,12 @@ header {
   height: minmax(max-content, 8vh);
   display: flex;
   justify-content: space-between;
-  box-shadow: 0px 10px 5px 1px rgba(0, 0, 0, 0.2);
-  color: #f5d042;
+  box-shadow: 0px 10px 10px 1px rgba(165, 166, 233, 0.5);
+  color: #d5cff5;
 }
 @media screen and (max-width: 480px) {
   header {
-    background-color: navy;
+    background-color: #9481a1;
   }
 }
 @media screen and (min-width: 480px) and (max-width: 767px) {
@@ -62,7 +63,7 @@ header {
 }
 @media screen and (min-width: 1024px) {
   header {
-    background-color: navy;
+    background-color: #9481a1;
   }
 }
 header #header__titleLogo {
@@ -75,7 +76,7 @@ header #header__titleLogo {
   font-family: "Concert One", cursive;
   font-size: 2em;
   font-weight: bold;
-  color: #f5d042;
+  color: #d5cff5;
 }
 header #header__icons {
   height: max-content1vw;
@@ -83,7 +84,7 @@ header #header__icons {
   padding-bottom: 1vh;
   margin: 0;
   list-style: none;
-  color: #f5d042;
+  color: #d5cff5;
 }
 @media screen and (min-width: 1024px) {
   header #header__icons {
@@ -135,22 +136,22 @@ header #header__icons li {
   padding-left: 0.3em;
   padding-right: 0.3em;
   border-radius: 15%/15%;
-  color: navy;
-  background-color: #f5d042;
+  color: #9481a1;
+  background-color: #d5cff5;
 }
 
 section {
-  padding-top: 8vh;
+  padding-top: 7vh;
   width: 100%;
-  height: 92vh;
-  background-color: navy;
+  height: 94vh;
+  background-color: #a5a6e9;
 }
 section .customPage__choosePoseText {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #f5d042;
-  background-color: navy;
+  color: #d5cff5;
+  background-color: #9481a1;
 }
 @media screen and (max-width: 480px) {
   section .customPage__choosePoseText {
@@ -200,7 +201,7 @@ section .customPage__choosePoseText p {
   }
 }
 section .customPage__myPoseContainer {
-  background-color: navy;
+  background-color: #9481a1;
 }
 @media screen and (max-width: 480px) {
   section .customPage__myPoseContainer {
@@ -243,7 +244,7 @@ section .customPage__myPoseContainer .customPage__myPoseContainer__picBox {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f5d042;
+  background-color: #d5cff5;
 }
 @media screen and (max-width: 480px) {
   section .customPage__myPoseContainer .customPage__myPoseContainer__picBox {
@@ -312,11 +313,11 @@ section .customPage__myPoseContainer .customPage__myPoseContainer__picBox {
   }
 }
 section .customPage__myPoseContainer .customPage__myPoseContainer__picBox .customPage__myPoseContainer__picBox__grid .customPage__myPoseContainer__picBox__grid__pic {
-  border: medium dashed navy;
+  border: medium dashed #9481a1;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f5d042;
+  background-color: #d5cff5;
 }
 @media screen and (max-width: 480px) {
   section .customPage__myPoseContainer .customPage__myPoseContainer__picBox .customPage__myPoseContainer__picBox__grid .customPage__myPoseContainer__picBox__grid__pic {
@@ -348,7 +349,7 @@ section .customPage__myPoseContainer .customPage__myPoseContainer__picBox .custo
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: navy;
+  color: #9481a1;
 }
 section .customPage__myPictures__nav {
   width: 50px;
@@ -361,29 +362,23 @@ section .customPage__myPictures__nav {
   justify-content: center;
   align-items: center;
   font-size: 25px;
-  color: navy;
-  background-color: #f5d042;
+  color: #9481a1;
+  background-color: #d5cff5;
   z-index: 2;
 }
 section .customPage__myPictures__nav #customPageNav01 {
-  color: navy;
+  color: #9481a1;
 }
 section .customPage__myPictures__nav #customPageNav02 {
   display: none;
 }
 section .customPage__navMenu {
-  max-height: 0;
-  height: 100%;
-  overflow: hidden;
-  transition: all 2s ease-in-out;
   position: fixed;
   right: 0;
   top: 8vh;
+  height: 100%;
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  background-color: rgb(0, 0, 0);
-  cursor: pointer;
+  justify-content: flex-end;
 }
 @media screen and (max-width: 480px) {
   section .customPage__navMenu {
@@ -392,25 +387,37 @@ section .customPage__navMenu {
 }
 @media screen and (min-width: 480px) and (max-width: 767px) {
   section .customPage__navMenu {
-    width: 100%;
+    width: 25%;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   section .customPage__navMenu {
-    width: 100%;
+    width: 25%;
   }
 }
 @media screen and (min-width: 1024px) {
   section .customPage__navMenu {
-    width: 25%;
+    width: 35%;
   }
 }
-section .customPage__navMenu .navMenu__link {
+section .customPage__navMenu__collapse {
+  height: 100%;
+  width: 100%;
+  max-width: 0;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+section .customPage__navMenu__collapse .navMenu__link {
   width: auto;
   height: auto;
   font-size: 1em;
   font-weight: bold;
-  color: #f5d042;
+  color: #d5cff5;
 }
 
 .navArrow_left,
@@ -420,7 +427,7 @@ section .customPage__navMenu .navMenu__link {
   width: max-content;
   height: 60px;
   font-size: 3em;
-  color: #f5d042;
+  color: #d5cff5;
   cursor: pointer;
 }
 

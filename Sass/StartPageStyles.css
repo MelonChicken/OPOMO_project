@@ -3,7 +3,7 @@
   cursor: pointer;
 }
 .linkbtns:visited {
-  color: navy;
+  color: #9481a1;
 }
 
 body {
@@ -28,7 +28,7 @@ header {
   box-shadow: 0px 10px 5px 1px rgba(0, 0, 0, 0.2);
   display: flex;
   justify-content: space-between;
-  color: #f5d042;
+  color: #d5cff5;
 }
 @media screen and (max-width: 480px) {
   header {
@@ -47,7 +47,7 @@ header {
 }
 @media screen and (min-width: 1024px) {
   header {
-    background-color: navy;
+    background-color: #9481a1;
   }
 }
 header #header__titleLogo {
@@ -60,7 +60,7 @@ header #header__titleLogo {
   font-family: "Concert One", cursive;
   font-size: 2em;
   font-weight: bold;
-  color: #f5d042;
+  color: #d5cff5;
 }
 header #header__icons {
   height: max-content1vw;
@@ -68,7 +68,7 @@ header #header__icons {
   padding-bottom: 1vh;
   margin: 0;
   list-style: none;
-  color: #f5d042;
+  color: #d5cff5;
 }
 @media screen and (min-width: 1024px) {
   header #header__icons {
@@ -120,8 +120,8 @@ header #header__icons li {
   padding-left: 0.3em;
   padding-right: 0.3em;
   border-radius: 15%/15%;
-  color: navy;
-  background-color: #f5d042;
+  color: #9481a1;
+  background-color: #d5cff5;
 }
 
 section {
@@ -131,7 +131,7 @@ section {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  background-color: navy;
+  background-color: #9481a1;
 }
 @media screen and (max-width: 480px) {
   section .section__leftContainer,
@@ -163,7 +163,7 @@ section .section__rightContainer__fourCutBox {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #f5d042;
+  background-color: #d5cff5;
 }
 @media screen and (max-width: 480px) {
   section .section__leftContainer__customBox,
@@ -210,7 +210,7 @@ section .section__rightContainer__fourCutBox .section__rightContainer__fourCutBo
     font-size: 1.6em;
     font-weight: bold;
     font-family: "Concert One", cursive;
-    color: navy;
+    color: #9481a1;
   }
   section .section__leftContainer__customBox .section__leftContainer__customBox__title #chooseExplanation,
 section .section__leftContainer__customBox .section__rightContainer__fourCutBox__title #chooseExplanation,
@@ -218,7 +218,7 @@ section .section__rightContainer__fourCutBox .section__leftContainer__customBox_
 section .section__rightContainer__fourCutBox .section__rightContainer__fourCutBox__title #chooseExplanation {
     font-size: 0.6em;
     font-weight: bold;
-    color: navy;
+    color: #9481a1;
   }
 }
 @media screen and (min-width: 480px) and (max-width: 767px) {
@@ -229,7 +229,7 @@ section .section__rightContainer__fourCutBox .section__rightContainer__fourCutBo
     font-size: 2.5em;
     font-weight: bold;
     font-family: "Concert One", cursive;
-    color: navy;
+    color: #9481a1;
   }
   section .section__leftContainer__customBox .section__leftContainer__customBox__title #chooseExplanation,
 section .section__leftContainer__customBox .section__rightContainer__fourCutBox__title #chooseExplanation,
@@ -237,7 +237,7 @@ section .section__rightContainer__fourCutBox .section__leftContainer__customBox_
 section .section__rightContainer__fourCutBox .section__rightContainer__fourCutBox__title #chooseExplanation {
     font-size: 1.1em;
     font-weight: bold;
-    color: navy;
+    color: #9481a1;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -248,7 +248,7 @@ section .section__rightContainer__fourCutBox .section__rightContainer__fourCutBo
     font-size: 3em;
     font-weight: bold;
     font-family: "Concert One", cursive;
-    color: navy;
+    color: #9481a1;
   }
   section .section__leftContainer__customBox .section__leftContainer__customBox__title #chooseExplanation,
 section .section__leftContainer__customBox .section__rightContainer__fourCutBox__title #chooseExplanation,
@@ -256,7 +256,7 @@ section .section__rightContainer__fourCutBox .section__leftContainer__customBox_
 section .section__rightContainer__fourCutBox .section__rightContainer__fourCutBox__title #chooseExplanation {
     font-size: 1em;
     font-weight: bold;
-    color: navy;
+    color: #9481a1;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -267,7 +267,7 @@ section .section__rightContainer__fourCutBox .section__rightContainer__fourCutBo
     font-size: 3em;
     font-weight: bold;
     font-family: "Concert One", cursive;
-    color: navy;
+    color: #9481a1;
   }
   section .section__leftContainer__customBox .section__leftContainer__customBox__title #chooseExplanation,
 section .section__leftContainer__customBox .section__rightContainer__fourCutBox__title #chooseExplanation,
@@ -275,7 +275,7 @@ section .section__rightContainer__fourCutBox .section__leftContainer__customBox_
 section .section__rightContainer__fourCutBox .section__rightContainer__fourCutBox__title #chooseExplanation {
     font-size: 1.1em;
     font-weight: bold;
-    color: navy;
+    color: #9481a1;
   }
 }
 section .section__leftContainer__customBox .section__leftContainer__customBox__content,
@@ -341,8 +341,8 @@ section .section__rightContainer__fourCutBox .section__rightContainer__fourCutBo
   border-style: none;
   border-radius: 15%/30%;
   font-weight: bold;
-  background-color: navy;
-  color: #f5d042;
+  background-color: #9481a1;
+  color: #d5cff5;
 }
 section .section__leftContainer__customBox .section__leftContainer__customBox__content .section__leftContainer__customBox__content__button .chooseButton:hover,
 section .section__leftContainer__customBox .section__leftContainer__customBox__content .section__rightContainer__fourCutBox__content__button .chooseButton:hover,
@@ -353,7 +353,7 @@ section .section__rightContainer__fourCutBox .section__leftContainer__customBox_
 section .section__rightContainer__fourCutBox .section__rightContainer__fourCutBox__content .section__leftContainer__customBox__content__button .chooseButton:hover,
 section .section__rightContainer__fourCutBox .section__rightContainer__fourCutBox__content .section__rightContainer__fourCutBox__content__button .chooseButton:hover {
   background-color: purple;
-  color: #f5d042;
+  color: #d5cff5;
 }
 @media screen and (max-width: 480px) {
   section .section__leftContainer__customBox .section__leftContainer__customBox__content .section__leftContainer__customBox__content__button .chooseButton,

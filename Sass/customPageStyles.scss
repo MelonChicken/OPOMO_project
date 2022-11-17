@@ -19,8 +19,6 @@ body {
 .customPage {
   width: 100%;
   height: 100vh;
-  @include responsive("window") {
-  }
 }
 header {
   top: 0%;
@@ -32,7 +30,7 @@ header {
 
   display: flex;
   justify-content: space-between;
-  box-shadow: 0px 10px 5px 1px rgb(0, 0, 0, 0.2);
+  box-shadow: 0px 10px 10px 1px rgb(165, 166, 233, 0.5);
   color: $themeColor02;
   @include responsive("mobile") {
     background-color: $themeColor01;
@@ -120,11 +118,11 @@ header {
 }
 
 section {
-  padding-top: $headerHeight;
+  padding-top: 7vh;
   width: 100%;
-  height: $sectionHeight;
+  height: 94vh;
 
-  background-color: $backgroundColor02;
+  background-color: $themeColor03;
 
   .customPage__choosePoseText {
     @include responsive("mobile") {
@@ -333,16 +331,34 @@ section {
       display: none;
     }
   }
-
   .customPage__navMenu {
-    max-height: 0;
-    height: 100%;
-    overflow: hidden;
-    transition: all 2s ease-in-out;
-
     position: fixed;
     right: 0;
     top: $headerHeight;
+
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+
+    @include responsive("mobile") {
+      width: 100%;
+    }
+    @include responsive("mobile-l") {
+      width: 25%;
+    }
+    @include responsive("tablet") {
+      width: 25%;
+    }
+    @include responsive("window") {
+      width: 35%;
+    }
+  }
+  .customPage__navMenu__collapse {
+    height: 100%;
+    width: 100%;
+    max-width: 0;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
 
     display: flex;
     justify-content: space-evenly;
@@ -350,18 +366,6 @@ section {
 
     background-color: rgba(0, 0, 0);
 
-    @include responsive("mobile") {
-      width: 100%;
-    }
-    @include responsive("mobile-l") {
-      width: 100%;
-    }
-    @include responsive("tablet") {
-      width: 100%;
-    }
-    @include responsive("window") {
-      width: 25%;
-    }
     cursor: pointer;
     .navMenu__link {
       width: auto;
