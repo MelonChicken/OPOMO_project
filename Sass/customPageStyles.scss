@@ -184,7 +184,7 @@ section {
     }
     @include responsive("tablet") {
       width: 100%;
-      height: 70%;
+      height: 90%;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -206,63 +206,63 @@ section {
 
       background-color: $themeColor02;
       @include responsive("mobile") {
-        width: 70%;
-        aspect-ratio: 29 / 40;
+        height: 75vh;
+        aspect-ratio: 1 / 3;
 
-        border-radius: 8% / 6%;
+        border-radius: 8% / 2%;
       }
       @include responsive("mobile-l") {
-        width: 80%;
-        aspect-ratio: 10 / 3;
+        height: 25vh;
+        aspect-ratio: 3 / 1;
 
-        border-radius: 2% / 8%;
+        border-radius: 8% / 2%;
       }
       @include responsive("tablet") {
-        width: 45vh;
-        aspect-ratio: auto 29 / 40;
+        height: 80vh;
+        aspect-ratio: 1 / 3;
 
-        border-radius: 8% / 6%;
+        border-radius: 8% / 2%;
       }
       @include responsive("window") {
-        width: 55vh;
-        aspect-ratio: 29 / 40;
+        height: 75vh;
+        aspect-ratio: 1 / 3;
 
-        border-radius: 8% / 6%;
+        border-radius: 8% / 2%;
       }
 
       .customPage__myPoseContainer__picBox__grid {
         @include responsive("mobile") {
           width: 92%;
-          aspect-ratio: 29 / 40;
+          aspect-ratio: 1 / 3;
 
           display: grid;
           gap: 1em;
-          grid-template-columns: 1fr 1fr;
+          grid-template-columns: 1fr;
           grid-template-rows: repeat(1fr, 4);
         }
         @include responsive("mobile-l") {
           width: 92%;
           aspect-ratio: 3 / 1;
-          display: flex;
-          flex-wrap: nowrap;
-          overflow-x: scroll;
-        }
-        @include responsive("tablet") {
-          width: 90%;
-          aspect-ratio: 29 / 40;
 
           display: grid;
           gap: 1em;
-          grid-template-columns: 1fr 1fr;
+          grid-template-columns: repeat(1fr, 4);
+        }
+        @include responsive("tablet") {
+          width: 90%;
+          aspect-ratio: 1 / 3;
+
+          display: grid;
+          gap: 1em;
+          grid-template-columns: 1fr;
           grid-template-rows: repeat(1fr, 4);
         }
         @include responsive("window") {
           width: 92%;
-          aspect-ratio: 29 / 40;
+          aspect-ratio: 1 / 3;
 
           display: grid;
           gap: 1em;
-          grid-template-columns: 1fr 1fr;
           grid-template-rows: repeat(1fr, 4);
         }
 
@@ -282,10 +282,8 @@ section {
             grid-row: span 1;
           }
           @include responsive("mobile-l") {
-            width: 40%;
-            aspect-ratio: 4 / 3;
-
-            margin-right: 5%;
+            grid-column: span 1;
+            grid-row: span 1;
           }
           @include responsive("tablet") {
             grid-column: span 1;
@@ -327,11 +325,51 @@ section {
     color: $themeColor01;
     background-color: $themeColor02;
 
+    z-index: 2;
     #customPageNav01 {
       color: $themeColor01;
     }
     #customPageNav02 {
       display: none;
+    }
+  }
+
+  .customPage__navMenu {
+    max-height: 0;
+    height: 100%;
+    overflow: hidden;
+    transition: all 2s ease-in-out;
+
+    position: fixed;
+    right: 0;
+    top: $headerHeight;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    background-color: rgba(0, 0, 0);
+
+    @include responsive("mobile") {
+      width: 100%;
+    }
+    @include responsive("mobile-l") {
+      width: 100%;
+    }
+    @include responsive("tablet") {
+      width: 100%;
+    }
+    @include responsive("window") {
+      width: 25%;
+    }
+    cursor: pointer;
+    .navMenu__link {
+      width: auto;
+      height: auto;
+
+      font-size: 1em;
+      font-weight: bold;
+      color: $themeColor02;
     }
   }
 }

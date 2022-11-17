@@ -11,6 +11,8 @@
     ></script>
     <title>OPOMO</title>
   </head>
+  <script src="./js/collapsible.js"></script>
+  <script src="./js/shiftImage.js"></script>
   <body>
     <div class="customPage">
       <header>
@@ -73,40 +75,15 @@
                   <i class="fa-regular fa-square-plus"></i>
                 </div>
               </div>
-              <div class="customPage__myPoseContainer__picBox__grid__pic">
-                <div
-                  class="customPage__myPoseContainer__picBox__grid__pic__innerText"
-                >
-                  <i class="fa-regular fa-square-plus"></i>
-                </div>
-              </div>
-              <div class="customPage__myPoseContainer__picBox__grid__pic">
-                <div
-                  class="customPage__myPoseContainer__picBox__grid__pic__innerText"
-                >
-                  <i class="fa-regular fa-square-plus"></i>
-                </div>
-              </div>
-              <div class="customPage__myPoseContainer__picBox__grid__pic">
-                <div
-                  class="customPage__myPoseContainer__picBox__grid__pic__innerText"
-                >
-                  <i class="fa-regular fa-square-plus"></i>
-                </div>
-              </div>
-              <div class="customPage__myPoseContainer__picBox__grid__pic">
-                <div
-                  class="customPage__myPoseContainer__picBox__grid__pic__innerText"
-                >
-                  <i class="fa-regular fa-square-plus"></i>
-                </div>
-              </div>
             </div>
           </div>
         </div>
         <div class="customPage__myPictures">
           <div class="customPage__myPictures__list"></div>
-          <div class="customPage__myPictures__nav" onclick="collapse(this)">
+          <div
+            class="customPage__myPictures__nav"
+            onclick="collapseRightLeft(this)"
+          >
             <i class="fa-solid fa-image" id="customPageNav01"></i>
             <i class="fa-solid fa-x" id="customPageNav02"></i>
           </div>
