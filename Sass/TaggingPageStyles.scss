@@ -207,9 +207,9 @@ header {
       background-color: rgba(5, 5, 146, 0.397);
       .publicPicture {
         height: 80%;
-        aspect-ratio: 29 / 40;
+        aspect-ratio: 1 / 3;
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: contain;
         background-position: center;
       }
       .pulicPicture__tags {
@@ -230,17 +230,17 @@ header {
 }
 
 #vulture {
-  background-image: url("../testImages/vulture.jpg");
+  background-image: url("../testImages/베어스.png");
 }
 #dog01 {
-  background-image: url("../testImages/dog01.jpg");
+  background-image: url("../testImages/세서미.png");
 }
 
 #dog02 {
-  background-image: url("../testImages/dog02.jpg");
+  background-image: url("../testImages/콩순이.png");
 }
 #dog03 {
-  background-image: url("../testImages/dog03.jpg");
+  background-image: url("../testImages/쿠로미.png");
 }
 #dog04 {
   background-image: url("../testImages/dog04.jpg");

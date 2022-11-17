@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Concert+One&display=swap");
 @media screen and (min-width: 1024px) {
   .publicPage .publicPage__picContainer::-webkit-scrollbar {
@@ -231,9 +232,9 @@ header .header__menu {
 }
 .publicPage .publicPage__picContainer .publicPictureBox .publicPicture {
   height: 80%;
-  aspect-ratio: 29/40;
+  aspect-ratio: 1/3;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
 }
 .publicPage .publicPage__picContainer .publicPictureBox .pulicPicture__tags {
@@ -250,19 +251,19 @@ header .header__menu {
 }
 
 #vulture {
-  background-image: url("../testImages/vulture.jpg");
+  background-image: url("../testImages/베어스.png");
 }
 
 #dog01 {
-  background-image: url("../testImages/dog01.jpg");
+  background-image: url("../testImages/세서미.png");
 }
 
 #dog02 {
-  background-image: url("../testImages/dog02.jpg");
+  background-image: url("../testImages/콩순이.png");
 }
 
 #dog03 {
-  background-image: url("../testImages/dog03.jpg");
+  background-image: url("../testImages/쿠로미.png");
 }
 
 #dog04 {
