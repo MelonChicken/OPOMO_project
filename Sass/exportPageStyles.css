@@ -16,6 +16,7 @@ body {
 .exportPage {
   width: 100%;
   height: 100vh;
+  background-color: #9481a1;
 }
 
 header {
@@ -133,7 +134,7 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: navy;
+  background-color: #9481a1;
 }
 section .exportPage__picContainer {
   display: flex;
@@ -216,6 +217,7 @@ section .exportPage__submissionContainer .exportPage__submissionContainer__save 
   height: 100%;
   display: flex;
   justify-content: center;
+  color: #9481a1;
   background-color: #d5cff5;
   cursor: pointer;
 }
@@ -239,10 +241,13 @@ section .exportPage__submissionContainer .exportPage__submissionContainer__save 
     border-radius: 10%/50%;
   }
 }
+section .exportPage__submissionContainer .exportPage__submissionContainer__save:hover {
+  color: #d5cff5;
+  background-color: #a5a6e9;
+}
 section .exportPage__submissionContainer .exportPage__submissionContainer__save p {
   height: auto;
   font-weight: bold;
-  color: #9481a1;
 }
 @media screen and (max-width: 480px) {
   section .exportPage__submissionContainer .exportPage__submissionContainer__save p {
@@ -298,6 +303,10 @@ section .exportPage__submissionContainer .exportPage__submissionContainer__share
   section .exportPage__submissionContainer .exportPage__submissionContainer__share {
     font-size: 1.1em;
   }
+}
+section .exportPage__submissionContainer .exportPage__submissionContainer__share:hover {
+  color: #d5cff5;
+  background-color: #a5a6e9;
 }
 
 .navArrow_left {

@@ -19,6 +19,7 @@ body {
 .exportPage {
   width: 100%;
   height: 100vh;
+  background-color: $themeColor01;
 }
 header {
   top: 0%;
@@ -127,7 +128,7 @@ section {
   justify-content: center;
   align-items: center;
 
-  background-color: $backgroundColor02;
+  background-color: $themeColor01;
   .exportPage__picContainer {
     @include responsive("mobile") {
       width: 70%;
@@ -198,6 +199,7 @@ section {
       display: flex;
       justify-content: center;
 
+      color: $themeColor01;
       background-color: $themeColor02;
       cursor: pointer;
       @include responsive("mobile") {
@@ -212,10 +214,13 @@ section {
       @include responsive("window") {
         border-radius: 10% / 50%;
       }
+      &:hover {
+        color: $themeColor02;
+        background-color: $themeColor03;
+      }
       p {
         height: auto;
         font-weight: bold;
-        color: $themeColor01;
         @include responsive("mobile") {
           margin: 5%;
           font-size: 1.5em;
@@ -256,6 +261,11 @@ section {
       }
       @include responsive("window") {
         font-size: 1.1em;
+      }
+
+      &:hover {
+        color: $themeColor02;
+        background-color: $themeColor03;
       }
     }
   }
