@@ -57,15 +57,16 @@ function enterkey() {
 
 //
 function saving(element) {
-  // console.dir(element);
-  // console.log(element.id);
-  // console.log(element.src);
+  console.dir(element);
+  console.log(element.id);
+  console.log(element.src);
 
-  localStorage.setItem(element.id, element.url);
-  moveExport();
+  localStorage.setItem(element.id, element.src);
+  setTimeout(moveExport(), 3000);
 }
 
 //이미지 누르면 다운로드pg로 이동
 function moveExport() {
-  location.href = "../export.html";
+  location.href =
+    "file:///C:/Users/%EC%9E%84/Documents/OPOMO_project/export.html";
 }
