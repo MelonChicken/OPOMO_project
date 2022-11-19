@@ -359,12 +359,12 @@ section .customPage__myPoseContainer .customPage__myPoseContainer__picBox .custo
   align-items: center;
   color: #9481a1;
 }
-section .customPage__myPictures__nav {
-  width: 50px;
-  aspect-ratio: 1/1;
-  border-radius: 50%/50%;
+section .customPage__searchPic__nav {
+  width: 30px;
+  aspect-ratio: 1/3;
+  border-radius: 6%/8%;
   right: 1%;
-  bottom: 1%;
+  bottom: 40%;
   position: fixed;
   display: flex;
   justify-content: center;
@@ -374,10 +374,10 @@ section .customPage__myPictures__nav {
   background-color: #d5cff5;
   z-index: 2;
 }
-section .customPage__myPictures__nav #customPageNav01 {
+section .customPage__searchPic__nav #customPageNav01 {
   color: #9481a1;
 }
-section .customPage__myPictures__nav #customPageNav02 {
+section .customPage__searchPic__nav #customPageNav02 {
   display: none;
 }
 section .customPage__navMenu {
@@ -434,6 +434,7 @@ section .customPage__navMenu__collapse .navMenu__link {
   width: -moz-max-content;
   width: max-content;
   height: 60px;
+  top: 8%;
   font-size: 3em;
   color: #d5cff5;
   cursor: pointer;
@@ -441,14 +442,12 @@ section .customPage__navMenu__collapse .navMenu__link {
 
 .navArrow_left {
   padding-left: 1%;
-  top: 50%;
   left: 0%;
   position: fixed;
 }
 
 .navArrow_right {
   padding-right: 1%;
-  top: 50%;
   right: 0%;
   position: fixed;
 }/*# sourceMappingURL=customPageStyles.css.map */
