@@ -8,246 +8,210 @@
 
 body {
   width: 100%;
+  height: 90vh;
   margin: 0;
-
-  display: flex;
-  justify-content: center;
 }
 .linkbtns {
   @extend %link;
 }
 
-header {
-  top: 0%;
-  left: 0%;
-  position: fixed;
-
-  width: 100%;
-  height: minmax(max-content, $headerHeight);
-
-  display: flex;
-  justify-content: space-between;
-  box-shadow: 0px 10px 5px 1px rgb(0, 0, 0, 0.2);
-  color: $themeColor02;
-  @include responsive("mobile") {
-    background-color: $themeColor01;
-  }
-  @include responsive("mobile-l") {
-    background-color: $mobile-lColor;
-  }
-  @include responsive("tablet") {
-    background-color: $tabletColor;
-  }
-  @include responsive("window") {
-    background-color: $themeColor01;
-  }
-
-  #header__titleLogo {
-    width: minmax(max-content, 5%);
-    height: 7vh;
-    padding-left: 1vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    font-family: $logoFont;
-    font-size: 2em;
-    font-weight: bold;
-
-    color: $themeColor02;
-  }
-  .header__menu {
-    cursor: pointer;
-
-    height: auto;
-    aspect-ratio: 1 / 1;
-    margin: 0;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    border: none;
-    color: $themeColor02;
-    background-color: $themeColor01;
-    @include responsive("mobile") {
-      font-size: 2em;
-    }
-    @include responsive("mobile-l") {
-      font-size: 2em;
-    }
-    @include responsive("tablet") {
-      font-size: 2em;
-    }
-    @include responsive("window") {
-      font-size: 2em;
-    }
-  }
-}
-
-.navMenu {
-  width: 100%;
-  height: 10%;
-  max-height: 0;
-
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-
-  position: fixed;
-  right: 0;
-  top: $headerHeight;
-
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-
-  background-color: rgba(0, 0, 128, 0.575);
-
-  cursor: pointer;
-  .navMenu__link {
-    width: auto;
-    height: auto;
-
-    font-size: 1em;
-    font-weight: bold;
-    color: $themeColor02;
-  }
-}
-
 .publicPage {
   width: 100%;
-  height: 100vh;
+  height: 100%;
+  header {
+    top: 0%;
+    left: 0%;
+    position: fixed;
 
-  section {
-    padding-top: $headerHeight;
     width: 100%;
-    height: $sectionHeight;
+    height: minmax(max-content, $headerHeight);
 
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-between;
+    box-shadow: 0px 10px 5px 1px rgb(0, 0, 0, 0.2);
+    color: $themeColor02;
+    @include responsive("mobile") {
+      background-color: $themeColor01;
+    }
+    @include responsive("mobile-l") {
+      background-color: $mobile-lColor;
+    }
+    @include responsive("tablet") {
+      background-color: $tabletColor;
+    }
+    @include responsive("window") {
+      background-color: $themeColor01;
+    }
 
-    background-color: $backgroundColor02;
-    .publicPage__filterContainer {
+    #header__titleLogo {
+      width: minmax(max-content, 5%);
+      height: 7vh;
+      padding-left: 1vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      font-family: $logoFont;
+      font-size: 2em;
+      font-weight: bold;
+
+      color: $themeColor02;
+    }
+    .header__menu {
+      cursor: pointer;
+
+      height: auto;
+      aspect-ratio: 1 / 1;
+      margin: 0;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      border: none;
+      color: $themeColor02;
+      background-color: $themeColor01;
+      @include responsive("mobile") {
+        font-size: 2em;
+      }
+      @include responsive("mobile-l") {
+        font-size: 2em;
+      }
+      @include responsive("tablet") {
+        font-size: 2em;
+      }
+      @include responsive("window") {
+        font-size: 2em;
+      }
+    }
+
+    .navMenu {
       width: 100%;
-      height: 7%;
+      height: 10%;
+      max-height: 0;
 
-      bottom: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+
       position: fixed;
+      right: 0;
+      top: $headerHeight;
 
       display: flex;
       justify-content: space-evenly;
       align-items: center;
 
-      background-color: $filterColor;
-      .publicPage__filterContainer__filters {
-        width: 83%;
-        height: 100%;
-        display: flex;
+      background-color: rgba(0, 0, 128, 0.575);
 
-        flex-wrap: wrap;
-        overflow: auto;
-        align-items: center;
-        .chosenFilter {
-          @extend %hash;
-        }
-      }
-      .publicPage__filterContainer__choose {
-        height: 90%;
-        aspect-ratio: 1 /1;
-        border-radius: 15% / 15%;
+      cursor: pointer;
+      .navMenu__link {
+        width: auto;
+        height: auto;
 
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        font-size: 3.3vh;
-
-        color: $themeColor01;
-        background-color: $themeColor02;
+        font-size: 1em;
+        font-weight: bold;
+        color: $themeColor02;
       }
     }
   }
-  .publicPage__picContainer {
+
+  section {
+    padding-top: 5vh;
     width: 100%;
-    height: 93%;
+    height: 95vh;
 
-    overflow-y: auto;
-    @extend %scrollbar;
+    .publicPage__picContainer {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow-y: auto;
+      @extend %scrollbar;
 
-    display: grid;
-    gap: 5px;
+      display: grid;
+      gap: 5px;
 
-    background-color: $themeColor01;
-    @include responsive("mobile") {
-      grid-template-columns: repeat(2, 1fr);
-      grid-auto-rows: 30vh;
-    }
-
-    @include responsive("mobile-l") {
-      grid-template-columns: repeat(3, 1fr);
-      grid-auto-rows: 30vh;
-    }
-    @include responsive("tablet") {
-      grid-template-columns: repeat(3, 1fr);
-      grid-auto-rows: 30vh;
-    }
-    @include responsive("window") {
-      grid-template-columns: repeat(5, 1fr);
-      grid-auto-rows: 55vh;
-    }
-    .publicPictureBox {
-      grid-row: span 1;
-      grid-column: span 1;
-
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background-color: rgba(5, 5, 146, 0.397);
-      .publicPicture {
-        height: 80%;
-        aspect-ratio: 1 / 3;
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
+      background-color: $themeColor01;
+      @include responsive("mobile") {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 30vh;
       }
-      .pulicPicture__tags {
-        width: 100%;
-        height: 20%;
+
+      @include responsive("mobile-l") {
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 30vh;
+      }
+      @include responsive("tablet") {
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 30vh;
+      }
+      @include responsive("window") {
+        grid-template-columns: repeat(5, 1fr);
+        grid-auto-rows: 55vh;
+      }
+      .publicPictureBox {
+        grid-row: span 1;
+        grid-column: span 1;
+
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-evenly;
-        align-items: center;
-        overflow-y: auto;
+        background-color: rgba(5, 5, 146, 0.397);
+        .publicPicture__container {
+          width: 100%;
+          height: 90%;
+          .pic {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+
         .tag {
           font-size: 0.9em;
+          margin: 0;
           @extend %hash;
         }
       }
     }
   }
-}
 
-#vulture {
-  background-image: url("../testImages/베어스.png");
-}
-#dog01 {
-  background-image: url("../testImages/세서미.png");
-}
+  .publicPage__filterContainer {
+    width: 100%;
+    height: 7%;
 
-#dog02 {
-  background-image: url("../testImages/콩순이.png");
-}
-#dog03 {
-  background-image: url("../testImages/쿠로미.png");
-}
-#dog04 {
-  background-image: url("../testImages/dog04.jpg");
-}
-#dog05 {
-  background-image: url("../testImages/dog05.jpg");
-}
-#dog06 {
-  background-image: url("../testImages/dog06.jpg");
+    bottom: 0;
+    position: fixed;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    background-color: $filterColor;
+    .publicPage__filterContainer__filters {
+      width: 83%;
+      height: 100%;
+      display: flex;
+
+      flex-wrap: wrap;
+      overflow: auto;
+      align-items: center;
+      .chosenFilter {
+        @extend %hash;
+      }
+    }
+    .publicPage__filterContainer__choose {
+      height: 90%;
+      aspect-ratio: 1 /1;
+      border-radius: 15% / 15%;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      font-size: 3.3vh;
+
+      color: $themeColor01;
+      background-color: $themeColor02;
+    }
+  }
 }
