@@ -76,7 +76,6 @@ body {
   justify-content: center;
   align-items: flex-start;
   white-space: nowrap;
-  font-family: Kotra;
   text-shadow: 2px 2px 4px #a5a6e9;
   color: #fffaff;
 }
@@ -167,7 +166,6 @@ body {
   margin: 2vh;
   border: none;
   box-shadow: 2px 4px #a5a6e9;
-  font-family: Kotra;
   font-weight: bold;
   color: #9481a1;
   background-color: #fffaff;
