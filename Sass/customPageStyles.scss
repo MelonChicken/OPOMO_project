@@ -367,13 +367,22 @@ section {
     background-color: rgba(0, 0, 0);
 
     cursor: pointer;
-    .navMenu__link {
-      width: auto;
-      height: auto;
+    .customPage__navMenu__collapse__grid {
+      width: 98%;
+      height: 70%;
 
-      font-size: 1em;
-      font-weight: bold;
-      color: $themeColor02;
+      display: grid;
+
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      gap: 1%;
+
+      .posePictureBox {
+        grid-column: span 1;
+        grid-row: span 1;
+
+        background-color: white;
+      }
     }
   }
 }
