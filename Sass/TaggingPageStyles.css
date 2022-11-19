@@ -1,33 +1,42 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Concert+One&display=swap");
+@font-face {
+  font-family: Kotra;
+  src: url(../font/KOTRA\ HOPE.otf);
+}
 @media screen and (min-width: 1024px) {
-  .publicPage .publicPage__picContainer::-webkit-scrollbar {
+  .publicPage section .publicPage__picContainer::-webkit-scrollbar {
     width: 5%;
   }
-  .publicPage .publicPage__picContainer::-webkit-scrollbar-button {
+  .publicPage section .publicPage__picContainer::-webkit-scrollbar-button {
     display: none;
   }
-  .publicPage .publicPage__picContainer::-webkit-scrollbar-thumb {
+  .publicPage section .publicPage__picContainer::-webkit-scrollbar-thumb {
     background-color: #9481a1;
   }
-  .publicPage .publicPage__picContainer::-webkit-scrollbar-track {
+  .publicPage section .publicPage__picContainer::-webkit-scrollbar-track {
     background-color: rgba(0, 21, 255, 0.16);
   }
 }
 
 .linkbtns {
   cursor: pointer;
+  color: #9481a1;
+}
+.linkbtns:link {
+  color: #9481a1;
 }
 .linkbtns:visited {
   color: #9481a1;
 }
 
-.publicPage .publicPage__picContainer .publicPictureBox .pulicPicture__tags .tag, .publicPage section .publicPage__filterContainer .publicPage__filterContainer__filters .chosenFilter {
+.publicPage .publicPage__filterContainer .publicPage__filterContainer__filters .chosenFilter, .publicPage section .publicPage__picContainer .publicPictureBox .tag {
   cursor: pointer;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  height: auto;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
   padding-left: 10px;
   padding-top: 2px;
   padding-bottom: 2px;
@@ -39,12 +48,15 @@
 
 body {
   width: 100%;
+  height: 90vh;
   margin: 0;
-  display: flex;
-  justify-content: center;
 }
 
-header {
+.publicPage {
+  width: 100%;
+  height: 100%;
+}
+.publicPage header {
   top: 0%;
   left: 0%;
   position: fixed;
@@ -58,26 +70,26 @@ header {
   color: #d5cff5;
 }
 @media screen and (max-width: 480px) {
-  header {
+  .publicPage header {
     background-color: #9481a1;
   }
 }
 @media screen and (min-width: 480px) and (max-width: 767px) {
-  header {
+  .publicPage header {
     background-color: purple;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-  header {
+  .publicPage header {
     background-color: green;
   }
 }
 @media screen and (min-width: 1024px) {
-  header {
+  .publicPage header {
     background-color: #9481a1;
   }
 }
-header #header__titleLogo {
+.publicPage header #header__titleLogo {
   width: minmax(-webkit-max-content, 5%);
   width: minmax(-moz-max-content, 5%);
   width: minmax(max-content, 5%);
@@ -91,7 +103,7 @@ header #header__titleLogo {
   font-weight: bold;
   color: #d5cff5;
 }
-header .header__menu {
+.publicPage header .header__menu {
   cursor: pointer;
   height: auto;
   aspect-ratio: 1/1;
@@ -104,27 +116,26 @@ header .header__menu {
   background-color: #9481a1;
 }
 @media screen and (max-width: 480px) {
-  header .header__menu {
+  .publicPage header .header__menu {
     font-size: 2em;
   }
 }
 @media screen and (min-width: 480px) and (max-width: 767px) {
-  header .header__menu {
+  .publicPage header .header__menu {
     font-size: 2em;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-  header .header__menu {
+  .publicPage header .header__menu {
     font-size: 2em;
   }
 }
 @media screen and (min-width: 1024px) {
-  header .header__menu {
+  .publicPage header .header__menu {
     font-size: 2em;
   }
 }
-
-.navMenu {
+.publicPage header .navMenu {
   width: 100%;
   height: 10%;
   max-height: 0;
@@ -139,28 +150,74 @@ header .header__menu {
   background-color: rgba(0, 0, 128, 0.575);
   cursor: pointer;
 }
-.navMenu .navMenu__link {
+.publicPage header .navMenu .navMenu__link {
   width: auto;
   height: auto;
   font-size: 1em;
   font-weight: bold;
   color: #d5cff5;
 }
-
-.publicPage {
-  width: 100%;
-  height: 100vh;
-}
 .publicPage section {
-  padding-top: 8vh;
+  padding-top: 5vh;
   width: 100%;
-  height: 92vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  background-color: navy;
+  height: 95vh;
 }
-.publicPage section .publicPage__filterContainer {
+.publicPage section .publicPage__picContainer {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  display: grid;
+  gap: 5px;
+  background-color: #9481a1;
+}
+@media screen and (max-width: 480px) {
+  .publicPage section .publicPage__picContainer {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 30vh;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .publicPage section .publicPage__picContainer {
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 30vh;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .publicPage section .publicPage__picContainer {
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 30vh;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .publicPage section .publicPage__picContainer {
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: 55vh;
+  }
+}
+.publicPage section .publicPage__picContainer .publicPictureBox {
+  grid-row: span 1;
+  grid-column: span 1;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgba(5, 5, 146, 0.397);
+}
+.publicPage section .publicPage__picContainer .publicPictureBox .publicPicture__container {
+  width: 100%;
+  height: 90%;
+}
+.publicPage section .publicPage__picContainer .publicPictureBox .publicPicture__container .pic {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.publicPage section .publicPage__picContainer .publicPictureBox .tag {
+  font-size: 0.9em;
+  margin: 0;
+}
+.publicPage .publicPage__filterContainer {
   width: 100%;
   height: 7%;
   bottom: 0;
@@ -170,7 +227,7 @@ header .header__menu {
   align-items: center;
   background-color: rgba(0, 0, 0, 0.2);
 }
-.publicPage section .publicPage__filterContainer .publicPage__filterContainer__filters {
+.publicPage .publicPage__filterContainer .publicPage__filterContainer__filters {
   width: 83%;
   height: 100%;
   display: flex;
@@ -178,7 +235,7 @@ header .header__menu {
   overflow: auto;
   align-items: center;
 }
-.publicPage section .publicPage__filterContainer .publicPage__filterContainer__choose {
+.publicPage .publicPage__filterContainer .publicPage__filterContainer__choose {
   height: 90%;
   aspect-ratio: 1/1;
   border-radius: 15%/15%;
@@ -188,92 +245,4 @@ header .header__menu {
   font-size: 3.3vh;
   color: #9481a1;
   background-color: #d5cff5;
-}
-.publicPage .publicPage__picContainer {
-  width: 100%;
-  height: 93%;
-  overflow-y: auto;
-  display: grid;
-  gap: 5px;
-  background-color: #9481a1;
-}
-@media screen and (max-width: 480px) {
-  .publicPage .publicPage__picContainer {
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: 30vh;
-  }
-}
-@media screen and (min-width: 480px) and (max-width: 767px) {
-  .publicPage .publicPage__picContainer {
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: 30vh;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  .publicPage .publicPage__picContainer {
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: 30vh;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .publicPage .publicPage__picContainer {
-    grid-template-columns: repeat(5, 1fr);
-    grid-auto-rows: 55vh;
-  }
-}
-.publicPage .publicPage__picContainer .publicPictureBox {
-  grid-row: span 1;
-  grid-column: span 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(5, 5, 146, 0.397);
-}
-.publicPage .publicPage__picContainer .publicPictureBox .publicPicture {
-  height: 80%;
-  aspect-ratio: 1/3;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-}
-.publicPage .publicPage__picContainer .publicPictureBox .pulicPicture__tags {
-  width: 100%;
-  height: 20%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
-  overflow-y: auto;
-}
-.publicPage .publicPage__picContainer .publicPictureBox .pulicPicture__tags .tag {
-  font-size: 0.9em;
-}
-
-#vulture {
-  background-image: url("../testImages/베어스.png");
-}
-
-#dog01 {
-  background-image: url("../testImages/세서미.png");
-}
-
-#dog02 {
-  background-image: url("../testImages/콩순이.png");
-}
-
-#dog03 {
-  background-image: url("../testImages/쿠로미.png");
-}
-
-#dog04 {
-  background-image: url("../testImages/dog04.jpg");
-}
-
-#dog05 {
-  background-image: url("../testImages/dog05.jpg");
-}
-
-#dog06 {
-  background-image: url("../testImages/dog06.jpg");
 }/*# sourceMappingURL=TaggingPageStyles.css.map */

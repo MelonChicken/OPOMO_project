@@ -13,110 +13,57 @@
   </head>
   <script src="./js/collapsible.js"></script>
   <body>
-    <header>
-      <span
-        OnClick="location.href='/index'"
-        class="linkbtns"
-        id="header__titleLogo"
-        ><p>OPOMO</p></span
-      >
-      <button type="button" class="header__menu" onclick="collapseUpDown(this)">
-        <i class="fa-solid fa-bars"></i>
-      </button>
-      <div class="navMenu">
-        <span class="navMenu__link" onclick="location.href='/customPage'"
-          >직접 만들기</span
-        >
-      </div>
-    </header>
     <div class="publicPage">
+      <header>
+        <span
+          OnClick="location.href='/index'"
+          class="linkbtns"
+          id="header__titleLogo"
+          draggable="true"
+          ><p>OPOMO</p></span
+        >
+        <button
+          type="button"
+          class="header__menu"
+          onclick="collapseUpDown(this)"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="navMenu">
+          <span class="navMenu__link" onclick="location.href='/customPage'"
+            >직접 만들기</span
+          >
+        </div>
+      </header>
+
       <section>
-        <div class="publicPage__picContainer">
-          <span class="publicPictureBox">
-            <div class="publicPicture" id="vulture"></div>
-            <div class="pulicPicture__tags">
-              <span class="tag">#3명</span>
-              <span class="tag">#신나게</span>
-              <span class="tag">#친구와</span>
+        <ul class="publicPage__picContainer">
+          <li class="publicPictureBox">
+            <div class="publicPicture__container">
+              <img class="pic" src="./images/dog01.jpg" alt="" />
             </div>
-          </span>
-          <span class="publicPictureBox">
-            <div class="publicPicture" id="dog01"></div>
-            <div class="pulicPicture__tags">
-              <span class="tag">#2명</span>
-              <span class="tag">#친구와</span>
-            </div>
-          </span>
-          <span class="publicPictureBox">
-            <div class="publicPicture" id="dog02"></div>
-            <div class="pulicPicture__tags">
-              <span class="tag">#1명</span>
-              <span class="tag">#혼자서</span>
-            </div>
-          </span>
-          <span class="publicPictureBox">
-            <div class="publicPicture" id="dog03"></div>
-            <div class="pulicPicture__tags">
-              <span class="tag">#2명</span>
-              <span class="tag">#친구와</span>
-              <span class="tag">#연인과</span>
-            </div>
-          </span>
-          <span class="publicPictureBox">
-            <div class="publicPicture" id="dog04"></div>
-            <div class="pulicPicture__tags">
-              <span class="tag">#즐겁게</span>
-              <span class="tag">#즐겁게</span>
-              <span class="tag">#치명적이개</span>
-            </div>
-          </span>
-          <span class="publicPictureBox">
-            <div class="publicPicture" id="dog05"></div>
-            <div class="pulicPicture__tags">
-              <span class="tag">#즐겁게</span>
-              <span class="tag">#귀엽개</span>
-            </div>
-          </span>
-          <span class="publicPictureBox">
-            <div class="publicPicture" id="dog06"></div>
-            <div class="pulicPicture__tags">
-              <span class="tag">#즐겁게</span>
-              <span class="tag">#즐겁게</span>
-              <span class="tag">#즐겁게</span>
-              <span class="tag">#섹시하개</span>
-            </div>
-          </span>
-          <span class="publicPictureBox">
-            <div class="publicPicture" id="dog01"></div>
-            <div class="pulicPicture__tags">
-              <span class="tag">#즐겁게</span>
-              <span class="tag">#즐겁게</span>
-              <span class="tag">#즐겁게</span>
-              <span class="tag">#즐겁게</span>
-              <span class="tag">#장난스럽개</span>
-            </div>
-          </span>
-          <span class="publicPictureBox">
-            <div class="publicPicture" id="dog02"></div>
-            <div class="pulicPicture__tags">
-              <span class="tag">#화나개</span>
-            </div>
-          </span>
-        </div>
-        <div class="publicPage__filterContainer">
-          <div class="publicPage__filterContainer__filters">
-            <span class="chosenFilter">#친구와</span>
-            <span class="chosenFilter">#즐겁게</span>
-            <span class="chosenFilter">#친구와</span>
-            <span class="chosenFilter">#즐겁게</span>
-            <span class="chosenFilter">#친구와</span>
-            <span class="chosenFilter">#즐겁게</span>
-          </div>
-          <div class="publicPage__filterContainer__choose">
-            <i class="fa-solid fa-hashtag"></i>
-          </div>
-        </div>
+            <p class="tag">#3명</p>
+            <p class="tag">#신나게</p>
+            <p class="tag">#친구와</p>
+          </li>
+        </ul>
       </section>
+
+      <div class="publicPage__filterContainer">
+        <div class="publicPage__filterContainer__filters"></div>
+        <div class="publicPage__filterContainer__choose"></div>
+      </div>
+
+      <div class="container">
+        <form id="search-form">
+          <input type="text" id="search" placeholder="#와 함께 입력해주세요!" />
+          <button id="searchBtn">
+            <i class="fa-solid fa-hashtag"></i>
+          </button>
+        </form>
+        <ul id="list"></ul>
+      </div>
+      <script src="./js/script.js"></script>
     </div>
   </body>
 </html>
