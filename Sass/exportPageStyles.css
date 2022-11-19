@@ -152,20 +152,20 @@ section .exportPage__picContainer {
 }
 @media screen and (max-width: 480px) {
   section .exportPage__picContainer {
-    width: 70%;
-    aspect-ratio: 29/40;
+    width: 50%;
+    aspect-ratio: 1/3;
   }
 }
 @media screen and (min-width: 480px) and (max-width: 767px) {
   section .exportPage__picContainer {
-    width: 70%;
-    aspect-ratio: 29/40;
+    width: 35%;
+    aspect-ratio: 1/3;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   section .exportPage__picContainer {
-    width: 70%;
-    aspect-ratio: 29/40;
+    width: 35%;
+    aspect-ratio: 1/3;
   }
 }
 @media screen and (min-width: 1024px) {
