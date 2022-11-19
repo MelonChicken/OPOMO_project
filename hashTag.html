@@ -35,6 +35,7 @@
           >
         </div>
       </header>
+
       <section>
         <ul class="publicPage__picContainer">
           <li class="publicPictureBox">
@@ -47,16 +48,22 @@
           </li>
         </ul>
       </section>
+
       <div class="publicPage__filterContainer">
-        <div class="publicPage__filterContainer__filters">
-          <span class="chosenFilter">#친구와</span>
-          <span class="chosenFilter">#즐겁게</span>
-          <span class="chosenFilter">#친구와</span>
-        </div>
-        <div class="publicPage__filterContainer__choose">
-          <i class="fa-solid fa-hashtag"></i>
-        </div>
+        <div class="publicPage__filterContainer__filters"></div>
+        <div class="publicPage__filterContainer__choose"></div>
       </div>
+
+      <div class="container">
+        <form id="search-form">
+          <input type="text" id="search" placeholder="#와 함께 입력해주세요!" />
+          <button id="searchBtn">
+            <i class="fa-solid fa-hashtag"></i>
+          </button>
+        </form>
+        <ul id="list"></ul>
+      </div>
+      <script src="./js/script.js"></script>
     </div>
   </body>
 </html>
