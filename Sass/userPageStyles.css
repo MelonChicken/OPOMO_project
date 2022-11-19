@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Concert+One&display=swap");
+@font-face {
+  font-family: Kotra;
+  src: url(../font/KOTRA\ HOPE.otf);
+}
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+}
+body .userPage {
+  width: 100%;
+  height: 100%;
+  background-color: #9481a1;
+}/*# sourceMappingURL=userPageStyles.css.map */
