@@ -29,7 +29,8 @@
   color: #9481a1;
 }
 
-.publicPage .publicPage__filterContainer .publicPage__filterContainer__filters .chosenFilter, .publicPage section .publicPage__picContainer .publicPictureBox .tag {
+.publicPage .publicPage__filterContainer .publicPage__filterContainer__filters .chosenFilter,
+.publicPage .container .publicPage__filterContainer__filters .chosenFilter, .publicPage section .publicPage__picContainer .publicPictureBox .tag {
   cursor: pointer;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -217,7 +218,8 @@ body {
   font-size: 0.9em;
   margin: 0;
 }
-.publicPage .publicPage__filterContainer {
+.publicPage .publicPage__filterContainer,
+.publicPage .container {
   width: 100%;
   height: 7%;
   bottom: 0;
@@ -227,7 +229,8 @@ body {
   align-items: center;
   background-color: rgba(0, 0, 0, 0.2);
 }
-.publicPage .publicPage__filterContainer .publicPage__filterContainer__filters {
+.publicPage .publicPage__filterContainer .publicPage__filterContainer__filters,
+.publicPage .container .publicPage__filterContainer__filters {
   width: 83%;
   height: 100%;
   display: flex;
@@ -235,9 +238,11 @@ body {
   overflow: auto;
   align-items: center;
 }
-.publicPage .publicPage__filterContainer .publicPage__filterContainer__choose {
+.publicPage .publicPage__filterContainer .publicPage__filterContainer__choose,
+.publicPage .container .publicPage__filterContainer__choose {
   height: 90%;
   aspect-ratio: 1/1;
+  border: none;
   border-radius: 15%/15%;
   display: flex;
   justify-content: center;
