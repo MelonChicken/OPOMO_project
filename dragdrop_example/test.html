@@ -6,12 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="testyy.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
   </head>  
   <body>
     <div class="container">
         <div draggable="true" class="box">A</div>
         <div draggable="true" class="box">B</div>
         <div draggable="true" class="box">C</div>
+        <div draggable="true" class="box">D</div>
+        <div draggable="true" class="box">E</div>
     </div>
     <script>
       const container = document.querySelector(".container");
@@ -34,11 +37,12 @@
         //놓임을 당한 대상이 선택됨
         const obj = e.target;
         const index = [...obj.parentNode.children].indexOf(obj)
-        
+
+        //***순서 바꾸는 거*** not 서로 바꾸기
+        //맨 마지막으로 옮길 때 밀리는 현상 해결해야 함
         index > pickedIndex ? obj.after(picked) : obj.before(picked)
       })
       
-
     </script>
   </body>
   
