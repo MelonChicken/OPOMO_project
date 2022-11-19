@@ -21,10 +21,13 @@ function showList(val = "") {
   const res = sibal.forEach((pose) => {
     if (pose.tag.includes(val)) {
       const li = document.createElement("li");
+      li.classList.add("publicPictureBox");
       li.innerHTML = `
-                <img src='${pose.url}' alt='${pose.tag}'>
-                <p>이름: ${pose.name}</p>
-                <p> ${pose.tag}</p>
+                <div class="publicPicture__container">
+                  <img  class="pic" src='${pose.url}' alt='${pose.tag}'>
+                </div>
+                <p class="tag">이름: ${pose.name}</p>
+                <p class="tag"> ${pose.tag}</p>
             `;
       list.appendChild(li);
     }

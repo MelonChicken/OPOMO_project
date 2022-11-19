@@ -37,19 +37,16 @@
       </header>
 
       <section>
-        <ul class="publicPage__picContainer">
-          <li class="publicPictureBox">
-            <div class="publicPicture__container">
-              <img class="pic" src="./images/dog01.jpg" alt="" />
-            </div>
-            <p class="tag">#3명</p>
-            <p class="tag">#신나게</p>
-            <p class="tag">#친구와</p>
-          </li>
+        <ul class="publicPage__picContainer" id="list">
+          <li class="publicPictureBox"></li>
         </ul>
       </section>
 
-      <!--검색창-->
+      <div class="publicPage__filterContainer">
+        <div class="publicPage__filterContainer__filters"></div>
+        <div class="publicPage__filterContainer__choose"></div>
+      </div>
+
       <div class="container">
         <form id="search-form">
           <input type="text" id="search" placeholder="#와 함께 입력해주세요!" />
@@ -57,14 +54,6 @@
             <i class="fa-solid fa-hashtag"></i>
           </button>
         </form>
-        <ul id="list">
-          <!--여기는 자바스크립트에서 데이터를 추가-->
-        </ul>
-      </div>
-
-      <div class="publicPage__filterContainer">
-        <div class="publicPage__filterContainer__filters"></div>
-        <div class="publicPage__filterContainer__choose"></div>
       </div>
       <script src="./js/search.js"></script>
     </div>
