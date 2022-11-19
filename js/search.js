@@ -46,3 +46,11 @@ searchBtn.addEventListener("click", (e) => {
   console.log(val);
   showList(val);
 });
+
+//enter키 눌렀을때 반응
+function enterkey() {
+  if (window.event.keyCode == 13) {
+    // 엔터키가 눌렸을 때 실행할 내용
+    showList();
+  }
+}
