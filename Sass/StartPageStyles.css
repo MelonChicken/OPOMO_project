@@ -1,14 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Concert+One&display=swap");
-@font-face {
-  font-family: Kotra;
-  src: url(../font/KOTRA\ HOPE.otf);
-}
 .linkbtns {
   cursor: pointer;
-  color: #9481a1;
-}
-.linkbtns:link {
-  color: #9481a1;
 }
 .linkbtns:visited {
   color: #9481a1;
