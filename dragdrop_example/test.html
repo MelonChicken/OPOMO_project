@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="testyy.css">
-    <script src="testy.js"></script>
   </head>  
   <body>
     <div class="container">
@@ -14,6 +13,33 @@
         <div draggable="true" class="box">B</div>
         <div draggable="true" class="box">C</div>
     </div>
+    <script>
+      const container = document.querySelector(".container");
+
+      //dragstat, dragover, drop 순서로 구분
+
+      let picked = null; // 당길 때의 대상을 변수에 설정
+      container.addEventListener("dragstart", (e)=>{ // event라는 listner를 parameter로 받을 수 있음
+        const obj = e.target;
+        picked = obj
+
+        //indexOf 사용하려면 배열로 변환해야함: html 컬렉션.. 
+        pickedIndex = [...obj.parentNode.children].indexOf(obj) 
+        //당기는 대상이 선택됨.. 인덱스를 파악해서 순서 바꿀 수 있음
+      }) 
+      container.addEventListener("dragover", (e)=>{
+        e.preventDefault()
+      })
+      container.addEventListener("drop", (e)=>{
+        //놓임을 당한 대상이 선택됨
+        const obj = e.target;
+        const index = [...obj.parentNode.children].indexOf(obj)
+        
+        index > pickedIndex ? obj.after(picked) : obj.before(picked)
+      })
+      
+
+    </script>
   </body>
   
 </html>
