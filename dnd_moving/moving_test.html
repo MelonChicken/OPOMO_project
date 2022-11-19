@@ -1,66 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Document</title>
+   <title>dnd 끌어다 놓기 test</title>
+   <style>
+      #div1, #div2 {
+         width : 500px;
+         height : 500px;
+         padding : 10px;
+         border : 1px solid #aaaaaa;
+      }
+   </style>
+   <script>
+      function allowDrop(allowdropevent) {
+         allowdropevent.preventDefault();
+      }
+
+      // text로 드래그 요소의 id (drag1)을 받아옴
+      function drag(dragevent) {
+         dragevent.dataTransfer.setData("text", dragevent.target.id);
+      }
+      
+
+      // 드래그된 데이터가 삭제되면 삭제 이벤트가 발생
+      // dataTransfer.getData()로 드래그된 데이터(ID)를 가져옴
+      // 드래그된 요소를 드롭 요소에 추가
+      function drop(dropevent) {
+         dropevent.preventDefault();
+         const data = dropevent.dataTransfer.getData("text");
+         //alert(data)
+         dropevent.target.appendChild(document.getElementById(data));
+      }
+
+      //ondragover는 드래그된 데이터 드롭할 수 있는 위치 지정
+   </script>
 </head>
 <body>
-   <style>
-      .container {
-         font-family: "Trebuchet MS", sans-serif;
-         display: flex;
-         gap: 30px;
-         }
-      .column {
-         flex-basis: 20%;
-         background: #ddd;
-         min-height: 90vh;
-         padding: 5px;
-         border-radius: 10px;
-         }
-      .column h1 {
-         text-align: center;
-         font-size: 22px;
-         }
-      .list-group-item {
-         background: #fff;
-         margin: 20px;
-         padding: 20px;
-         border-radius: 5px;
-         cursor: pointer;
-         }
-   </style>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js" integrity="sha512-zYXldzJsDrNKV+odAwFYiDXV2Cy37cwizT+NkuiPGsa9X1dOz04eHvUWVuxaJ299GvcJT31ug2zO4itXBjFx4w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-   <script>
-      const columns = document.querySelectorAll(".column");
-      columns.forEach((column) => {
-      new Sortable(column, {
-         group: "shared",
-         animation: 150,
-         ghostClass: "blue-background-class"
-      });
-      });
-   </script>
-   <script src="dnd_test\dnd_test.js"></script>
-   <div class="container">
-      <div class="column">
-         <h1>1</h1>
-         <div class="list-group-item" draggable="true">Wash Clothes</div>
-         <div class="list-group-item" draggable="true">Take a stroll outside</div>
-         <div class="list-group-item" draggable="true">Design Thumbnail</div>
-         <div class="list-group-item" draggable="true">Attend Meeting</div>
-         <div class="list-group-item" draggable="true">Fix workshop</div>
-         <div class="list-group-item" draggable="true">Visit the zoo</div>
-      </div>
-      <div class="column">
-         <h1>2</h1>
-      </div>
-      <div class="column">
-         <h1>3</h1>
-      </div>
+   <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+   <div id="div2">
+      <img id="drag1" src="../images\pose1.jpg" draggable="true" ondragstart="drag(event)" width="300" height="250"/>
+      <p id="drag2" draggable="true" ondragstart="drag(event)">나를 끌고가유</p>
    </div>
+      
 </body>
 </html>
-
