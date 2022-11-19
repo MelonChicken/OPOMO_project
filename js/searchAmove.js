@@ -24,7 +24,7 @@ function showList(val = "") {
       li.classList.add("publicPictureBox");
       li.innerHTML = `
                 <div class="publicPicture__container">
-                  <img  class="pic" src='${pose.url}' alt='${pose.tag}'>
+                  <img class="pic" onclick="moveExport()" src='${pose.url}' alt='${pose.tag}' />
                 </div>
                 <p class="tag">이름: ${pose.name}</p>
                 <p class="tag"> ${pose.tag}</p>
@@ -53,4 +53,9 @@ function enterkey() {
     // 엔터키가 눌렸을 때 실행할 내용
     showList();
   }
+}
+
+//이미지 누르면 다운로드pg로 이동
+function moveExport() {
+  location.href = "../export.html";
 }
