@@ -14,5 +14,54 @@ body {
     width: 100%;
     height: 100%;
     background-color: $themeColor01;
+
+    header {
+      width: 100%;
+      height: 10%;
+      box-shadow: 0px 10px 5px 1px rgb(0, 0, 0, 0.2);
+      .userPage__upHeader {
+        width: 96%;
+        height: 60%;
+        padding-left: 2%;
+        padding-right: 2%;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .userPage__upHeader__home,
+        .userPage__upHeader__user {
+          width: max-content;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          font-family: $logoFont;
+          font-size: 1.5em;
+          font-weight: bold;
+
+          color: $themeColor02;
+        }
+        .userPage__upHeader__logo {
+          width: max-content;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          font-family: $logoFont;
+          font-size: 3em;
+          font-weight: bold;
+          text-shadow: 2px 2px 4px $themeColor03;
+
+          color: $themeColor02;
+        }
+      }
+      .userPage__downHeader {
+        width: 100%;
+        height: 40%;
+        background-color: black;
+      }
+    }
   }
 }

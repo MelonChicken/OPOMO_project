@@ -59,7 +59,9 @@ header {
   }
 }
 header #header__titleLogo {
-  width: minmax(max-conent, 5%);
+  width: minmax(-webkit-max-content, 5%);
+  width: minmax(-moz-max-content, 5%);
+  width: minmax(max-content, 5%);
   height: 7vh;
   padding-left: 1vw;
   display: flex;
