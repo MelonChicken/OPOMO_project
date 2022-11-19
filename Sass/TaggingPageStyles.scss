@@ -181,12 +181,14 @@ body {
 
     bottom: 0;
     position: fixed;
+    z-index: -1;
 
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 
     background-color: $filterColor;
+
     .publicPage__filterContainer__filters {
       width: 83%;
       height: 100%;
@@ -202,6 +204,7 @@ body {
     .publicPage__filterContainer__choose {
       height: 90%;
       aspect-ratio: 1 /1;
+      border: none;
       border-radius: 15% / 15%;
 
       display: flex;

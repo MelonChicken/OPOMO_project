@@ -49,11 +49,7 @@
         </ul>
       </section>
 
-      <div class="publicPage__filterContainer">
-        <div class="publicPage__filterContainer__filters"></div>
-        <div class="publicPage__filterContainer__choose"></div>
-      </div>
-
+      <!--검색창-->
       <div class="container">
         <form id="search-form">
           <input type="text" id="search" placeholder="#와 함께 입력해주세요!" />
@@ -61,9 +57,16 @@
             <i class="fa-solid fa-hashtag"></i>
           </button>
         </form>
-        <ul id="list"></ul>
+        <ul id="list">
+          <!--여기는 자바스크립트에서 데이터를 추가-->
+        </ul>
       </div>
-      <script src="./js/script.js"></script>
+
+      <div class="publicPage__filterContainer">
+        <div class="publicPage__filterContainer__filters"></div>
+        <div class="publicPage__filterContainer__choose"></div>
+      </div>
+      <script src="./js/search.js"></script>
     </div>
   </body>
 </html>
