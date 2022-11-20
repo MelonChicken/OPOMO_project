@@ -34,6 +34,7 @@ body {
   margin: 0;
   display: flex;
   justify-content: center;
+  overflow: hidden;
 }
 
 .customPage {
@@ -347,7 +348,6 @@ section .customPage__myPoseContainer .customPage__myPoseContainer__picBox .custo
 section .customPage__myPoseContainerCover {
   position: absolute;
   left: 0;
-  z-index: 2;
   width: 100%;
 }
 @media screen and (max-width: 480px) {
@@ -392,6 +392,7 @@ section .customPage__myPoseContainerCover .customPage__myPoseContainerCover__pic
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1;
 }
 @media screen and (max-width: 480px) {
   section .customPage__myPoseContainerCover .customPage__myPoseContainerCover__picBox {
@@ -492,14 +493,14 @@ section .customPage__searchPic__nav {
   border-radius: 6%/8%;
   right: 1%;
   bottom: 40%;
-  position: fixed;
+  position: absolute;
+  z-index: 4;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 25px;
   color: #9481a1;
   background-color: #d5cff5;
-  z-index: 2;
 }
 section .customPage__searchPic__nav #customPageNav01 {
   color: #9481a1;
@@ -508,9 +509,10 @@ section .customPage__searchPic__nav #customPageNav02 {
   display: none;
 }
 section .customPage__navMenu {
-  position: fixed;
+  position: absolute;
   right: 0;
   top: 8vh;
+  z-index: 2;
   height: 100%;
   display: flex;
   justify-content: flex-end;
@@ -541,6 +543,8 @@ section .customPage__navMenu__collapse {
   max-width: 0;
   overflow: hidden;
   transition: all 0.5s ease-in-out;
+  position: absolute;
+  z-index: 3;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
