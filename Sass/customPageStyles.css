@@ -34,7 +34,6 @@ body {
   margin: 0;
   display: flex;
   justify-content: center;
-  overflow: hidden;
 }
 
 .customPage {
@@ -187,13 +186,20 @@ section .customPage__choosePoseText p {
     font-size: 1.2em;
   }
 }
+section .cover {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
 section .customPage__myPoseContainer {
+  position: absolute;
   background-color: #9481a1;
 }
 @media screen and (max-width: 480px) {
   section .customPage__myPoseContainer {
     width: 100%;
     height: 83vh;
+    position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -339,16 +345,16 @@ section .customPage__myPoseContainer .customPage__myPoseContainer__picBox .custo
   color: #9481a1;
 }
 section .customPage__myPoseContainerCover {
-  position: fixed;
-  top: 16.2vh;
+  position: absolute;
   left: 0;
   z-index: 2;
   width: 100%;
 }
 @media screen and (max-width: 480px) {
   section .customPage__myPoseContainerCover {
-    top: 16.2vh;
+    width: 100%;
     height: 83vh;
+    position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -357,7 +363,7 @@ section .customPage__myPoseContainerCover {
 }
 @media screen and (min-width: 480px) and (max-width: 767px) {
   section .customPage__myPoseContainerCover {
-    top: 16.2vh;
+    width: 100%;
     height: 50%;
     display: flex;
     justify-content: center;
@@ -366,8 +372,8 @@ section .customPage__myPoseContainerCover {
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   section .customPage__myPoseContainerCover {
-    top: 16vh;
-    height: 85%;
+    width: 100%;
+    height: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -375,8 +381,8 @@ section .customPage__myPoseContainerCover {
 }
 @media screen and (min-width: 1024px) {
   section .customPage__myPoseContainerCover {
-    top: 16vh;
-    height: 85.4%;
+    width: 100%;
+    height: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
