@@ -31,9 +31,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    @include responsive("mobile") {
-      margin-bottom: 2vh;
-    }
 
     .mainPage__upTitles__logo {
       width: 80%;
@@ -64,6 +61,7 @@ body {
     .mainPage__upTitles__sub {
       width: 100%;
       height: 45%;
+      margin-top: 2vh;
 
       display: flex;
       justify-content: center;
