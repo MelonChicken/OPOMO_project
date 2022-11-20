@@ -12,6 +12,13 @@ const sibal = [
     tag: ["#2명", "#친구와"],
     url: "./images/세서미.png",
   },
+  {
+    //2x2 테스트용으로 추가했어.
+    id: 3,
+    name: "콩순이",
+    tag: ["#1명", "#귀엽게"],
+    url: "./images/콩순이.png",
+  },
 ];
 
 const list = document.getElementById("list");

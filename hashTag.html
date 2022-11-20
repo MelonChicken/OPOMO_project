@@ -42,17 +42,17 @@
         </ul>
       </section>
 
-      <div class="publicPage__filterContainer">
-        <div class="publicPage__filterContainer__filters"></div>
-        <div class="publicPage__filterContainer__choose"></div>
-      </div>
-
       <div class="container">
-        <form id="search-form">
-          <input type="text" id="search" placeholder="#와 함께 입력해주세요!" />
-          <button id="searchBtn">
+        <form class="publicPage__filterContainer" id="search-form">
+          <button class="publicPage__filterContainer__choose" id="searchBtn">
             <i class="fa-solid fa-hashtag"></i>
           </button>
+          <input
+            class="publicPage__filterContainer__filters"
+            type="text"
+            id="search"
+            placeholder="#와 함께 입력해주세요!"
+          />
         </form>
       </div>
       <script src="./js/searchAmove.js"></script>
