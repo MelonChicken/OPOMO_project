@@ -322,7 +322,7 @@ section .exportPage__submissionContainer .exportPage__submissionContainer__share
   width: max-content;
   height: 60px;
   padding-left: 1%;
-  top: 50%;
+  top: 8%;
   left: 0%;
   position: fixed;
   font-size: 3em;
