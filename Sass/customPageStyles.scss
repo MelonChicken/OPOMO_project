@@ -158,6 +158,7 @@ section {
 
   .customPage__myPoseContainer {
     position: absolute;
+    z-index: 0;
     @include responsive("mobile") {
       width: 100%;
       height: 100%;
@@ -457,7 +458,7 @@ section {
     position: absolute;
     right: 0;
     top: $headerHeight;
-    z-index: 2;
+    z-index: 3;
 
     height: 93vh;
     display: flex;
@@ -484,7 +485,6 @@ section {
     transition: all 0.5s ease-in-out;
 
     position: absolute;
-    z-index: 3;
 
     display: flex;
     flex-direction: column;
@@ -551,20 +551,20 @@ section {
   width: max-content;
   height: 60px;
   top: 8%;
+  z-index: 2;
+  position: absolute;
 
   font-size: 3em;
 
-  color: $themeColor02;
+  color: black;
 
   cursor: pointer;
 }
 .navArrow_left {
   padding-left: 1%;
   left: 0%;
-  position: fixed;
 }
 .navArrow_right {
   padding-right: 1%;
   right: 0%;
-  position: fixed;
 }
