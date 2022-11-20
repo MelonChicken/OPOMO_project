@@ -31,6 +31,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    @include responsive("mobile") {
+      margin-bottom: 2vh;
+    }
 
     .mainPage__upTitles__logo {
       width: 80%;
