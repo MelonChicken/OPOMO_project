@@ -11,8 +11,6 @@ body {
 
   display: flex;
   justify-content: center;
-
-  overflow: hidden;
 }
 .linkbtns {
   @extend %link;
@@ -161,14 +159,15 @@ section {
   .customPage__myPoseContainer {
     position: absolute;
     z-index: 0;
+
+    background-color: $themeColor01;
     @include responsive("mobile") {
       width: 100%;
       height: 100%;
-      position: absolute;
 
       display: flex;
       flex-direction: column;
-      justify-content: space-around;
+      justify-content: flex-start;
       align-items: center;
     }
     @include responsive("mobile-l") {
@@ -176,24 +175,22 @@ section {
       height: 50%;
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: flex-start;
     }
     @include responsive("tablet") {
       width: 100%;
       height: 100%;
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: flex-start;
     }
     @include responsive("window") {
       width: 100%;
       height: 100%;
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: flex-start;
     }
-
-    background-color: $themeColor01;
 
     .customPage__myPoseContainer__picBox {
       display: flex;
@@ -312,11 +309,10 @@ section {
     @include responsive("mobile") {
       width: 100%;
       height: 100%;
-      position: absolute;
 
       display: flex;
       flex-direction: column;
-      justify-content: space-around;
+      justify-content: flex-start;
       align-items: center;
     }
     @include responsive("mobile-l") {
@@ -324,21 +320,21 @@ section {
       height: 50%;
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: flex-start;
     }
     @include responsive("tablet") {
       width: 100%;
       height: 100%;
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: flex-start;
     }
     @include responsive("window") {
       width: 100%;
       height: 100%;
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: flex-start;
     }
     .customPage__myPoseContainerCover__picBox {
       display: flex;
