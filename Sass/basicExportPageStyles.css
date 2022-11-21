@@ -1,0 +1,331 @@
+@import url("https://fonts.googleapis.com/css2?family=Concert+One&display=swap");
+@font-face {
+  font-family: Kotra;
+  src: url(../font/KOTRA\ HOPE.otf);
+}
+.linkbtns {
+  cursor: pointer;
+  color: #9481a1;
+}
+.linkbtns:link {
+  color: #9481a1;
+}
+.linkbtns:visited {
+  color: #9481a1;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.exportPage {
+  width: 100%;
+  height: 100vh;
+  background-color: #9481a1;
+}
+
+header {
+  top: 0%;
+  left: 0%;
+  position: fixed;
+  width: 100%;
+  height: minmax(-webkit-max-content, 8vh);
+  height: minmax(-moz-max-content, 8vh);
+  height: minmax(max-content, 8vh);
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0px 10px 5px 1px rgba(0, 0, 0, 0.2);
+  color: #d5cff5;
+}
+@media screen and (max-width: 480px) {
+  header {
+    background-color: #9481a1;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  header {
+    background-color: purple;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  header {
+    background-color: green;
+  }
+}
+@media screen and (min-width: 1024px) {
+  header {
+    background-color: #9481a1;
+  }
+}
+header #header__titleLogo {
+  width: minmax(max-conent, 5%);
+  height: 7vh;
+  padding-left: 1vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Concert One", cursive;
+  font-size: 2em;
+  font-weight: bold;
+  color: #d5cff5;
+}
+header #header__icons {
+  height: max-content1vw;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  margin: 0;
+  list-style: none;
+  color: #d5cff5;
+}
+@media screen and (min-width: 1024px) {
+  header #header__icons {
+    width: 15%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  header #header__icons li {
+    margin-right: 1vw;
+  }
+}
+@media screen and (max-width: 480px) {
+  header #header__icons {
+    width: 30%;
+    padding-right: 5vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  header #header__icons {
+    width: 20%;
+    padding-right: 1vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  header #header__icons {
+    width: 20%;
+    padding-right: 1vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+header #header__icons li {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  font-size: 1.2em;
+  padding: 0.2em;
+  padding-left: 0.3em;
+  padding-right: 0.3em;
+  border-radius: 15%/15%;
+  color: #9481a1;
+  background-color: #d5cff5;
+}
+
+section {
+  padding-top: 8vh;
+  width: 100%;
+  height: 92vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #9481a1;
+}
+section .exportPage__picContainer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #d5cff5;
+}
+@media screen and (max-width: 480px) {
+  section .exportPage__picContainer {
+    width: 50%;
+    aspect-ratio: 1/3;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  section .exportPage__picContainer {
+    width: 35%;
+    aspect-ratio: 1/3;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  section .exportPage__picContainer {
+    width: 35%;
+    aspect-ratio: 1/3;
+  }
+}
+@media screen and (min-width: 1024px) {
+  section .exportPage__picContainer {
+    width: 12%;
+    aspect-ratio: 1/3;
+  }
+}
+section .exportPage__picContainer .exportPage__picContainer__grid {
+  width: 92%;
+  aspect-ratio: 1/3;
+  margin-top: 1vh;
+  display: grid;
+  grid-template-rows: repeat(4, 1fr) 0.5fr;
+  gap: 2%;
+}
+section .exportPage__picContainer .exportPage__picContainer__grid .exportPage__picContainer__grid__pic {
+  grid-column: span 1;
+  grid-row: span 1;
+  background-color: white;
+}
+section .exportPage__submissionContainer {
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 480px) {
+  section .exportPage__submissionContainer {
+    margin-top: 1.5vh;
+    width: 70%;
+    aspect-ratio: 20/1;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  section .exportPage__submissionContainer {
+    margin-top: 1.5vh;
+    width: 70%;
+    aspect-ratio: 20/1;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  section .exportPage__submissionContainer {
+    margin-top: 1.5vh;
+    width: 70%;
+    aspect-ratio: 20/1;
+  }
+}
+@media screen and (min-width: 1024px) {
+  section .exportPage__submissionContainer {
+    margin-top: 1.5vh;
+    width: 25%;
+    aspect-ratio: 22/1;
+  }
+}
+section .exportPage__submissionContainer .exportPage__submissionContainer__save {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  color: #9481a1;
+  background-color: #d5cff5;
+  cursor: pointer;
+}
+@media screen and (max-width: 480px) {
+  section .exportPage__submissionContainer .exportPage__submissionContainer__save {
+    border-radius: 10%/50%;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  section .exportPage__submissionContainer .exportPage__submissionContainer__save {
+    border-radius: 10%/50%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  section .exportPage__submissionContainer .exportPage__submissionContainer__save {
+    border-radius: 10%/50%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  section .exportPage__submissionContainer .exportPage__submissionContainer__save {
+    border-radius: 10%/50%;
+  }
+}
+section .exportPage__submissionContainer .exportPage__submissionContainer__save:hover {
+  color: #d5cff5;
+  background-color: #a5a6e9;
+}
+section .exportPage__submissionContainer .exportPage__submissionContainer__save p {
+  height: auto;
+  font-weight: bold;
+}
+@media screen and (max-width: 480px) {
+  section .exportPage__submissionContainer .exportPage__submissionContainer__save p {
+    margin: 5%;
+    font-size: 1.5em;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  section .exportPage__submissionContainer .exportPage__submissionContainer__save p {
+    margin: 5%;
+    font-size: 1.3em;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  section .exportPage__submissionContainer .exportPage__submissionContainer__save p {
+    margin: 3%;
+    font-size: 2em;
+  }
+}
+@media screen and (min-width: 1024px) {
+  section .exportPage__submissionContainer .exportPage__submissionContainer__save p {
+    margin: 5%;
+    font-size: 1.5em;
+  }
+}
+section .exportPage__submissionContainer .exportPage__submissionContainer__share {
+  height: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 50%/50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #9481a1;
+  background-color: #d5cff5;
+  cursor: pointer;
+}
+@media screen and (max-width: 480px) {
+  section .exportPage__submissionContainer .exportPage__submissionContainer__share {
+    font-size: 1.5em;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  section .exportPage__submissionContainer .exportPage__submissionContainer__share {
+    font-size: 1.3em;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  section .exportPage__submissionContainer .exportPage__submissionContainer__share {
+    font-size: 2em;
+  }
+}
+@media screen and (min-width: 1024px) {
+  section .exportPage__submissionContainer .exportPage__submissionContainer__share {
+    font-size: 1.1em;
+  }
+}
+section .exportPage__submissionContainer .exportPage__submissionContainer__share:hover {
+  color: #d5cff5;
+  background-color: #a5a6e9;
+}
+
+.navArrow_left {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: 60px;
+  padding-left: 1%;
+  top: 8%;
+  left: 0%;
+  position: fixed;
+  font-size: 3em;
+  color: #d5cff5;
+  cursor: pointer;
+}/*# sourceMappingURL=basicExportPageStyles.css.map */
