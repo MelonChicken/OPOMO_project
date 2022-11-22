@@ -4,22 +4,31 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="Sass/customPageStyles.css" />
+    <link rel="stylesheet" href="Sass/customPageStylesForTest.css" />
     <script
       src="https://kit.fontawesome.com/8da0f3b785.js"
       crossorigin="anonymous"
     ></script>
-    
+
     <!--jQuery-->
-    <link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js" ></script>
-    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" ></script>
+    <link
+      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-1.12.4.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+    ></script>
     <script src="js\DnD.js"></script>
-    
+
     <title>OPOMO</title>
   </head>
   <script src="./js/collapsible.js"></script>
-  <script src="./js/shiftImage.js"></script>
   <body>
     <div class="customPage">
       <header>
@@ -88,26 +97,38 @@
             </div>
           </div>
 
-          <div id="buttons"></div> <!--삭제버튼이 생성되는 곳-->
-          
-          <div class="customPage__myPoseContainerCover"> 
-            <div class="customPage__myPoseContainerCover__picBox"> 
-              <div class="customPage__myPoseContainerCover__picBox__grid" id="cnt_drop"> <!--실질적 드롭존-->
+          <div id="buttons"></div>
+          <!--삭제버튼이 생성되는 곳-->
+          <div class="customPage__myPoseContainerCover">
+            <div class="customPage__myPoseContainerCover__picBox">
+              <div
+                class="customPage__myPoseContainerCover__picBox__grid"
+                id="cnt_drop"
+              >
+                <!--실질적 드롭존-->
                 <div
                   class="customPage__myPoseContainerCover__picBox__grid__pic"
-                  id="frame1" ondrop="drop(event)" ondragover="allowDrop(event)"
+                  id="frame1"
+                  ondrop="drop(event)"
+                  ondragover="allowDrop(event)"
                 ></div>
                 <div
                   class="customPage__myPoseContainerCover__picBox__grid__pic"
-                  id="frame2" ondrop="drop(event)" ondragover="allowDrop(event)"
+                  id="frame2"
+                  ondrop="drop(event)"
+                  ondragover="allowDrop(event)"
                 ></div>
                 <div
                   class="customPage__myPoseContainerCover__picBox__grid__pic"
-                  id="frame3" ondrop="drop(event)" ondragover="allowDrop(event)"
+                  id="frame3"
+                  ondrop="drop(event)"
+                  ondragover="allowDrop(event)"
                 ></div>
                 <div
                   class="customPage__myPoseContainerCover__picBox__grid__pic"
-                  id="frame4" ondrop="drop(event)" ondragover="allowDrop(event)"
+                  id="frame4"
+                  ondrop="drop(event)"
+                  ondragover="allowDrop(event)"
                 ></div>
               </div>
             </div>
@@ -123,17 +144,43 @@
             <!--태그 검색 및 사진 페이지 -->
             <div class="customPage__navMenu__collapse child">
               <div class="customPage__navMenu__collapse__categories"></div>
-              <div class="customPage__navMenu__collapse__grid" id="cnt_drag"> <!--드래그존-->
-                <img class="posePictureBox" id="image1" src="images/dog01.jpg"
-                draggable="true" ondragstart="drag(event)" width="100" height="100"/>
-                <img class="posePictureBox" id="image2" src="images/dog02.jpg"
-                draggable="true" ondragstart="drag(event)" width="100" height="100"/>
-                <img class="posePictureBox" id="image3" src="images/dog03.jpg"
-                draggable="true" ondragstart="drag(event)" width="100" height="100"/>
-                <img class="posePictureBox" id="image4" src="images/dog04.jpg"
-                draggable="true" ondragstart="drag(event)" width="100" height="100"/>
-                <img class="posePictureBox" id="image5" src="images/dog05.jpg"
-                draggable="true" ondragstart="drag(event)" width="100" height="100"/>
+              <div class="customPage__navMenu__collapse__grid" id="cnt_drag">
+                <!--드래그존-->
+                <img
+                  class="posePictureBox"
+                  id="image1"
+                  src="images/dog01.jpg"
+                  draggable="true"
+                  ondragstart="drag(event)"
+                />
+                <img
+                  class="posePictureBox"
+                  id="image2"
+                  src="images/dog02.jpg"
+                  draggable="true"
+                  ondragstart="drag(event)"
+                />
+                <img
+                  class="posePictureBox"
+                  id="image3"
+                  src="images/dog03.jpg"
+                  draggable="true"
+                  ondragstart="drag(event)"
+                />
+                <img
+                  class="posePictureBox"
+                  id="image4"
+                  src="images/dog04.jpg"
+                  draggable="true"
+                  ondragstart="drag(event)"
+                />
+                <img
+                  class="posePictureBox"
+                  id="image5"
+                  src="images/dog05.jpg"
+                  draggable="true"
+                  ondragstart="drag(event)"
+                />
                 <div class="posePictureBox"></div>
                 <div class="posePictureBox"></div>
                 <div class="posePictureBox"></div>
@@ -145,7 +192,6 @@
             </div>
           </div>
         </div>
-        <div class="customPage__wishList"></div>
       </section>
       <div OnClick="location.href='/selection'" class="navArrow_left">
         <i class="fa-solid fa-caret-left"></i>

@@ -17,6 +17,20 @@
     background-color: rgba(0, 21, 255, 0.16);
   }
 }
+@media screen and (min-width: 1024px) and (min-width: 768px) and (max-width: 1023px) {
+  .publicPage section .publicPage__picContainer::-webkit-scrollbar {
+    width: 3%;
+  }
+  .publicPage section .publicPage__picContainer::-webkit-scrollbar-button {
+    display: none;
+  }
+  .publicPage section .publicPage__picContainer::-webkit-scrollbar-thumb {
+    background-color: #9481a1;
+  }
+  .publicPage section .publicPage__picContainer::-webkit-scrollbar-track {
+    background-color: rgba(0, 21, 255, 0.16);
+  }
+}
 
 .linkbtns {
   cursor: pointer;
