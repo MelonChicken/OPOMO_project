@@ -1,6 +1,6 @@
 const savedPicture = localStorage.getItem("1");
-const container = document.querySelector(".exportPage__picContainer");
-
-container.innerHTML = `
+const LnL = document.querySelector(".exportPage__picContainer");
+//락앤락 반찬통이라는 뜻
+LnL.innerHTML = `
     <img class="finalStep" src='${savedPicture}' />
   `;

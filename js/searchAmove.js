@@ -65,10 +65,9 @@ function enterkey() {
 //
 function saving(element) {
   console.dir(element);
-  console.log(element.id);
   console.log(element.src);
 
-  localStorage.setItem(element.id, element.src);
+  localStorage.setItem(1, element.src);
   setTimeout(moveExport(), 3000);
 }
 
