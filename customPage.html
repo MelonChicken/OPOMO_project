@@ -12,7 +12,9 @@
     <title>OPOMO</title>
   </head>
   <script src="./js/collapsible.js"></script>
-  <script src="./js/shiftImage.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.5/mobile-detect.min.js"></script>
+  <script src="./js/mobileDetector.js"></script> -->
+
   <body>
     <div class="customPage">
       <header>
@@ -126,7 +128,13 @@
             </div>
           </div>
         </div>
-        <div class="customPage__wishList"></div>
+        <div class="customPage__wishPic">
+          <div
+            class="customPage__wishListNav"
+            onclick="collapseRightLeft(this)"
+          ></div>
+          <div class="customPage__wishList"></div>
+        </div>
       </section>
       <div OnClick="location.href='/selection'" class="navArrow_left">
         <i class="fa-solid fa-caret-left"></i>
