@@ -70,6 +70,12 @@ function saving(element) {
 
   localStorage.setItem(element.id, element.src);
   setTimeout(moveExport(), 3000);
+
+  const lastData = localStorage.getItem(element.id);
+  const LnL = document.querySelector(".exportPage__picContainer");
+  LnL.innerHTML = `
+    <img class="finalStep" src='${lastData}' />
+  `;
 }
 
 //이미지 누르면 다운로드pg로 이동
