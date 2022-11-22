@@ -33,18 +33,7 @@ header {
   justify-content: space-between;
 
   color: $themeColor02;
-  @include responsive("mobile") {
-    background-color: $mobileColor;
-  }
-  @include responsive("mobile-l") {
-    background-color: $mobile-lColor;
-  }
-  @include responsive("tablet") {
-    background-color: $tabletColor;
-  }
-  @include responsive("window") {
-    background-color: $themeColor01;
-  }
+  background-color: $themeColor01;
 
   #header__titleLogo {
     width: minmax(max-content, 5%);
