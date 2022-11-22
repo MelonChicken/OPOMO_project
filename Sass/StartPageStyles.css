@@ -37,26 +37,7 @@ header {
   display: flex;
   justify-content: space-between;
   color: #d5cff5;
-}
-@media screen and (max-width: 480px) {
-  header {
-    background-color: red;
-  }
-}
-@media screen and (min-width: 480px) and (max-width: 767px) {
-  header {
-    background-color: purple;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  header {
-    background-color: green;
-  }
-}
-@media screen and (min-width: 1024px) {
-  header {
-    background-color: #9481a1;
-  }
+  background-color: #9481a1;
 }
 header #header__titleLogo {
   width: minmax(-webkit-max-content, 5%);

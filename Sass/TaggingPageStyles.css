@@ -82,26 +82,7 @@ body {
   justify-content: space-between;
   box-shadow: 0px 10px 5px 1px rgba(0, 0, 0, 0.2);
   color: #d5cff5;
-}
-@media screen and (max-width: 480px) {
-  .publicPage header {
-    background-color: #9481a1;
-  }
-}
-@media screen and (min-width: 480px) and (max-width: 767px) {
-  .publicPage header {
-    background-color: purple;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  .publicPage header {
-    background-color: green;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .publicPage header {
-    background-color: #9481a1;
-  }
+  background-color: #9481a1;
 }
 .publicPage header #header__titleLogo {
   width: minmax(-webkit-max-content, 5%);

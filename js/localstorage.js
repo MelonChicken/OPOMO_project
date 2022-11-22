@@ -6,5 +6,5 @@ const lastData = localStorage.getItem(id);
 const container = document.querySelector(".exportPage__picContainer");
 
 container.innerHTML = `
-    <img class="finalStep" src='${lastData}' />
+    <img class="pic" src='${savedPicture}' />
   `;
