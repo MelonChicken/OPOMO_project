@@ -244,8 +244,10 @@ body {
 }
 @media screen and (max-width: 480px) {
   .publicPage .publicPage__filterContainer .publicPage__filterContainer__filters {
-    width: 83%;
+    width: 78%;
     height: 6vh;
+    padding-left: 2vw;
+    border-radius: 2%/25%;
     font-size: 1.3em;
   }
 }
@@ -253,6 +255,8 @@ body {
   .publicPage .publicPage__filterContainer .publicPage__filterContainer__filters {
     width: 83%;
     height: 6vh;
+    padding-left: 1vw;
+    border-radius: 2%/20%;
     font-size: 1.3em;
   }
 }
@@ -260,6 +264,8 @@ body {
   .publicPage .publicPage__filterContainer .publicPage__filterContainer__filters {
     width: 83%;
     height: 6vh;
+    padding-left: 1vw;
+    border-radius: 2%/25%;
     font-size: 1.5em;
   }
 }
@@ -267,6 +273,8 @@ body {
   .publicPage .publicPage__filterContainer .publicPage__filterContainer__filters {
     width: 50%;
     height: 5vh;
+    padding-left: 1vw;
+    border-radius: 2%/25%;
     font-size: 1.3em;
   }
 }

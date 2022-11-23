@@ -496,6 +496,7 @@ section .customPage__searchPic__nav {
   font-size: 25px;
   color: #9481a1;
   background-color: #d5cff5;
+  cursor: pointer;
 }
 section .customPage__navMenu {
   position: absolute;

@@ -200,8 +200,10 @@ body {
       color: $themeColor01;
       background-color: $themeColor02;
       @include responsive("mobile") {
-        width: 83%;
+        width: 78%;
         height: 6vh;
+        padding-left: 2vw;
+        border-radius: 2% / 25%;
 
         font-size: 1.3em;
       }
@@ -209,18 +211,24 @@ body {
       @include responsive("mobile-l") {
         width: 83%;
         height: 6vh;
+        padding-left: 1vw;
+        border-radius: 2% / 20%;
 
         font-size: 1.3em;
       }
       @include responsive("tablet") {
         width: 83%;
         height: 6vh;
+        padding-left: 1vw;
+        border-radius: 2% / 25%;
 
         font-size: 1.5em;
       }
       @include responsive("window") {
         width: 50%;
         height: 5vh;
+        padding-left: 1vw;
+        border-radius: 2% / 25%;
 
         font-size: 1.3em;
       }
