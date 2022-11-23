@@ -42,9 +42,15 @@
       <section>
         <!--사진 담기는 곳-->
         <div class="exportPage__picContainer" id="capture_area"></div>
+
         <!--저장 버튼-->
         <div class="exportPage__submissionContainer">
-          <button type="button" class="exportPage__submissionContainer__save">
+          <button
+            type="button"
+            id="pick"
+            class="exportPage__submissionContainer__save"
+            onclick="alert('저장완료!')"
+          >
             <p>저장</p>
           </button>
           <script>
@@ -61,6 +67,7 @@
               });
             });
           </script>
+
           <div class="exportPage__submissionContainer__share">
             <i class="fa-solid fa-share-nodes"></i>
           </div>
@@ -72,5 +79,5 @@
     </div>
   </body>
   <script src="js/localstorage.js"></script>
-  <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+  <script src="js/html2canvas.min.js"></script>
 </html>
