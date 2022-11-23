@@ -29,6 +29,7 @@
             background-color:yellow;
         }
      </style>
+    <script src="./DnD_touch.js"></script>
     <script> // 드래그존에 넣기
         const allowDrop = (e) => {
             e.preventDefault();
@@ -36,20 +37,76 @@
 
         // text로 드래그 요소의 id (drag1)을 받아옴
         const drag = (e) => {
-            e.dataTransfer.setData("text", e.target.id);
-            
+            if(e.dataTransfer == undefined) { // touch 이벤트일 경우..
+                dragId = e.target.id
+            } else {
+                e.dataTransfer.setData("text", e.target.id);
+            }
         }
         
         // 드래그된 요소를 드롭 요소에 추가
         const drop = (e) => {
             if(e.target.childElementCount == 0) {
-                const data = e.dataTransfer.getData("text");
-                if(e.target.className == "dropzone ui-sortable-handle") {
-                e.preventDefault();
-                e.target.appendChild(document.getElementById(data));
+                if(e.dataTransfer == undefined) { // touch 이벤트일 경우..
+                    if(e.target.className == "dropzone ui-sortable-handle") {
+                        e.preventDefault();
+                        e.target.appendChild(document.getElementById(dragId));
+                    }
+                } else {
+                    const data = e.dataTransfer.getData("text");
+                    if(e.target.className == "dropzone ui-sortable-handle") {
+                    e.preventDefault();
+                    e.target.appendChild(document.getElementById(data));
+                    }
                 }
             }
         }
+    </script>
+    <script> // 모바일 드래그
+        /* window.onload 사용해 터치 이벤트 발생 확인 : 상시 대기 */
+        window.onload = function() {						
+            /* 터치 이벤트 감시 위한 객체 등록 및 이벤트 등록 실시 */
+            document.querySelectorAll('.item').forEach(items => {
+                items.addEventListener("touchstart", handelStart, false);
+                items.addEventListener("touchmove", handleMove, false);
+                items.addEventListener("touchend", handleEnd, false)
+            });
+
+            document.querySelectorAll('.dragzone').forEach(items => {
+                items.addEventListener("touchstart", handelStart, false);
+                items.addEventListener("touchmove", handleMove, false);
+                items.addEventListener("touchend", handleEnd, false) // 마지막 false는 버블링 막는용
+            });
+            
+            /* 터치 이동 이벤트 발생 */
+            function handelStart(e) {
+                e.preventDefault();
+                drag(e);
+            }
+
+            function handleMove(e) {
+                /* 선택한 div id 값 확인 */	
+                e.preventDefault()	
+                dragId = e.target.id;
+                
+                /* 시작 좌표값 확인 */
+                beaforeX = $(this).scrollLeft();
+                beaforeY = $(this).scrollTop();
+            }
+            
+            /* 터치 종료 이벤트 발생 */
+            function handleEnd(e) {									
+                /* 종료 좌표값 확인 */				
+                var divX = e.changedTouches[0].clientX;
+                var divY = e.changedTouches[0].clientY;							
+                
+                /* 강제로 특정 좌표값 드롭 이벤트 발생 수행 */
+                var evt = new MouseEvent("drop");
+                var cb = document.elementFromPoint(divX, divY);
+                cb.dispatchEvent(evt);
+                evt.preventDefault();
+    }						
+};	
     </script>
     <script> // 드래그존에서 순서 변경
         function reorder() {
