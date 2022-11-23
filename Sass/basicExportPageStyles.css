@@ -197,6 +197,7 @@ section .exportPage__submissionContainer .exportPage__submissionContainer__save 
   height: 100%;
   display: flex;
   justify-content: center;
+  border: none;
   color: #9481a1;
   background-color: #d5cff5;
   cursor: pointer;
