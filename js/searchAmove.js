@@ -19,14 +19,44 @@ const sibal = [
     tag: ["#1명", "#귀엽게"],
     url: "./images/콩순이.png",
   },
+  {
+    id: 4, //다중 태그 입력 되는지 테스트 용
+
+    name: "쿠로미",
+    tag: ["#2명", "#친구와", "#귀엽게"],
+    url: "./images/쿠로미.png",
+  },
+  {
+    id: 5,
+    name: "스폰지밥1",
+    tag: ["#2명", "#신나게"],
+    url: "./images/스폰지밥1.png",
+  },
+  {
+    id: 6,
+    name: "스폰지밥2",
+    tag: ["#2명", "#웃기게", "#친구와"],
+    url: "./images/스폰지밥2.png",
+  },
 ];
 
 const list = document.getElementById("list");
 
 function showList(val = "") {
   list.innerHTML = "";
+  //여러개의 태그들을 리스트화
+  wantedtags = val.split(",");
+
   const res = sibal.forEach((pose) => {
-    if (pose.tag.includes(val)) {
+    let flag = 0;
+    //리스트화 된 태그들을 모두 포함하는지 조사 (모두 포함한다면 flag = wantedTags.length)
+    wantedtags.forEach(function (tag) {
+      if (pose.tag.includes(tag)) {
+        flag += 1;
+      }
+    });
+    //만약 원하는 태그들을 모두 포함한다면
+    if (flag == wantedtags.length) {
       const li = document.createElement("li");
       li.classList.add("publicPictureBox");
       li.innerHTML = `
