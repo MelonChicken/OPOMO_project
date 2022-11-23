@@ -40,12 +40,27 @@
         </ul>
       </header>
       <section>
-        <div class="exportPage__picContainer"></div>
+        <!--사진 담기는 곳-->
+        <div class="exportPage__picContainer" id="capture_area"></div>
         <!--저장 버튼-->
         <div class="exportPage__submissionContainer">
-          <div class="exportPage__submissionContainer__save">
+          <button type="button" class="exportPage__submissionContainer__save">
             <p>저장</p>
-          </div>
+          </button>
+          <script>
+            $(function () {
+              $(".exportPage__submissionContainer__save").click(function (e) {
+                html2canvas(document.getElementById("capture_area")).then(
+                  function (canvas) {
+                    var el = document.createElement("a");
+                    el.href = canvas.toDataURL("image/jpeg");
+                    el.download = "이미지.jpg"; //다운로드 할 파일명 설정
+                    el.click();
+                  }
+                );
+              });
+            });
+          </script>
           <div class="exportPage__submissionContainer__share">
             <i class="fa-solid fa-share-nodes"></i>
           </div>
@@ -57,4 +72,5 @@
     </div>
   </body>
   <script src="js/localstorage.js"></script>
+  <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
 </html>
