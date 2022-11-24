@@ -272,7 +272,7 @@
         <i class="fa-solid fa-caret-left"></i>
       </div>
       <!--오른쪽으로 넘어가는 버튼-->
-      <div OnClick="location.href = '/customExport'" class="navArrow_right">
+      <div OnClick="location.href = '/cusExport'" class="navArrow_right">
         <i class="fa-solid fa-caret-right"></i>
       </div>
 
@@ -284,13 +284,12 @@
         }
       </script>
       <!--확인 버튼 NEW-->
-      <button type="button" class="confirm" onclick="EunA">
+      <button type="button" class="confirm" onclick="alert('확인!')">
         <p>확인</p>
       </button>
       <script>
-        var EunA = function () {
+        $(function () {
           $(".confirm").click(function (e) {
-            $(".hbtns hearts").css("display", "none");
             html2canvas(document.getElementById("capture_area")).then(function (
               canvas
             ) {
@@ -302,7 +301,7 @@
               saving(myImage.src);
             });
           });
-        };
+        });
       </script>
     </div>
   </body>
