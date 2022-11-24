@@ -6,7 +6,7 @@ const frame = document.querySelector(
 //드래그 이벤트 발생시 떠오른다.
 document.addEventListener("dragstart", (event) => {
   //원래는 z-index:1 -> 4로 높여준다.
-  frame.style.zIndex = 4;
+  frame.style.zIndex = 5;
   frame.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
 });
 document.addEventListener("dragend", (event) => {
