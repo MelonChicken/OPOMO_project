@@ -170,7 +170,7 @@ section .exportPage__picContainer .exportPage__picContainer__grid .exportPage__p
 }
 section .exportPage__submissionContainer {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 @media screen and (max-width: 480px) {
   section .exportPage__submissionContainer {
@@ -260,41 +260,6 @@ section .exportPage__submissionContainer .exportPage__submissionContainer__save 
     margin: 5%;
     font-size: 1.5em;
   }
-}
-section .exportPage__submissionContainer .exportPage__submissionContainer__share {
-  height: 100%;
-  aspect-ratio: 1/1;
-  border-radius: 50%/50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #9481a1;
-  background-color: #d5cff5;
-  cursor: pointer;
-}
-@media screen and (max-width: 480px) {
-  section .exportPage__submissionContainer .exportPage__submissionContainer__share {
-    font-size: 1.5em;
-  }
-}
-@media screen and (min-width: 480px) and (max-width: 767px) {
-  section .exportPage__submissionContainer .exportPage__submissionContainer__share {
-    font-size: 1.3em;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  section .exportPage__submissionContainer .exportPage__submissionContainer__share {
-    font-size: 2em;
-  }
-}
-@media screen and (min-width: 1024px) {
-  section .exportPage__submissionContainer .exportPage__submissionContainer__share {
-    font-size: 1.1em;
-  }
-}
-section .exportPage__submissionContainer .exportPage__submissionContainer__share:hover {
-  color: #d5cff5;
-  background-color: #a5a6e9;
 }
 
 .navArrow_left {

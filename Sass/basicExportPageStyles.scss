@@ -148,7 +148,7 @@ section {
   }
   .exportPage__submissionContainer {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     @include responsive("mobile") {
       margin-top: 1.5vh;
       width: 70%;
@@ -215,35 +215,6 @@ section {
           margin: 5%;
           font-size: 1.5em;
         }
-      }
-    }
-    .exportPage__submissionContainer__share {
-      height: 100%;
-      aspect-ratio: 1 / 1;
-      border-radius: 50% / 50%;
-
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: $themeColor01;
-      background-color: $themeColor02;
-      cursor: pointer;
-      @include responsive("mobile") {
-        font-size: 1.5em;
-      }
-      @include responsive("mobile-l") {
-        font-size: 1.3em;
-      }
-      @include responsive("tablet") {
-        font-size: 2em;
-      }
-      @include responsive("window") {
-        font-size: 1.1em;
-      }
-
-      &:hover {
-        color: $themeColor02;
-        background-color: $themeColor03;
       }
     }
   }
