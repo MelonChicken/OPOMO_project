@@ -209,7 +209,7 @@
         <i class="fa-solid fa-caret-left"></i>
       </div>
       <!--오른쪽으로 넘어가는 버튼-->
-      <div OnClick="location.href='/customExport'" class="navArrow_right">
+      <div OnClick="saving2()" class="navArrow_right">
         <i class="fa-solid fa-caret-right"></i>
       </div>
       <script>
@@ -223,6 +223,11 @@
             });
           });
         });
+      </script>
+      <script>
+        function saving2() {
+          location.href = "/basicExport";
+        }
       </script>
     </div>
   </body>
