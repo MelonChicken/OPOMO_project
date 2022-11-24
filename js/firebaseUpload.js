@@ -32,9 +32,9 @@ function getWhichData(category, value) {
       console.error(error);
     });
 }
-//불러오기 예시
-getWhichData("poses", "basic");
-getWhichData("poses", "custom");
+// //불러오기 예시
+// getWhichData("poses", "basic");
+// getWhichData("poses", "custom");
 
 //새로 쓰기 예시
 writePoseData({
