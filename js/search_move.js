@@ -468,8 +468,7 @@ function showListCustom(val = "") {
       li.classList.add("publicPictureBox");
       li.id = `image${pose.id.substring(1)}`;
       li.draggable = "true";
-      li.ondragstart = "drag(event)";
-      li.innerHTML = `<div class="posePictureBox" style="background-image: url('${pose.url}');">
+      li.innerHTML = `<div class="posePictureBox" id="image${cnt}" ondragstart="drag(event)" style="background-image: url('${pose.url}');">
       <div class="hbtns hearts">
         <button type="button" class="hbtn" id="hbtn_${cnt}">
           <i class="fa-regular fa-heart"></i>
