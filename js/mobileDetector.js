@@ -37,14 +37,11 @@ function noticeTouch(e) {
     // 이미지에 터치 이벤트 발생시
     $('.customPage__navMenu__collapse__grid').on("touchstart", '.posePictureBox', function(event) {
       //커튼을 닫고 박스를 치운다.
-        nowOpened.style.maxWidth = null;
-        nowMenu.style.width = null;
-    });
-
-    $('.customPage__myPoseContainerCover__picBox__grid__pic').on("touchend", '.posePictureBox', function(event) {
-      //박스를 다시 꺼내고 커튼도 연다.
-        nowMenu.style.display = null;
-        nowMenu.style.display = "flex";
-        nowOpened.style.maxWidth = 100 + "%";
+      console.log('커튼닫기')
+      setTimeout(() => 
+        nowOpened.style.maxWidth = null,
+        nowMenu.style.width = null,
+        console.log("2초 후에 실행됨"), 2000);
+        
     });
   }};

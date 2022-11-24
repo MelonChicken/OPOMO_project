@@ -6,6 +6,7 @@ const allowDrop = (e) => {
 
 // text로 드래그 요소의 id (drag1)을 받아옴
 const drag = (e) => {
+  console.log(e.target, '드래그 되는 놈')
   if(e.dataTransfer == undefined) { // touch 이벤트일 경우..
     self.dragId = e.target.id;
   } else {
@@ -15,6 +16,7 @@ const drag = (e) => {
 
 // 드래그된 요소를 드롭 요소에 추가
 const drop = (e) => {
+  console.log(e.target, '드롭된 곳')
   if(e.target.childElementCount == 0) {
       if(e.dataTransfer == undefined) { // touch 이벤트일 경우..
           if(e.target.className == "customPage__myPoseContainerCover__picBox__grid__pic ui-sortable-handle") {

@@ -31,13 +31,15 @@ $(function() {
     
     /* 터치 종료 이벤트 발생 */
     function handleEnd(e) {									
-        /* 종료 좌표값 확인 */				
-        var divX = e.changedTouches[0].clientX;
-        var divY = e.changedTouches[0].clientY;							
+        /* 종료 좌표값 확인 */
+        console.log(e.target, '터치 종료')
+        
+        let divX = e.changedTouches[0].clientX;
+        let divY = e.changedTouches[0].clientY;							
         
         /* 강제로 특정 좌표값 드롭 이벤트 발생 수행 */
-        var evt = new MouseEvent("drop");
-        var cb = document.elementFromPoint(divX, divY);
+        let evt = new MouseEvent("drop");
+        let cb = document.elementFromPoint(divX, divY);
         cb.dispatchEvent(evt);
         evt.preventDefault();
     }						
