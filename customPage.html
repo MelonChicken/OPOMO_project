@@ -269,42 +269,39 @@
         <i class="fa-solid fa-caret-left"></i>
       </div>
       <!--오른쪽으로 넘어가는 버튼-->
-      <div OnClick="saving2()" class="navArrow_right">
+      <div OnClick="location.href = '/basicExport'" class="navArrow_right">
         <i class="fa-solid fa-caret-right"></i>
       </div>
+
+      <script src="js/html2canvas.min.js"></script>
+      <script>
+        function saving(element) {
+          console.log(element);
+          localStorage.setItem(1, element);
+        }
+      </script>
+      <!--확인 버튼 NEW-->
+      <button type="button" class="confirm" onclick="alert('확인!')">
+        <p>확인</p>
+      </button>
       <script>
         $(function () {
-          $(".navArrow_right").click(function (e) {
+          $(".confirm").click(function (e) {
             html2canvas(document.getElementById("capture_area")).then(function (
               canvas
             ) {
-              var el = document.createElement("a");
-              el.href = canvas.toDataURL("image/jpeg");
-              function saving2() {
-                console.dir();
-
-                localStorage.setItem(1, el.href);
-                setTimeout(moveExport(), 3000);
-                location.href = "/basicExport";
-              }
+              var myImage = document.createElement("img");
+              myImage.crossOrigin = "*";
+              myImage.src = canvas.toDataURL("image/jpg");
+              // el.download = "이미지.jpg"; //다운로드 할 파일명 설정
+              // el.click();
+              saving(myImage.src);
             });
           });
         });
       </script>
     </div>
   </body>
-  <script src="./js/customSearch.js"></script>
+  <!-- <script src="./js/customSearch.js"></script> -->
   <!-- <script src="./js/mobileDetector.js"></script> -->
-  <script src="js/html2canvas.min.js"></script>
-  <!--firebase 사용 위한 스크립트들-->
-  <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-analytics.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-firestore.js"></script>
-  <script type="module">
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";
-  </script>
-  <script src="./js/firebaseUpload.js"></script>
-  <script src="js/search_move.js"></script>
 </html>
