@@ -207,7 +207,7 @@ section .section__rightContainer__fourCutBox .section__rightContainer__fourCutBo
 section .section__leftContainer__customBox .section__rightContainer__fourCutBox__title #chooseExplanation,
 section .section__rightContainer__fourCutBox .section__leftContainer__customBox__title #chooseExplanation,
 section .section__rightContainer__fourCutBox .section__rightContainer__fourCutBox__title #chooseExplanation {
-    font-size: 0.6em;
+    font-size: 0.8em;
     font-weight: bold;
     color: #9481a1;
   }
