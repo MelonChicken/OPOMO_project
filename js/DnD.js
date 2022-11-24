@@ -61,7 +61,7 @@ $(function(){
           let seq = e.target.id[5]; // frame번호에서 숫자 가져오기
           let id_name = "btnDel_"+seq; // 버튼 id명 만들기
           if((document.getElementById(id_name) == null)) { // 버튼 중복 방지
-            let html = `<button type="button" id="${id_name}"> 삭제 </button>`; //html변수에 삭제버튼을 대입
+            let html = `<button type="button" id="${id_name}"> ${seq} 삭제 </button>`; //html변수에 삭제버튼을 대입
             $("#buttons").append(html); // 아이디에 html을 추가해라
           }
       }
