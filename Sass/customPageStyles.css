@@ -557,9 +557,10 @@ section .customPage__searchPic .customPage__navMenu__collapse .customPage__navMe
 }
 section .customPage__searchPic .customPage__navMenu__collapse .customPage__navMenu__collapse__categories .container {
   margin: 0;
-  justify-content: center;
   width: 100;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
 }
 section .customPage__searchPic .customPage__navMenu__collapse .customPage__navMenu__collapse__categories .container .publicPage__filterContainer {
   width: 90%;
@@ -583,7 +584,7 @@ section .customPage__searchPic .customPage__navMenu__collapse .customPage__navMe
 }
 @media screen and (max-width: 480px) {
   section .customPage__searchPic .customPage__navMenu__collapse .customPage__navMenu__collapse__categories .container .publicPage__filterContainer .publicPage__filterContainer__filters {
-    width: 70%;
+    width: 86%;
     height: 6vh;
     padding-left: 2vw;
     border-radius: 2%/25%;
@@ -610,8 +611,8 @@ section .customPage__searchPic .customPage__navMenu__collapse .customPage__navMe
 }
 @media screen and (min-width: 1024px) {
   section .customPage__searchPic .customPage__navMenu__collapse .customPage__navMenu__collapse__categories .container .publicPage__filterContainer .publicPage__filterContainer__filters {
-    width: 80%;
-    height: 5vh;
+    width: 83%;
+    height: 6vh;
     padding-left: 1vw;
     border-radius: 2%/25%;
     font-size: 1.3em;
@@ -708,34 +709,6 @@ section .customPage__searchPic .customPage__navMenu__collapse .customPage__navMe
     grid-auto-columns: 30%;
     grid-auto-rows: 30%;
   }
-}
-section .customPage__searchPic .customPage__navMenu__collapse .customPage__navMenu__collapse__grid .posePictureBox {
-  grid-column: span 1;
-  grid-row: span 1;
-  width: 100%;
-  aspect-ratio: 4/3;
-  border-radius: 6%/8%;
-  overflow: hidden;
-  background-color: #fffaff;
-  cursor: pointer;
-}
-section .customPage__searchPic .customPage__navMenu__collapse .customPage__navMenu__collapse__grid .posePictureBox .hearts {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-section .customPage__searchPic .customPage__navMenu__collapse .customPage__navMenu__collapse__grid .posePictureBox .hearts button {
-  height: 100%;
-  aspect-ratio: 1/1;
-  border: none;
-  border-radius: 50%/50%;
-  color: #fffaff;
-  background-color: #9481a1;
-}
-section .customPage__searchPic .customPage__navMenu__collapse .customPage__navMenu__collapse__grid .posePictureBox .hearts button i {
-  font-size: 1.2em;
-  touch-action: none;
-  pointer-events: none;
 }
 section .customPage__wishPic .customPage__wishList__nav {
   width: 30px;
@@ -860,13 +833,34 @@ section .customPage__wishPic .customPage__wishList .customPage__wishList__collap
     grid-auto-rows: 40%;
   }
 }
-section .customPage__wishPic .customPage__wishList .customPage__wishList__collapse .customPage__wishList__collapse__grid .posePictureBox {
+
+.posePictureBox {
   grid-column: span 1;
   grid-row: span 1;
+  width: 100%;
   aspect-ratio: 4/3;
+  border-radius: 6%/8%;
   overflow: hidden;
   background-color: #fffaff;
   cursor: pointer;
+}
+.posePictureBox .hearts {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.posePictureBox .hearts button {
+  height: 100%;
+  aspect-ratio: 1/1;
+  border: none;
+  border-radius: 50%/50%;
+  color: #fffaff;
+  background-color: #9481a1;
+}
+.posePictureBox .hearts button i {
+  font-size: 1.2em;
+  touch-action: none;
+  pointer-events: none;
 }
 
 .navArrow_left,
@@ -891,11 +885,6 @@ section .customPage__wishPic .customPage__wishList .customPage__wishList__collap
 .navArrow_right {
   padding-right: 1%;
   right: 0%;
-}
-
-.posePictureBox {
-  width: 100%;
-  aspect-ratio: 4/3;
 }
 
 #buttons {

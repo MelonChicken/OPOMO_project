@@ -490,9 +490,11 @@ section {
         height: 18%;
         .container {
           margin: 0;
-          justify-content: center;
           width: 100;
           overflow: hidden;
+
+          display: flex;
+          justify-content: center;
           .publicPage__filterContainer {
             width: 90%;
             height: 8%;
@@ -517,7 +519,7 @@ section {
               background-color: $themeColor02;
 
               @include responsive("mobile") {
-                width: 70%;
+                width: 86%;
                 height: 6vh;
                 padding-left: 2vw;
                 border-radius: 2% / 25%;
@@ -542,8 +544,8 @@ section {
                 font-size: 1.5em;
               }
               @include responsive("window") {
-                width: 80%;
-                height: 5vh;
+                width: 83%;
+                height: 6vh;
                 padding-left: 1vw;
                 border-radius: 2% / 25%;
 
@@ -641,38 +643,6 @@ section {
           grid-template-rows: repeat(4, 30%);
           grid-auto-columns: 30%;
           grid-auto-rows: 30%;
-        }
-        .posePictureBox {
-          grid-column: span 1;
-          grid-row: span 1;
-          width: 100%;
-          aspect-ratio: 4 / 3;
-          border-radius: 6% / 8%;
-          overflow: hidden;
-
-          background-color: $themeColor04;
-
-          cursor: pointer;
-          .hearts {
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            button {
-              height: 100%;
-              aspect-ratio: 1 / 1;
-
-              border: none;
-              border-radius: 50% / 50%;
-
-              color: $themeColor04;
-              background-color: $themeColor01;
-              i {
-                font-size: 1.2em;
-                touch-action: none;
-                pointer-events: none;
-              }
-            }
-          }
         }
       }
     }
@@ -797,23 +767,43 @@ section {
             grid-auto-columns: 48%;
             grid-auto-rows: 40%;
           }
-          .posePictureBox {
-            grid-column: span 1;
-            grid-row: span 1;
-            aspect-ratio: 4 / 3;
-
-            overflow: hidden;
-
-            background-color: $themeColor04;
-
-            cursor: pointer;
-          }
         }
       }
     }
   }
 }
+.posePictureBox {
+  grid-column: span 1;
+  grid-row: span 1;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 6% / 8%;
+  overflow: hidden;
 
+  background-color: $themeColor04;
+
+  cursor: pointer;
+  .hearts {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    button {
+      height: 100%;
+      aspect-ratio: 1 / 1;
+
+      border: none;
+      border-radius: 50% / 50%;
+
+      color: $themeColor04;
+      background-color: $themeColor01;
+      i {
+        font-size: 1.2em;
+        touch-action: none;
+        pointer-events: none;
+      }
+    }
+  }
+}
 .navArrow_left,
 .navArrow_right {
   width: max-content;
@@ -836,11 +826,6 @@ section {
 .navArrow_right {
   padding-right: 1%;
   right: 0%;
-}
-
-.posePictureBox {
-  width: 100%;
-  aspect-ratio: 4 / 3;
 }
 
 #buttons {
