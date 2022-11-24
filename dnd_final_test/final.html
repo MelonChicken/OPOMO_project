@@ -9,6 +9,7 @@
     <link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js" ></script>
     <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
 
     <style>
         .container {
@@ -29,7 +30,6 @@
             background-color:yellow;
         }
      </style>
-    <script src="./DnD_touch.js"></script>
     <script> // 드래그존에 넣기
         const allowDrop = (e) => {
             e.preventDefault();
@@ -38,6 +38,7 @@
         // text로 드래그 요소의 id (drag1)을 받아옴
         const drag = (e) => {
             if(e.dataTransfer == undefined) { // touch 이벤트일 경우..
+                console.log(e.target)
                 dragId = e.target.id
             } else {
                 e.dataTransfer.setData("text", e.target.id);
