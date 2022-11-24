@@ -11,7 +11,7 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 //DB에 새로 쓰기(추가 아님)
-export function writePoseData(value) {
+function writePoseData(value) {
   firebase.database().ref("poses/").set(value);
 }
 
@@ -32,6 +32,7 @@ function getWhichData(category, value) {
       console.error(error);
     });
 }
+export { getWhichData };
 // //불러오기 예시
 // getWhichData("poses", "basic");
 // getWhichData("poses", "custom");
