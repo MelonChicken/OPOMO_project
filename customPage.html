@@ -289,8 +289,8 @@
       </button>
       <script>
         $(function () {
+          $(".posePictureBox").removeClass("hbtns hearts");
           $(".confirm").click(function (e) {
-            console.dir(document.getElementById("capture_area"));
             html2canvas(document.getElementById("capture_area")).then(function (
               canvas
             ) {
