@@ -44,7 +44,7 @@ const list = document.getElementById("list");
 function showList(val = "") {
   list.innerHTML = "";
   //여러개의 태그들을 리스트화
-  wantedtags = val.split(",");
+  wantedtags = val.split(" ");
 
   const res = sibal.forEach((pose) => {
     let flag = 0;
