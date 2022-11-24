@@ -29,6 +29,11 @@
             height: 100px;
             background-color:yellow;
         }
+        .wish_container {
+            display: solid 1px black;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 5px;
+        }
      </style>
     <script> // 드래그존에 넣기
         const allowDrop = (e) => {
@@ -122,7 +127,31 @@
                 $('button').remove('#btnDel_4')
             });
 
-        })
+            $("#buttons").on("click", "#btnDel_5", function() {
+                let imported_image = $("#frame5").children();
+                $('#cnt_drag').prepend(imported_image);
+                $('button').remove('#btnDel_5')
+            });
+
+        });
+    </script>
+    <script> // 위시리스트 버튼+추가
+        $(function(){
+            $("#hearts").on("click", "button", function(e) { // 위시리스트 버튼 중 하나를 클릭시...
+                let btn_id = e.target.id // 클릭 된 버튼 id = hbtn_숫자
+                let seq = btn_id[5] // 숫자만 떼어옴
+                let image_id = `#image${seq}` // 버튼에 해당하는 이미지 id
+
+                if(($('#wishlist').children(image_id).length == 0)) { // factor의 children중 'image숫자'를 아이디로 가진 아이가 0개일 경우 // 이미지가 위시리스트에 존재하지 않을 경우
+                    let copied_image = $(image_id).clone(); // 이미지 복사
+                    copied_image.appendTo('#wishlist'); // 위시리스트 목록에 추가하기
+                    $(`#${btn_id}`).css('backgroundColor', 'red'); // 위시리스트 버튼 색깔 바꾸기
+                } else { // 버튼이 이미 눌러있는 경우
+                    $('#wishlist').children(image_id).remove(); // 위시리스트 빼기
+                    $(`#${btn_id}`).css('backgroundColor', 'gray'); // 버튼 색깔 되돌리기
+                }
+            });
+        });
     </script>
     <script> // 모바일 드래그
         /* window.onload 사용해 터치 이벤트 발생 확인 : 상시 대기 */
@@ -182,6 +211,14 @@
 
     <div id="buttons"></div>
 
+    <div class="hbtns" id="hearts">
+        <button type="button" class="hbtn" id="hbtn_1">1번 위시</button>
+        <button type="button" class="hbtn" id="hbtn_2">2번 위시</button>
+        <button type="button" class="hbtn" id="hbtn_3">3번 위시</button>
+        <button type="button" class="hbtn" id="hbtn_4">4번 위시</button>
+        <button type="button" class="hbtn" id="hbtn_5">5번 위시</button>
+    </div>
+
     <div id="cnt_drag" class="container">
         <img id="image1" class="item" src="../images/dog01.jpg" draggable="true" ondragstart="drag(event)" width="100" height="100"/>
         <img id="image2" class="item" src="../images/dog02.jpg" draggable="true" ondragstart="drag(event)" width="100" height="100"/>
@@ -189,6 +226,8 @@
         <img id="image4" class="item" src="../images/dog04.jpg" draggable="true" ondragstart="drag(event)" width="100" height="100"/>
         <img id="image5" class="item" src="../images/dog05.jpg" draggable="true" ondragstart="drag(event)" width="100" height="100"/>
     </div>
+
+    <div id="wishlist" class="wish_container">위시리스트. 나는.</div>
 
 </body>
 </html>

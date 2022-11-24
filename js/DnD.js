@@ -10,7 +10,7 @@ const drag = (e) => {
     self.dragId = e.target.id;
   } else {
     e.dataTransfer.setData("text", e.target.id);
-}
+  }
 }
 
 // 드래그된 요소를 드롭 요소에 추가
@@ -24,11 +24,12 @@ const drop = (e) => {
       } else {
           const data = e.dataTransfer.getData("text");
           if(e.target.className == "customPage__myPoseContainerCover__picBox__grid__pic ui-sortable-handle") {
-          e.preventDefault();
-          e.target.appendChild(document.getElementById(data));
+            e.preventDefault();
+            e.target.appendChild(document.getElementById(data));
           }
       }
-  }};
+  }
+};
 
 
 /////////////////////////////////////////////////////////// **드래그존에서 순서 변경**
