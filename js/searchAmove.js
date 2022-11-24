@@ -104,3 +104,24 @@ function saving(element) {
 function moveExport() {
   location.href = "/basicExport.html";
 }
+
+//js파일 안에 js파일 넣음
+document.write(
+  '<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>'
+);
+document.write(
+  '<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>'
+);
+document.write(
+  '<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-analytics.js"></script>'
+);
+document.write(
+  '<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-auth.js"></script>'
+);
+document.write(
+  '<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-firestore.js"></script>'
+);
+document.write(
+  '<script type="module"> import { initializeApp } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";</script>'
+);
+document.write('<script src="./js/firebaseUpload.js"></script>');
