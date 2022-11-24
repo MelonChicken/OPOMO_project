@@ -233,18 +233,16 @@
             ) {
               var el = document.createElement("a");
               el.href = canvas.toDataURL("image/jpeg");
+              function saving2() {
+                console.dir();
+
+                localStorage.setItem(1, el.href);
+                setTimeout(moveExport(), 3000);
+                location.href = "/basicExport";
+              }
             });
           });
         });
-      </script>
-      <script>
-        function saving2() {
-          console.dir();
-
-          localStorage.setItem(1, el.href);
-          setTimeout(moveExport(), 3000);
-          location.href = "/basicExport";
-        }
       </script>
     </div>
   </body>
