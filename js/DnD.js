@@ -6,6 +6,7 @@ const allowDrop = (e) => {
 
 // text로 드래그 요소의 id (drag1)을 받아옴
 const drag = (e) => {
+  console.log(e)
   if(e.dataTransfer == undefined) { // touch 이벤트일 경우..
     self.dragId = e.target.id;
   } else {
