@@ -49,20 +49,23 @@
       </header>
 
       <section>
-        <ul class="publicPage__picContainer" id="list">
+        <ul class="publicPage__picContainer list">
           <li class="publicPictureBox"></li>
         </ul>
       </section>
 
       <div class="container">
         <form class="publicPage__filterContainer" id="search-form">
-          <button class="publicPage__filterContainer__choose" id="searchBtn">
+          <button
+            class="publicPage__filterContainer__choose"
+            id="basicSearchBtn"
+          >
             <i class="fa-solid fa-hashtag"></i>
           </button>
           <input
             class="publicPage__filterContainer__filters"
             type="text"
-            id="search"
+            id="basicSearch"
             placeholder="#와 함께 입력하고 공백으로 구분해주세요!"
           />
         </form>
