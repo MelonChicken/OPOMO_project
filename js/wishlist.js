@@ -1,6 +1,7 @@
 // 위시리스트 버튼+추가
 $(function(){
     $("#hearts").on("click", "button", function(e) { // 위시리스트 버튼 중 하나를 클릭시...
+        console.log(e.target.id)
         let btn_id = e.target.id // 클릭 된 버튼 id = hbtn_숫자
         let seq = btn_id[5] // 숫자만 떼어옴
         let image_id = `#image${seq}` // 버튼에 해당하는 이미지 id
