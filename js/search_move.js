@@ -120,7 +120,7 @@ const sibalBasic = [
     id: "b20",
     name: "마음 빼고 다 맞는 우리",
     tag: ["#3명", "신나게", "#친구와"],
-    url: "./images/Basic/img (6) .PNG",
+    url: "./images/Basic/img (6).PNG",
   },
   {
     id: "b21",
@@ -443,6 +443,7 @@ function showListBasic(val = "") {
     //만약 원하는 태그들을 모두 포함한다면
     if (flag == wantedtags.length) {
       const li = document.createElement("li");
+      li.classList.add("publicPictureBox");
       li.innerHTML = `
                   <div class="publicPicture__container">
                     <img class="pic" onclick="saving(this)" id='${pose.id}' src='${pose.url}' alt='${pose.tag}' />
