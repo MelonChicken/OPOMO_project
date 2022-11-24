@@ -881,10 +881,40 @@ section {
     background-color: $themeColor02;
   }
 }
-.confirm{
-  width:10%;
-  height:auto;
-  position: :absolute;
-  top:70%;
+.confirm {
+  height: 6vh;
+  position: absolute;
 
+  border: none;
+  border-radius: 15% / 30%;
+
+  font-weight: bold;
+
+  z-index: 6;
+  color: $themeColor02;
+  background-color: $themeColor03;
+  @include responsive("mobile") {
+    width: 20%;
+    top: 92%;
+    left: 40%;
+  }
+  @include responsive("mobile-l") {
+    width: 20%;
+    top: 92%;
+    left: 40%;
+  }
+  @include responsive("tablet") {
+    width: 20%;
+    top: 92%;
+    left: 40%;
+  }
+  @include responsive("window") {
+    width: 8%;
+    top: 92%;
+    left: 45.5%;
+  }
+  &:hover {
+    background-color: purple;
+    color: $themeColor02;
+  }
 }

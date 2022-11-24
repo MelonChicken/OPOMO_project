@@ -940,4 +940,47 @@ section .customPage__wishPic .customPage__wishList .customPage__wishList__collap
   font-weight: bold;
   color: #9481a1;
   background-color: #d5cff5;
+}
+
+.confirm {
+  height: 6vh;
+  position: absolute;
+  border: none;
+  border-radius: 15%/30%;
+  font-weight: bold;
+  z-index: 6;
+  color: #d5cff5;
+  background-color: #a5a6e9;
+}
+@media screen and (max-width: 480px) {
+  .confirm {
+    width: 20%;
+    top: 92%;
+    left: 40%;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .confirm {
+    width: 20%;
+    top: 92%;
+    left: 40%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .confirm {
+    width: 20%;
+    top: 92%;
+    left: 40%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .confirm {
+    width: 8%;
+    top: 92%;
+    left: 45.5%;
+  }
+}
+.confirm:hover {
+  background-color: purple;
+  color: #d5cff5;
 }/*# sourceMappingURL=customPageStyles.css.map */
