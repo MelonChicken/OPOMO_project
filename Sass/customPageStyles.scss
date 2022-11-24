@@ -542,7 +542,7 @@ section {
                 font-size: 1.5em;
               }
               @include responsive("window") {
-                width: 50%;
+                width: 80%;
                 height: 5vh;
                 padding-left: 1vw;
                 border-radius: 2% / 25%;
@@ -642,22 +642,20 @@ section {
           grid-auto-columns: 30%;
           grid-auto-rows: 30%;
         }
-        .container {
+        .posePictureBox {
           grid-column: span 1;
           grid-row: span 1;
+          width: 100%;
+          aspect-ratio: 4 / 3;
+          border-radius: 6% / 8%;
+          overflow: hidden;
 
           background-color: $themeColor04;
 
           cursor: pointer;
-          .posePictureBox {
-            width: 100%;
-            aspect-ratio: 4 / 3;
-            border-radius: 6% / 8%;
-            overflow: hidden;
-          }
           .hearts {
             display: flex;
-            justify-content: center;
+            justify-content: flex-end;
             align-items: center;
             button {
               height: 100%;
