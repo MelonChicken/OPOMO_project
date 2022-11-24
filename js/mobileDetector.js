@@ -35,9 +35,10 @@ function noticeTouch(e) {
 
 
     // 이미지에 터치 이벤트 발생시
-    $('.customPage__navMenu__collapse__grid').on("touchstart", '.posePictureBox', function(event) {
+    $('.publicPictureBox').on("touchstart", '.posePictureBox', function(event) {
       //커튼을 닫고 박스를 치운다.
         console.log('커튼 닫어!')
+        console.log(e.target, '터치 시작되는 놈')
         nowOpened.style.maxWidth = null;
         nowMenu.style.width = null;
         nowMenu.style.display = 'none';
@@ -45,6 +46,7 @@ function noticeTouch(e) {
 
     $('.posePictureBox').on("touchend", function(event) {
       //박스를 다시 꺼내고 커튼도 연다.
+      //customPage__myPoseContainerCover__picBox__grid__pic ui-sortable-handle
       console.log('커튼 열어!!')
       console.log(e.target, '터치 끝나는 놈')
 
