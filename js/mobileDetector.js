@@ -37,11 +37,23 @@ function noticeTouch(e) {
     // 이미지에 터치 이벤트 발생시
     $('.customPage__navMenu__collapse__grid').on("touchstart", '.posePictureBox', function(event) {
       //커튼을 닫고 박스를 치운다.
-      console.log('커튼닫기')
+        console.log('커튼 닫어!')
+        nowOpened.style.maxWidth = null;
+        nowMenu.style.width = null;
+        nowMenu.style.display = 'none';
+    });
+
+    $('.posePictureBox').on("touchend", function(event) {
+      //박스를 다시 꺼내고 커튼도 연다.
+      console.log('커튼 열어!!')
+      console.log(e.target, '터치 끝나는 놈')
+
       setTimeout(() => 
-        nowOpened.style.maxWidth = null,
-        nowMenu.style.width = null,
+        nowMenu.style.display = null,
+        nowMenu.style.display = "flex",
+        nowOpened.style.maxWidth = 100 + "%",
         console.log("2초 후에 실행됨"), 2000);
         
+        /// 순서 바꿀 때 커튼 열리는 거 해결하기
     });
   }};
