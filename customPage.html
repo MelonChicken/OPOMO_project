@@ -29,6 +29,7 @@
 
     <script src="js/DnD.js"></script>
     <script src="./js/collapsible.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <title>OPOMO</title>
   </head>
   <body>
@@ -103,7 +104,10 @@
           <!--삭제버튼이 생성되는 곳-->
 
           <div class="customPage__myPoseContainerCover">
-            <div class="customPage__myPoseContainerCover__picBox">
+            <div
+              class="customPage__myPoseContainerCover__picBox"
+              id="capture_area"
+            >
               <div
                 class="customPage__myPoseContainerCover__picBox__grid"
                 id="cnt_drop"
@@ -204,11 +208,20 @@
       <div OnClick="location.href='/selection'" class="navArrow_left">
         <i class="fa-solid fa-caret-left"></i>
       </div>
+      <!--오른쪽으로 넘어가는 버튼-->
       <div OnClick="location.href='/customExport'" class="navArrow_right">
         <i class="fa-solid fa-caret-right"></i>
       </div>
+      <script>
+        $(function(){
+            $(".navArrow_right").click(function(e){
+                html2canvas(document.getElementById("capture_area")).then(function(canvas) {
+                    var el = document.createElement("a");
+                    el.href = canvas.toDataURL("image/jpeg");
+      </script>
     </div>
   </body>
   <script src="./js/customSearch.js"></script>
   <script src="./js/mobileDetector.js"></script>
+  <script src="js/html2canvas.min.js"></script>
 </html>
