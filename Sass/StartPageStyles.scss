@@ -1,0 +1,262 @@
+@import "other_scss/variables"; //변수는 맨 위에
+@import "other_scss/responsive"; //반응형 사이즈 설정
+@import "other_scss/buttons";
+@import "other_scss/linkBtns";
+
+@import url("https://fonts.googleapis.com/css2?family=Concert+One&display=swap"); //사용 폰트
+
+body {
+  width: 100%;
+  height: 90vh;
+  margin: 0;
+}
+
+.startPage {
+  width: 100%;
+  height: 100%;
+}
+
+.linkbtns {
+  @extend %link;
+}
+
+header {
+  top: 0;
+  left: 0;
+  position: fixed;
+
+  width: 100%;
+  height: minmax(max-content, $headerHeight);
+  box-shadow: 0px 10px 5px 1px rgb(0, 0, 0, 0.2);
+
+  display: flex;
+  justify-content: space-between;
+
+  color: $themeColor02;
+  background-color: $themeColor01;
+
+  #header__titleLogo {
+    width: minmax(max-content, 5%);
+    height: 7vh;
+    padding-left: 1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: $logoFont;
+    font-size: 2em;
+    font-weight: bold;
+
+    color: $themeColor02;
+  }
+
+  #header__icons {
+    height: max-content + 1vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    margin: 0;
+
+    list-style: none;
+    color: $themeColor02;
+    @include responsive("window") {
+      width: 15%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      li {
+        margin-right: 1vw;
+      }
+    }
+    @include responsive("mobile") {
+      width: 30%;
+      padding-right: 5vw;
+
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+    @include responsive("tablet") {
+      width: 20%;
+      padding-right: 1vw;
+
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    @include responsive("mobile-l") {
+      width: 20%;
+      padding-right: 1vw;
+
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    li {
+      width: max-content;
+      height: max-content;
+      font-size: 1.2em;
+
+      padding: 0.2em;
+      padding-left: 0.3em;
+      padding-right: 0.3em;
+      border-radius: 15% / 15%;
+
+      color: $themeColor01;
+      background-color: $themeColor02;
+    }
+  }
+}
+
+section {
+  padding-top: $headerHeight;
+  width: 100%;
+  height: $sectionHeight;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  background-color: $themeColor01;
+
+  .section__leftContainer,
+  .section__rightContainer {
+    @include responsive("mobile") {
+      width: 35%;
+    }
+    @include responsive("mobile-l") {
+      width: 30%;
+    }
+    @include responsive("tablet") {
+      width: 25%;
+    }
+    @include responsive("window") {
+      width: 20%;
+    }
+  }
+  .section__leftContainer__customBox,
+  .section__rightContainer__fourCutBox {
+    border-radius: 15% / 10%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $themeColor02;
+
+    @include responsive("mobile") {
+      aspect-ratio: 2 / 5;
+    }
+    @include responsive("mobile-l") {
+      aspect-ratio: 1 / 2;
+    }
+    @include responsive("tablet") {
+      aspect-ratio: 1 / 2;
+    }
+    @include responsive("window") {
+      aspect-ratio: 1 / 2;
+    }
+
+    .section__leftContainer__customBox__title,
+    .section__rightContainer__fourCutBox__title {
+      width: minmax(100%, max-content);
+      height: 30%;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+
+      @include responsive("mobile") {
+        #chooseTitle {
+          font-size: 1.6em;
+          font-weight: bold;
+          font-family: $logoFont;
+          color: $themeColor01;
+        }
+        #chooseExplanation {
+          font-size: 0.6em;
+          font-weight: bold;
+          color: $themeColor01;
+        }
+      }
+      @include responsive("mobile-l") {
+        #chooseTitle {
+          font-size: 2.5em;
+          font-weight: bold;
+          font-family: $logoFont;
+          color: $themeColor01;
+        }
+        #chooseExplanation {
+          font-size: 1.1em;
+          font-weight: bold;
+          color: $themeColor01;
+        }
+      }
+      @include responsive("tablet") {
+        #chooseTitle {
+          font-size: 3em;
+          font-weight: bold;
+          font-family: $logoFont;
+          color: $themeColor01;
+        }
+        #chooseExplanation {
+          font-size: 1em;
+          font-weight: bold;
+          color: $themeColor01;
+        }
+      }
+      @include responsive("window") {
+        #chooseTitle {
+          font-size: 3em;
+          font-weight: bold;
+          font-family: $logoFont;
+          color: $themeColor01;
+        }
+        #chooseExplanation {
+          font-size: 1.1em;
+          font-weight: bold;
+          color: $themeColor01;
+        }
+      }
+    }
+
+    .section__leftContainer__customBox__content,
+    .section__rightContainer__fourCutBox__content {
+      width: 64%;
+      aspect-ratio: 2 / 5;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .section__leftContainer__customBox__content__pic,
+      .section__rightContainer__fourCutBox__content__pic {
+        width: 100%;
+        height: 70%;
+
+        display: grid;
+        grid-template-rows: repeat(1fr, 4);
+        gap: 2%;
+
+        #chooseDisplayCuts {
+          grid-row: span 1;
+          background-color: white;
+        }
+      }
+
+      .section__leftContainer__customBox__content__button,
+      .section__rightContainer__fourCutBox__content__button {
+        width: 100%;
+        height: 20%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .chooseButton {
+          @include chooseButtons;
+        }
+      }
+    }
+  }
+}

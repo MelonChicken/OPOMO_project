@@ -1,0 +1,65 @@
+@mixin chooseButtons {
+  width: 100%;
+  aspect-ratio: 3 / 1;
+  border-style: none;
+  border-radius: 15% / 30%;
+
+  font-weight: bold;
+
+  background-color: $themeColor01;
+  color: $themeColor02;
+
+  &:hover {
+    background-color: purple;
+    color: $themeColor02;
+  }
+  @include responsive("mobile") {
+    font-size: 0.9em;
+  }
+  @include responsive("mobile-l") {
+    font-size: 1.6em;
+  }
+  @include responsive("tablet") {
+    font-size: 1.8em;
+  }
+  @include responsive("window") {
+    font-size: 1.8em;
+  }
+}
+
+%scrollbar {
+  @include responsive("window") {
+    &::-webkit-scrollbar {
+      width: 5%;
+    }
+    &::-webkit-scrollbar-button {
+      //스크롤바 버튼
+      display: none;
+    }
+    &::-webkit-scrollbar-thumb {
+      //스크롤바 손잡이
+      background-color: $themeColor01;
+    }
+    &::-webkit-scrollbar-track {
+      //스크롤바 손잡이 이외의 부분
+      background-color: rgba(0, 21, 255, 0.16);
+    }
+    @include responsive("tablet") {
+      &::-webkit-scrollbar {
+        width: 3%;
+      }
+      &::-webkit-scrollbar-button {
+        //스크롤바 버튼
+        display: none;
+      }
+      &::-webkit-scrollbar-thumb {
+        //스크롤바 손잡이
+        background-color: $themeColor01;
+      }
+      &::-webkit-scrollbar-track {
+        //스크롤바 손잡이 이외의 부분
+        background-color: rgba(0, 21, 255, 0.16);
+      }
+    }
+  }
+}

@@ -1,0 +1,269 @@
+@import "other_scss/variables"; //변수는 맨 위에
+@import "other_scss/responsive"; //반응형 사이즈 설정
+@import "other_scss/buttons";
+@import "other_scss/linkBtns";
+
+@import url("https://fonts.googleapis.com/css2?family=Concert+One&display=swap"); //사용 폰트
+
+body {
+  width: 100%;
+  height: 90vh;
+  margin: 0;
+}
+.hidden {
+  display: none;
+}
+
+.mainPage {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: $themeColor01;
+  .mainPage__upTitles {
+    margin-top: 2vh;
+    width: minmax(max-content, 50%);
+    height: 30%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .mainPage__upTitles__logo {
+      width: 80%;
+      height: 55%;
+
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+
+      font-family: $logoFont;
+      font-weight: bold;
+      text-shadow: 2px 2px 4px $themeColor03;
+      color: $themeColor04;
+
+      @include responsive("mobile") {
+        font-size: 20vw;
+      }
+      @include responsive("mobile-l") {
+        font-size: 5em;
+      }
+      @include responsive("tablet") {
+        font-size: 5em;
+      }
+      @include responsive("window") {
+        font-size: 7em;
+      }
+    }
+    .mainPage__upTitles__sub {
+      width: 100%;
+      height: 45%;
+      margin-top: 2vh;
+
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+
+      white-space: nowrap;
+      text-shadow: 2px 2px 4px $themeColor03;
+
+      color: $themeColor04;
+      @include responsive("mobile") {
+        margin-top: 1vh;
+        font-size: 10vw;
+      }
+      @include responsive("mobile-l") {
+        font-size: 3em;
+      }
+      @include responsive("tablet") {
+        font-size: 5em;
+      }
+      @include responsive("window") {
+        font-size: 3.5em;
+      }
+    }
+  }
+  .mainPage__picBox {
+    overflow: hidden;
+    padding: 1vw;
+    background-color: rgba(70, 70, 99, 0.452);
+    @include responsive("mobile") {
+      width: 80%;
+      height: 40%;
+      border-radius: 8% / 10%;
+    }
+    @include responsive("mobile-l") {
+      width: 80%;
+      height: 40%;
+      border-radius: 8% / 10%;
+    }
+    @include responsive("tablet") {
+      width: 60%;
+      height: 40%;
+      border-radius: 8% / 10%;
+    }
+    @include responsive("window") {
+      width: 25%;
+      height: 40%;
+      border-radius: 8% / 10%;
+    }
+    .mainPage__picBox__picContainer {
+      width: 100%;
+      height: 100%;
+
+      display: flex;
+      flex-wrap: nowrap;
+
+      animation-name: marquee;
+      animation-delay: 2s;
+      animation-duration: 20s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+
+      &:hover {
+        animation-play-state: paused;
+      }
+      .mainPage__picBox__example {
+        width: max-content;
+        height: 100%;
+        margin-right: 2vw;
+
+        object-fit: contain;
+      }
+    }
+  }
+  .mainPage__startButton {
+    cursor: pointer;
+
+    margin: 2vh;
+    border: none;
+    box-shadow: 2px 4px $themeColor03;
+
+    font-weight: bold;
+
+    color: $themeColor01;
+    background-color: $themeColor04;
+
+    &:hover {
+      color: $themeColor04;
+      background-color: $themeColor03;
+    }
+
+    @include responsive("mobile") {
+      width: 60vw;
+      aspect-ratio: 4 /1;
+      border-radius: 8% / 50%;
+      font-size: 2em;
+    }
+    @include responsive("mobile-l") {
+      width: 80%;
+      aspect-ratio: 4 /1;
+      border-radius: 8% / 50%;
+      font-size: 2em;
+    }
+    @include responsive("tablet") {
+      width: 60%;
+      aspect-ratio: 4 /1;
+      border-radius: 8% / 50%;
+      font-size: 4em;
+    }
+    @include responsive("window") {
+      width: 20%;
+      aspect-ratio: 4 /1;
+      border-radius: 8% / 50%;
+      font-size: 3em;
+    }
+  }
+  .mainPage__navBox {
+    position: fixed;
+    right: 0;
+
+    color: $themeColor04;
+    @include responsive("mobile") {
+      padding-left: 2vw;
+      padding-right: 2vw;
+      bottom: 2px;
+
+      width: 96vw;
+      height: 100px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      font-size: 3em;
+    }
+    @include responsive("mobile-l") {
+      padding-left: 2vw;
+      padding-right: 2vw;
+      bottom: 10px;
+
+      width: 96vw;
+      height: 100px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      font-size: 80px;
+    }
+    @include responsive("tablet") {
+      padding-left: 2vw;
+      padding-right: 2vw;
+      bottom: 10px;
+
+      width: 96vw;
+      height: 100px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      font-size: 80px;
+    }
+    @include responsive("window") {
+      bottom: 10px;
+
+      width: 10%;
+      height: 95%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+
+      font-size: 80px;
+    }
+    i {
+      cursor: pointer;
+      &:hover {
+        color: $themeColor03;
+      }
+    }
+  }
+}
+
+.linkBtns {
+  cursor: pointer;
+  color: $themeColor04;
+  &:hover {
+    color: $themeColor03;
+  }
+  &:link {
+    color: $themeColor04;
+  }
+  &:visited {
+    color: $themeColor04;
+  }
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-150%);
+  }
+}

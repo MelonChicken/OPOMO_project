@@ -1,0 +1,10 @@
+%link {
+  cursor: pointer;
+  color: $themeColor01;
+  &:link {
+    color: $themeColor01;
+  }
+  &:visited {
+    color: $themeColor01;
+  }
+}
