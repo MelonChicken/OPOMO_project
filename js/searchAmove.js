@@ -19,7 +19,7 @@ document.write(
 );
 //이미지
 // document.write('<script src="./js/firebaseUpload.js"></script>');
-import { getWhichData } from "js/firebaseUpload.js";
+import { getWhichData } from "./js/firebaseUpload.js";
 const sibal = getWhichData("poses", "basic");
 
 const list = document.getElementById("list");
