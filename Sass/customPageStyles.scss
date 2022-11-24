@@ -740,11 +740,47 @@ section {
 }
 
 #buttons {
-  width: max-content;
-  height: max-content;
+  aspect-ratio: 1/1;
 
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1%;
   position: absolute;
   z-index: 4;
-  top: 30%;
-  left: 30%;
+
+  @include responsive("mobile") {
+    width: 30%;
+    top: 4%;
+    left: 3%;
+  }
+  @include responsive("mobile-l") {
+    width: 10%;
+    top: 30%;
+    left: 30%;
+  }
+  @include responsive("tablet") {
+    width: 17%;
+    top: 10%;
+    left: 10%;
+  }
+  @include responsive("window") {
+    width: 10%;
+    top: 17%;
+    left: 30%;
+    border-radius: 10% / 6%;
+  }
+  button {
+    grid-column: span 1;
+    grid-row: span 1;
+
+    border: none;
+    border-radius: 10% / 6%;
+
+    font-size: 1.1em;
+    font-weight: bold;
+
+    color: $themeColor01;
+    background-color: $themeColor02;
+  }
 }
