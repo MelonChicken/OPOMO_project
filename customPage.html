@@ -286,9 +286,8 @@
       </button>
       <script>
         $(function () {
+          $(".hbtns hearts").css("display", "none");
           $(".confirm").click(function (e) {
-            console.log($(".hbtns hearts").css("display"));
-            $(".hbtns hearts").css("display", "none");
             html2canvas(document.getElementById("capture_area")).then(function (
               canvas
             ) {
