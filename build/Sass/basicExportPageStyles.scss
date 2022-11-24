@@ -1,0 +1,265 @@
+@import "other_scss/variables"; //변수는 맨 위에
+@import "other_scss/responsive"; //반응형 사이즈 설정
+@import "other_scss/buttons";
+@import "other_scss/linkBtns";
+
+@import url("https://fonts.googleapis.com/css2?family=Concert+One&display=swap"); //사용 폰트
+
+body {
+  width: 100%;
+  margin: 0;
+
+  display: flex;
+  justify-content: center;
+}
+.linkbtns {
+  @extend %link;
+}
+
+.exportPage {
+  width: 100%;
+  height: 100vh;
+  background-color: $themeColor01;
+}
+header {
+  top: 0%;
+  left: 0%;
+  position: fixed;
+
+  width: 100%;
+  height: minmax(max-content, $headerHeight);
+
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0px 10px 5px 1px rgb(0, 0, 0, 0.2);
+  color: $themeColor02;
+  background-color: $themeColor01;
+  #header__titleLogo {
+    width: minmax(max-conent, 5%);
+    height: 7vh;
+    padding-left: 1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: $logoFont;
+    font-size: 2em;
+    font-weight: bold;
+
+    color: $themeColor02;
+  }
+
+  #header__icons {
+    height: max-content + 1vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    margin: 0;
+
+    list-style: none;
+    color: $themeColor02;
+    @include responsive("window") {
+      width: 15%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      li {
+        margin-right: 1vw;
+      }
+    }
+    @include responsive("mobile") {
+      width: 30%;
+      padding-right: 5vw;
+
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+    @include responsive("tablet") {
+      width: 20%;
+      padding-right: 1vw;
+
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    @include responsive("mobile-l") {
+      width: 20%;
+      padding-right: 1vw;
+
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    li {
+      width: max-content;
+      height: max-content;
+      font-size: 1.2em;
+
+      padding: 0.2em;
+      padding-left: 0.3em;
+      padding-right: 0.3em;
+      border-radius: 15% / 15%;
+
+      color: $themeColor01;
+      background-color: $themeColor02;
+    }
+  }
+}
+
+section {
+  padding-top: $headerHeight;
+  width: 100%;
+  height: $sectionHeight;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: $themeColor01;
+  .exportPage__picContainer {
+    @include responsive("mobile") {
+      height: 80%;
+      aspect-ratio: 1 / 3;
+    }
+    @include responsive("mobile-l") {
+      height: 80%;
+      aspect-ratio: 1 / 3;
+    }
+    @include responsive("tablet") {
+      height: 80%;
+      aspect-ratio: 1 / 3;
+    }
+    @include responsive("window") {
+      height: 80%;
+      aspect-ratio: 1 / 3;
+    }
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    background-color: $themeColor02;
+    .finalStep {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+  }
+  .exportPage__submissionContainer {
+    display: flex;
+    justify-content: space-between;
+    @include responsive("mobile") {
+      margin-top: 1.5vh;
+      width: 70%;
+      aspect-ratio: 20 / 1;
+    }
+    @include responsive("mobile-l") {
+      margin-top: 1.5vh;
+      width: 70%;
+      aspect-ratio: 20 / 1;
+    }
+    @include responsive("tablet") {
+      margin-top: 1.5vh;
+      width: 70%;
+      aspect-ratio: 20 / 1;
+    }
+    @include responsive("window") {
+      margin-top: 1.5vh;
+      width: 25%;
+      aspect-ratio: 22 / 1;
+    }
+    .exportPage__submissionContainer__save {
+      width: 70%;
+      height: 100%;
+
+      display: flex;
+      justify-content: center;
+
+      border: none;
+      color: $themeColor01;
+      background-color: $themeColor02;
+      cursor: pointer;
+      @include responsive("mobile") {
+        border-radius: 10% / 50%;
+      }
+      @include responsive("mobile-l") {
+        border-radius: 10% / 50%;
+      }
+      @include responsive("tablet") {
+        border-radius: 10% / 50%;
+      }
+      @include responsive("window") {
+        border-radius: 10% / 50%;
+      }
+      &:hover {
+        color: $themeColor02;
+        background-color: $themeColor03;
+      }
+      p {
+        height: auto;
+        font-weight: bold;
+        @include responsive("mobile") {
+          margin: 5%;
+          font-size: 1.5em;
+        }
+        @include responsive("mobile-l") {
+          margin: 5%;
+          font-size: 1.3em;
+        }
+        @include responsive("tablet") {
+          margin: 3%;
+          font-size: 2em;
+        }
+        @include responsive("window") {
+          margin: 5%;
+          font-size: 1.5em;
+        }
+      }
+    }
+    .exportPage__submissionContainer__share {
+      height: 100%;
+      aspect-ratio: 1 / 1;
+      border-radius: 50% / 50%;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $themeColor01;
+      background-color: $themeColor02;
+      cursor: pointer;
+      @include responsive("mobile") {
+        font-size: 1.5em;
+      }
+      @include responsive("mobile-l") {
+        font-size: 1.3em;
+      }
+      @include responsive("tablet") {
+        font-size: 2em;
+      }
+      @include responsive("window") {
+        font-size: 1.1em;
+      }
+
+      &:hover {
+        color: $themeColor02;
+        background-color: $themeColor03;
+      }
+    }
+  }
+}
+
+.navArrow_left {
+  width: max-content;
+  height: 60px;
+  padding-left: 1%;
+
+  top: 8%;
+  left: 0%;
+  position: fixed;
+
+  font-size: 3em;
+  color: $themeColor02;
+
+  cursor: pointer;
+}
