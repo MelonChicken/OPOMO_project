@@ -1,4 +1,5 @@
 //이미지
+document.write('<script src="./js/firebaseUpload.js"></script>');
 const sibal = getWhichData("poses", "basic");
 
 const list = document.getElementById("list");
@@ -86,5 +87,3 @@ document.write(
 document.write(
   '<script type="module"> import { initializeApp } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";</script>'
 );
-
-document.write('<script src="./js/firebaseUpload.js"></script>');
