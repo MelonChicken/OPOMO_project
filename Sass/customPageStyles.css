@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Concert+One&display=swap");
 @font-face {
   font-family: Kotra;
@@ -847,4 +848,34 @@ section .customPage__wishPic .customPage__wishList .customPage__wishList__collap
   font-weight: bold;
   color: #9481a1;
   background-color: #d5cff5;
+}
+
+#image1 {
+  background-size: contain;
+  background-position: center;
+  background-image: url("../images/2명/6.png");
+}
+
+#image2 {
+  background-size: contain;
+  background-position: center;
+  background-image: url("../images/2명/7.png");
+}
+
+#image3 {
+  background-size: contain;
+  background-position: center;
+  background-image: url("../images/2명/8.png");
+}
+
+#image4 {
+  background-size: contain;
+  background-position: center;
+  background-image: url("../images/2명/13.png");
+}
+
+#image5 {
+  background-size: contain;
+  background-position: center;
+  background-image: url("../images/2명/14.png");
 }/*# sourceMappingURL=customPageStyles.css.map */
