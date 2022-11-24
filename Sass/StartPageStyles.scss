@@ -2,9 +2,10 @@
 @import "other_scss/responsive"; //반응형 사이즈 설정
 @import "other_scss/buttons";
 @import "other_scss/linkBtns";
-
-@import url("https://fonts.googleapis.com/css2?family=Concert+One&display=swap"); //사용 폰트
-
+@font-face {
+  font-family: bitbit;
+  src: url(../font/DNFBitBitOTF.woff);
+}
 body {
   width: 100%;
   height: 90vh;
@@ -176,6 +177,7 @@ section {
           font-size: 0.8em;
           font-weight: bold;
           color: $themeColor01;
+          font-family: bitbit;
         }
       }
       @include responsive("mobile-l") {
@@ -189,6 +191,7 @@ section {
           font-size: 1.1em;
           font-weight: bold;
           color: $themeColor01;
+          font-family: bitbit;
         }
       }
       @include responsive("tablet") {
@@ -202,6 +205,7 @@ section {
           font-size: 1em;
           font-weight: bold;
           color: $themeColor01;
+          font-family: bitbit;
         }
       }
       @include responsive("window") {
@@ -215,6 +219,7 @@ section {
           font-size: 1.1em;
           font-weight: bold;
           color: $themeColor01;
+          font-family: "bitbit";
         }
       }
     }

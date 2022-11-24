@@ -3,6 +3,10 @@
   font-family: Kotra;
   src: url(../font/KOTRA\ HOPE.otf);
 }
+@font-face {
+  font-family: bitbit;
+  src: url(../font/DNFBitBitOTF.woff);
+}
 body {
   width: 100%;
   height: 90vh;
@@ -66,6 +70,7 @@ body {
   width: 100%;
   height: 45%;
   margin-top: 2vh;
+  font-family: bitbit;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -162,6 +167,7 @@ body {
   border: none;
   box-shadow: 2px 4px #a5a6e9;
   font-weight: bold;
+  font-family: bitbit;
   color: #9481a1;
   background-color: #fffaff;
 }

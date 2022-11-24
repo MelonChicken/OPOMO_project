@@ -464,10 +464,7 @@ function showListCustom(val = "") {
   sibalCustom.forEach((pose) => {
     //만약 원하는 태그들을 모두 포함한다면
     if (pose.tag.includes(wantedtag)) {
-      const li = document.createElement("li");
-      console.log(pose.url);
-      li.classList.add("publicPictureBox");
-      li.innerHTML = `<div class="posePictureBox" id="image${cnt}" draggable="true" ondragstart="drag(event)" style="background-image: url('${pose.url}');">
+      gridContainer.innerHTML = `<div class="posePictureBox" id="image${cnt}" draggable="true" ondragstart="drag(event)" style="background-image: url('${pose.url}');">
       <div class="hbtns hearts">
         <button type="button" class="hbtn" id="hbtn_${cnt}">
           <i class="fa-regular fa-heart"></i>

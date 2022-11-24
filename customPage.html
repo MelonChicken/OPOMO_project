@@ -289,7 +289,6 @@
       </button>
       <script>
         $(function () {
-          $(".hbtns hearts").css("display", "none");
           $(".confirm").click(function (e) {
             html2canvas(document.getElementById("capture_area")).then(function (
               canvas
@@ -300,8 +299,6 @@
               // el.download = "이미지.jpg"; //다운로드 할 파일명 설정
               // el.click();
               saving(myImage.src);
-
-              $(".hbtns hearts").css("display", "undefined");
             });
           });
         });
