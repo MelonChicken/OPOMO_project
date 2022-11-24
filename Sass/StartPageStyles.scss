@@ -6,6 +6,8 @@
   font-family: bitbit;
   src: url(../font/DNFBitBitOTF.woff);
 }
+
+@import url("https://fonts.googleapis.com/css2?family=Concert+One&display=swap"); //사용 폰트
 body {
   width: 100%;
   height: 90vh;
@@ -216,7 +218,7 @@ section {
           color: $themeColor01;
         }
         #chooseExplanation {
-          font-size: 1.1em;
+          font-size: 1.5em;
           font-weight: bold;
           color: $themeColor01;
           font-family: "bitbit";

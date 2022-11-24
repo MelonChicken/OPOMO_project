@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Concert+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Concert+One&display=swap");
 @font-face {
   font-family: Kotra;
   src: url(../font/KOTRA\ HOPE.otf);
@@ -270,7 +272,7 @@ section .section__rightContainer__fourCutBox .section__rightContainer__fourCutBo
 section .section__leftContainer__customBox .section__rightContainer__fourCutBox__title #chooseExplanation,
 section .section__rightContainer__fourCutBox .section__leftContainer__customBox__title #chooseExplanation,
 section .section__rightContainer__fourCutBox .section__rightContainer__fourCutBox__title #chooseExplanation {
-    font-size: 1.1em;
+    font-size: 1.5em;
     font-weight: bold;
     color: #9481a1;
     font-family: "bitbit";
