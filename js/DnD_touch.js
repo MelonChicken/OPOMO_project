@@ -4,13 +4,13 @@ $(function() {
     document.querySelectorAll('.posePictureBox').forEach(items => {
         items.addEventListener("touchstart", handelStart, false);
         items.addEventListener("touchmove", handleMove, false);
-        items.addEventListener("touchend", handleEnd, false)
+        items.addEventListener("touchend", handleEnd, false);
     });
 
     document.querySelectorAll('.customPage__myPoseContainerCover__picBox__grid__pic').forEach(items => {
         items.addEventListener("touchstart", handelStart, false);
         items.addEventListener("touchmove", handleMove, false);
-        items.addEventListener("touchend", handleEnd, false) // 마지막 false는 버블링 막는용
+        items.addEventListener("touchend", handleEnd, false); // 마지막 false는 버블링 막는용
     });
     
     /* 터치 이동 이벤트 발생 */
