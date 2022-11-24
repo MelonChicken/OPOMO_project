@@ -213,11 +213,16 @@
         <i class="fa-solid fa-caret-right"></i>
       </div>
       <script>
-        $(function(){
-            $(".navArrow_right").click(function(e){
-                html2canvas(document.getElementById("capture_area")).then(function(canvas) {
-                    var el = document.createElement("a");
-                    el.href = canvas.toDataURL("image/jpeg");
+        $(function () {
+          $(".navArrow_right").click(function (e) {
+            html2canvas(document.getElementById("capture_area")).then(function (
+              canvas
+            ) {
+              var el = document.createElement("a");
+              el.href = canvas.toDataURL("image/jpeg");
+            });
+          });
+        });
       </script>
     </div>
   </body>
