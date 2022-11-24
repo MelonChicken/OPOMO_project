@@ -1,5 +1,5 @@
 /* window.onload 사용해 터치 이벤트 발생 확인 : 상시 대기 */
-window.onload = function() {						
+$(function() {						
     /* 터치 이벤트 감시 위한 객체 등록 및 이벤트 등록 실시 */
     document.querySelectorAll('.posePictureBox').forEach(items => {
         items.addEventListener("touchstart", handelStart, false);
@@ -41,4 +41,4 @@ window.onload = function() {
         cb.dispatchEvent(evt);
         evt.preventDefault();
     }						
-};	
+});	

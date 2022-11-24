@@ -16,7 +16,6 @@ const drag = (e) => {
 // 드래그된 요소를 드롭 요소에 추가
 const drop = (e) => {
   if(e.target.childElementCount == 0) {
-    if(e.target.childElementCount == 0) {
       if(e.dataTransfer == undefined) { // touch 이벤트일 경우..
           if(e.target.className == "customPage__myPoseContainerCover__picBox__grid__pic ui-sortable-handle") {
               e.preventDefault();
@@ -29,7 +28,7 @@ const drop = (e) => {
           e.target.appendChild(document.getElementById(data));
           }
       }
-  }}};
+  }};
 
 
 /////////////////////////////////////////////////////////// **드래그존에서 순서 변경**
@@ -42,23 +41,17 @@ function reorder() {
 $(function() {
   // 빈 dropzone 순서 변환 막기 //
   $("#cnt_drop").sortable({ // 안의 태그들로 드래그 가능한 리스트 생성
-      // placeholder : "dropzone_highlight", // 기존 구역 하이라이트 기능
+    // placeholder : "dropzone_highlight", // 기존 구역 하이라이트 기능
 
-      start : function(event, ui) {
-          ui.item.data('start_pos', ui.item.index());
-      },
-  
-      stop : function(event, ui) {
-          let spos = ui.item.data('start_pos');
-          let epos = ui.item.index();
-          reorder();
-      }
+    start : function(event, ui) {
+      console.log('순서변환', event)
+    },
+
+    top : function(event, ui) {
+      reorder();
+    }
   })
 })
-
-/////////////////////////////////////////////////////////// **모바일 터치 이벤트**
-
-
 
 /////////////////////////////////////////////////////////// **이미지 삭제+버튼**
 $(function(){
