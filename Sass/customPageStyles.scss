@@ -392,7 +392,7 @@ section {
         @extend %scrollbar;
 
         .customPage__myPoseContainerCover__picBox__grid__pic {
-          background-color: $themeColor04;
+          background-color: transparent;
           overflow: hidden;
           aspect-ratio: 4 / 3;
           @include responsive("mobile") {
@@ -533,19 +533,42 @@ section {
         @include responsive("window") {
           grid-template-columns: repeat(3, 30%);
           grid-template-rows: repeat(4, 30%);
-          grid-auto-columns: 48%;
-          grid-auto-rows: 40%;
+          grid-auto-columns: 30%;
+          grid-auto-rows: 30%;
         }
-        .posePictureBox {
+        .container {
           grid-column: span 1;
           grid-row: span 1;
-          aspect-ratio: 4 / 3;
-          border-radius: 6% / 8%;
-          overflow: hidden;
 
           background-color: $themeColor04;
 
           cursor: pointer;
+          .posePictureBox {
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            border-radius: 6% / 8%;
+            overflow: hidden;
+          }
+          .hearts {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            button {
+              height: 100%;
+              aspect-ratio: 1 / 1;
+
+              border: none;
+              border-radius: 50% / 50%;
+
+              color: $themeColor04;
+              background-color: $themeColor01;
+              i {
+                font-size: 1.2em;
+                touch-action: none;
+                pointer-events: none;
+              }
+            }
+          }
         }
       }
     }

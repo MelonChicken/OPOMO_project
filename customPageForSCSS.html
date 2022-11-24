@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="Sass/customPageStyles.css" />
+    <link rel="stylesheet" href="Sass/customPageStylesForSCSS.css" />
     <script
       src="https://kit.fontawesome.com/8da0f3b785.js"
       crossorigin="anonymous"
@@ -28,16 +28,9 @@
     <!--jQuery-->
 
     <script src="js/DnD.js"></script>
-    <!--드래그, 순서변경, 삭제버튼-->
     <script src="js/DnD_touch.js"></script>
-    <!--모바일 드래그-->
-    <script src="js/wishlist.js"></script>
-    <!--위시리스트-->
-    <script src="js/collapsible.js"></script>
-    <!--커튼-->
-    <script src="js/mobileDetector.js"></script>
-    <!--모바일에서 커튼 접고 펼치기-->
-
+    <script src="js/wishlist copy.js"></script>
+    <script src="./js/collapsible.js"></script>
     <title>OPOMO</title>
   </head>
   <body>
@@ -171,7 +164,7 @@
                   />
                   <div class="hbtns hearts">
                     <button type="button" class="hbtn" id="hbtn_1">
-                      <i class="fa-regular fa-heart"></i>
+                      1번 위시
                     </button>
                   </div>
                 </div>
@@ -186,7 +179,7 @@
                   />
                   <div class="hbtns hearts">
                     <button type="button" class="hbtn" id="hbtn_2">
-                      <i class="fa-regular fa-heart"></i>
+                      2번 위시
                     </button>
                   </div>
                 </div>
@@ -201,7 +194,7 @@
                   />
                   <div class="hbtns hearts">
                     <button type="button" class="hbtn" id="hbtn_3">
-                      <i class="fa-regular fa-heart"></i>
+                      3번 위시
                     </button>
                   </div>
                 </div>
@@ -216,7 +209,7 @@
                   />
                   <div class="hbtns hearts">
                     <button type="button" class="hbtn" id="hbtn_4">
-                      <i class="fa-regular fa-heart"></i>
+                      4번 위시
                     </button>
                   </div>
                 </div>
@@ -231,7 +224,7 @@
                   />
                   <div class="hbtns hearts">
                     <button type="button" class="hbtn" id="hbtn_5">
-                      <i class="fa-regular fa-heart"></i>
+                      5번 위시
                     </button>
                   </div>
                 </div>
@@ -272,21 +265,22 @@
             ) {
               var el = document.createElement("a");
               el.href = canvas.toDataURL("image/jpeg");
-              function saving2() {
-                console.dir();
-
-                localStorage.setItem(1, el.href);
-                setTimeout(moveExport(), 3000);
-                location.href = "/basicExport";
-              }
             });
           });
         });
       </script>
+      <script>
+        function saving2() {
+          console.dir();
+
+          localStorage.setItem(1, el.href);
+          setTimeout(moveExport(), 3000);
+          location.href = "/basicExport";
+        }
+      </script>
     </div>
   </body>
   <script src="./js/customSearch.js"></script>
-  <!-- <script src="./js/mobileDetector.js"></script> -->
   <script src="js/html2canvas.min.js"></script>
   <!--firebase 사용 위한 스크립트들-->
   <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
