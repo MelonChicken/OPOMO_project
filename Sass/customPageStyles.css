@@ -845,6 +845,7 @@ section .customPage__wishPic .customPage__wishList .customPage__wishList__collap
   cursor: pointer;
 }
 .posePictureBox .hearts {
+  height: 33%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -858,7 +859,7 @@ section .customPage__wishPic .customPage__wishList .customPage__wishList__collap
   background-color: #9481a1;
 }
 .posePictureBox .hearts button i {
-  font-size: 1.2em;
+  font-size: 1.6em;
   touch-action: none;
   pointer-events: none;
 }
