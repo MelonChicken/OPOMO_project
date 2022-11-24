@@ -4,12 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="Sass/basicExportPageStyles.css" />
+    <link rel="stylesheet" href="Sass/customExportPageStyles.css" />
     <script
       src="https://kit.fontawesome.com/8da0f3b785.js"
       crossorigin="anonymous"
     ></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="js/localstorage.js"></script>
     <title>OPOMO</title>
   </head>
   <body>
@@ -41,40 +41,24 @@
         </ul>
       </header>
       <section>
-        <!--사진 담기는 곳-->
-        <div class="exportPage__picContainer" id="capture_area"></div>
-
+        <div class="exportPage__picContainer">
+          <div class="exportPage__picContainer__grid">
+            <div class="exportPage__picContainer__grid__pic"></div>
+            <div class="exportPage__picContainer__grid__pic"></div>
+            <div class="exportPage__picContainer__grid__pic"></div>
+            <div class="exportPage__picContainer__grid__pic"></div>
+          </div>
+        </div>
         <!--저장 버튼-->
         <div class="exportPage__submissionContainer">
-          <button
-            type="button"
-            id="pick"
-            class="exportPage__submissionContainer__save"
-            onclick="alert('저장완료!')"
-          >
+          <div class="exportPage__submissionContainer__save">
             <p>저장</p>
-          </button>
-          <script>
-            $(function () {
-              $(".exportPage__submissionContainer__save").click(function (e) {
-                html2canvas(document.getElementById("capture_area")).then(
-                  function (canvas) {
-                    var el = document.createElement("a");
-                    el.href = canvas.toDataURL("image/jpeg");
-                    el.download = "이미지.jpg"; //다운로드 할 파일명 설정
-                    el.click();
-                  }
-                );
-              });
-            });
-          </script>
+          </div>
         </div>
       </section>
-      <div OnClick="location.href='/hashTag'" class="navArrow_left">
+      <div OnClick="location.href='/customPage'" class="navArrow_left">
         <i class="fa-solid fa-caret-left"></i>
       </div>
     </div>
   </body>
-  <script src="js/localstorage.js"></script>
-  <script src="js/html2canvas.min.js"></script>
 </html>
