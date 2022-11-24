@@ -284,13 +284,13 @@
         }
       </script>
       <!--확인 버튼 NEW-->
-      <button type="button" class="confirm" onclick="EunA()">
+      <button type="button" class="confirm" onclick="EunA">
         <p>확인</p>
       </button>
       <script>
-        $(function EunA() {
-          $(".hbtns hearts").css("display", "none");
+        var EunA = function () {
           $(".confirm").click(function (e) {
+            $(".hbtns hearts").css("display", "none");
             html2canvas(document.getElementById("capture_area")).then(function (
               canvas
             ) {
@@ -304,7 +304,7 @@
               $(".hbtns hearts").css("display", "undefined");
             });
           });
-        });
+        };
       </script>
     </div>
   </body>
