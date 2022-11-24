@@ -504,6 +504,7 @@ section .customPage__searchPic .customPage__navMenu {
   right: 0;
   display: flex;
   justify-content: flex-end;
+  touch-action: none;
 }
 @media screen and (max-width: 480px) {
   section .customPage__searchPic .customPage__navMenu {
@@ -540,6 +541,7 @@ section .customPage__searchPic .customPage__navMenu__collapse {
   border-radius: 6% 0% 0% 6%;
   transition: all 0.5s ease-in-out;
   position: absolute;
+  touch-action: none;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -558,6 +560,7 @@ section .customPage__searchPic .customPage__navMenu__collapse .customPage__navMe
   padding-left: 5%;
   display: grid;
   overflow-y: scroll;
+  touch-action: none;
   gap: 4%;
 }
 section .customPage__searchPic .customPage__navMenu__collapse .customPage__navMenu__collapse__grid::-webkit-scrollbar {
@@ -634,6 +637,7 @@ section .customPage__wishPic .customPage__wishList {
   right: 0;
   display: flex;
   justify-content: flex-end;
+  touch-action: none;
 }
 @media screen and (max-width: 480px) {
   section .customPage__wishPic .customPage__wishList {
@@ -670,6 +674,7 @@ section .customPage__wishPic .customPage__wishList .customPage__wishList__collap
   border-radius: 6% 0% 0% 6%;
   transition: all 0.5s ease-in-out;
   position: absolute;
+  touch-action: none;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -687,6 +692,7 @@ section .customPage__wishPic .customPage__wishList .customPage__wishList__collap
   height: 80%;
   display: grid;
   overflow-y: scroll;
+  touch-action: none;
   gap: 4%;
 }
 section .customPage__wishPic .customPage__wishList .customPage__wishList__collapse .customPage__wishList__collapse__grid::-webkit-scrollbar {
@@ -778,6 +784,7 @@ section .customPage__wishPic .customPage__wishList .customPage__wishList__collap
   height: -moz-max-content;
   height: max-content;
   position: absolute;
+  z-index: 4;
   top: 30%;
   left: 30%;
 }/*# sourceMappingURL=customPageStyles.css.map */
