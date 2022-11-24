@@ -158,7 +158,24 @@
           <div class="customPage__navMenu">
             <!--태그 검색 및 사진 페이지 -->
             <div class="customPage__navMenu__collapse child01">
-              <div class="customPage__navMenu__collapse__categories"></div>
+              <div class="customPage__navMenu__collapse__categories">
+                <div class="container">
+                  <form class="publicPage__filterContainer" id="search-form">
+                    <button
+                      class="publicPage__filterContainer__choose"
+                      id="searchBtn"
+                    >
+                      <i class="fa-solid fa-hashtag"></i>
+                    </button>
+                    <input
+                      class="publicPage__filterContainer__filters"
+                      type="text"
+                      id="search"
+                      placeholder="#와 함께 입력하고 공백으로 구분해주세요!"
+                    />
+                  </form>
+                </div>
+              </div>
               <div class="customPage__navMenu__collapse__grid" id="cnt_drag">
                 <!--드래그존-->
                 <div class="container">
@@ -293,4 +310,5 @@
     import { initializeApp } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";
   </script>
   <script src="./js/firebaseUpload.js"></script>
+  <script src="js/search_move.js"></script>
 </html>

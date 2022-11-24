@@ -34,7 +34,7 @@ function getWhichData(category, value) {
 }
 // //불러오기 예시
 // getWhichData("poses", "basic");
-// getWhichData("poses", "custom");
+getWhichData("poses", "custom");
 
 ////////////////////////////////////////////////////////////////////////////////////////////
 

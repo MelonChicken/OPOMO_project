@@ -555,6 +555,108 @@ section .customPage__searchPic .customPage__navMenu__collapse .customPage__navMe
   width: 92%;
   height: 18%;
 }
+section .customPage__searchPic .customPage__navMenu__collapse .customPage__navMenu__collapse__categories .container {
+  margin: 0;
+  justify-content: center;
+  width: 100;
+  overflow: hidden;
+}
+section .customPage__searchPic .customPage__navMenu__collapse .customPage__navMenu__collapse__categories .container .publicPage__filterContainer {
+  width: 90%;
+  height: 8%;
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #a5a6e9;
+}
+section .customPage__searchPic .customPage__navMenu__collapse .customPage__navMenu__collapse__categories .container .publicPage__filterContainer .publicPage__filterContainer__filters {
+  display: flex;
+  margin-left: 1vw;
+  flex-wrap: wrap;
+  overflow: auto;
+  align-items: center;
+  font-weight: bold;
+  border: none;
+  color: #9481a1;
+  background-color: #d5cff5;
+}
+@media screen and (max-width: 480px) {
+  section .customPage__searchPic .customPage__navMenu__collapse .customPage__navMenu__collapse__categories .container .publicPage__filterContainer .publicPage__filterContainer__filters {
+    width: 70%;
+    height: 6vh;
+    padding-left: 2vw;
+    border-radius: 2%/25%;
+    font-size: 1.3em;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  section .customPage__searchPic .customPage__navMenu__collapse .customPage__navMenu__collapse__categories .container .publicPage__filterContainer .publicPage__filterContainer__filters {
+    width: 83%;
+    height: 6vh;
+    padding-left: 1vw;
+    border-radius: 2%/20%;
+    font-size: 1.3em;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  section .customPage__searchPic .customPage__navMenu__collapse .customPage__navMenu__collapse__categories .container .publicPage__filterContainer .publicPage__filterContainer__filters {
+    width: 83%;
+    height: 6vh;
+    padding-left: 1vw;
+    border-radius: 2%/25%;
+    font-size: 1.5em;
+  }
+}
+@media screen and (min-width: 1024px) {
+  section .customPage__searchPic .customPage__navMenu__collapse .customPage__navMenu__collapse__categories .container .publicPage__filterContainer .publicPage__filterContainer__filters {
+    width: 50%;
+    height: 5vh;
+    padding-left: 1vw;
+    border-radius: 2%/25%;
+    font-size: 1.3em;
+  }
+}
+section .customPage__searchPic .customPage__navMenu__collapse .customPage__navMenu__collapse__categories .container .publicPage__filterContainer .publicPage__filterContainer__choose {
+  aspect-ratio: 1/1;
+  border: none;
+  border-radius: 15%/15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3.3vh;
+  color: #9481a1;
+  background-color: #d5cff5;
+  cursor: pointer;
+}
+section .customPage__searchPic .customPage__navMenu__collapse .customPage__navMenu__collapse__categories .container .publicPage__filterContainer .publicPage__filterContainer__choose:hover {
+  color: #d5cff5;
+  background-color: #9481a1;
+}
+@media screen and (max-width: 480px) {
+  section .customPage__searchPic .customPage__navMenu__collapse .customPage__navMenu__collapse__categories .container .publicPage__filterContainer .publicPage__filterContainer__choose {
+    height: 6vh;
+    font-size: 1.3em;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  section .customPage__searchPic .customPage__navMenu__collapse .customPage__navMenu__collapse__categories .container .publicPage__filterContainer .publicPage__filterContainer__choose {
+    height: 6vh;
+    font-size: 1.3em;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  section .customPage__searchPic .customPage__navMenu__collapse .customPage__navMenu__collapse__categories .container .publicPage__filterContainer .publicPage__filterContainer__choose {
+    height: 6vh;
+    font-size: 1.5em;
+  }
+}
+@media screen and (min-width: 1024px) {
+  section .customPage__searchPic .customPage__navMenu__collapse .customPage__navMenu__collapse__categories .container .publicPage__filterContainer .publicPage__filterContainer__choose {
+    height: 6vh;
+    font-size: 1.3em;
+  }
+}
 section .customPage__searchPic .customPage__navMenu__collapse .customPage__navMenu__collapse__grid {
   width: 92%;
   height: 75%;

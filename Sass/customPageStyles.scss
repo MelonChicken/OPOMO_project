@@ -488,6 +488,112 @@ section {
       .customPage__navMenu__collapse__categories {
         width: 92%;
         height: 18%;
+        .container {
+          margin: 0;
+          justify-content: center;
+          width: 100;
+          overflow: hidden;
+          .publicPage__filterContainer {
+            width: 90%;
+            height: 8%;
+            margin: 0;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+            background-color: $themeColor03;
+
+            .publicPage__filterContainer__filters {
+              display: flex;
+              margin-left: 1vw;
+              flex-wrap: wrap;
+              overflow: auto;
+              align-items: center;
+
+              font-weight: bold;
+
+              border: none;
+              color: $themeColor01;
+              background-color: $themeColor02;
+
+              @include responsive("mobile") {
+                width: 70%;
+                height: 6vh;
+                padding-left: 2vw;
+                border-radius: 2% / 25%;
+
+                font-size: 1.3em;
+              }
+
+              @include responsive("mobile-l") {
+                width: 83%;
+                height: 6vh;
+                padding-left: 1vw;
+                border-radius: 2% / 20%;
+
+                font-size: 1.3em;
+              }
+              @include responsive("tablet") {
+                width: 83%;
+                height: 6vh;
+                padding-left: 1vw;
+                border-radius: 2% / 25%;
+
+                font-size: 1.5em;
+              }
+              @include responsive("window") {
+                width: 50%;
+                height: 5vh;
+                padding-left: 1vw;
+                border-radius: 2% / 25%;
+
+                font-size: 1.3em;
+              }
+            }
+            .publicPage__filterContainer__choose {
+              aspect-ratio: 1 /1;
+              border: none;
+              border-radius: 15% / 15%;
+
+              display: flex;
+              justify-content: center;
+              align-items: center;
+
+              font-size: 3.3vh;
+
+              color: $themeColor01;
+              background-color: $themeColor02;
+              cursor: pointer;
+
+              &:hover {
+                color: $themeColor02;
+                background-color: $themeColor01;
+              }
+
+              @include responsive("mobile") {
+                height: 6vh;
+
+                font-size: 1.3em;
+              }
+
+              @include responsive("mobile-l") {
+                height: 6vh;
+
+                font-size: 1.3em;
+              }
+              @include responsive("tablet") {
+                height: 6vh;
+
+                font-size: 1.5em;
+              }
+              @include responsive("window") {
+                height: 6vh;
+
+                font-size: 1.3em;
+              }
+            }
+          }
+        }
       }
       .customPage__navMenu__collapse__grid {
         width: 92%;
