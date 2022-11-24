@@ -34,13 +34,23 @@ function collapseRightLeftS(element) {
   if (child.style.maxWidth != 0) {
     // 버튼 다음 요소가 펼쳐져 있으면
     child.style.maxWidth = null; // 접기
+    document.querySelector(".customPage__wishList").style.display = null;
+    document.querySelector(".customPage__wishList").style.display = "none";
+    setTimeout(() => {
+      document.querySelector(".customPage__navMenu").style.display = null;
+      document.querySelector(".customPage__navMenu").style.display = "none";
+    }, 1000);
   } else {
     document.querySelector(".child02").style.maxWidth = null;
-    document.querySelector(".customPage__wishList").style.display = null;
-    document.querySelector(".customPage__wishList").style.display = "none"; // 다른 걸 접고
+    setTimeout(() => {
+      document.querySelector(".customPage__wishList").style.display = null;
+      document.querySelector(".customPage__wishList").style.display = "none";
+    }, 1000); // 다른 걸 접고
 
     document.querySelector(".customPage__navMenu").style.display = "flex";
-    child.style.maxWidth = 100 + "%"; // 접혀있는 경우 펼치기
+    setTimeout(() => {
+      child.style.maxWidth = 100 + "%";
+    }, 1000); // 접혀있는 경우 펼치기
   }
 }
 
@@ -60,12 +70,22 @@ function collapseRightLeftW(element) {
   if (child.style.maxWidth != 0) {
     // 버튼 다음 요소가 펼쳐져 있으면
     child.style.maxWidth = null; // 접기
+    document.querySelector(".customPage__navMenu").style.display = null;
+    document.querySelector(".customPage__navMenu").style.display = "none";
+    setTimeout(() => {
+      document.querySelector(".customPage__wishList").style.display = null;
+      document.querySelector(".customPage__wishList").style.display = "none";
+    }, 1000);
   } else {
     document.querySelector(".child01").style.maxWidth = null;
-    document.querySelector(".customPage__navMenu").style.display = null;
-    document.querySelector(".customPage__navMenu").style.display = "none"; //다른 걸 접고
+    setTimeout(() => {
+      document.querySelector(".customPage__navMenu").style.display = null;
+      document.querySelector(".customPage__navMenu").style.display = "none";
+    }, 1000); //다른 걸 접고
 
     document.querySelector(".customPage__wishList").style.display = "flex";
-    child.style.maxWidth = 100 + "%"; // 접혀있는 경우 펼치기
+    setTimeout(() => {
+      child.style.maxWidth = 100 + "%";
+    }, 1000); // 접혀있는 경우 펼치기
   }
 }

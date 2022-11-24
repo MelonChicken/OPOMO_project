@@ -804,13 +804,13 @@ section .customPage__wishPic .customPage__wishList .customPage__wishList__collap
   grid-template-rows: repeat(2, 1fr);
   gap: 1%;
   position: absolute;
-  z-index: 4;
 }
 @media screen and (max-width: 480px) {
   #buttons {
     width: 30%;
     top: 4%;
     left: 3%;
+    z-index: 2;
   }
 }
 @media screen and (min-width: 480px) and (max-width: 767px) {
@@ -818,6 +818,7 @@ section .customPage__wishPic .customPage__wishList .customPage__wishList__collap
     width: 10%;
     top: 30%;
     left: 30%;
+    z-index: 4;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -825,6 +826,7 @@ section .customPage__wishPic .customPage__wishList .customPage__wishList__collap
     width: 17%;
     top: 10%;
     left: 10%;
+    z-index: 4;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -833,6 +835,7 @@ section .customPage__wishPic .customPage__wishList .customPage__wishList__collap
     top: 17%;
     left: 30%;
     border-radius: 10%/6%;
+    z-index: 4;
   }
 }
 #buttons button {
