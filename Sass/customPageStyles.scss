@@ -604,6 +604,7 @@ section {
         display: grid;
         overflow-y: scroll;
         touch-action: none;
+        list-style: none;
 
         gap: 4%;
         &::-webkit-scrollbar {
@@ -780,7 +781,8 @@ section {
   border-radius: 6% / 8%;
   overflow: hidden;
 
-  background-color: $themeColor04;
+  background-size: contain;
+  background-position: center;
 
   cursor: pointer;
   .hearts {
@@ -876,30 +878,4 @@ section {
     color: $themeColor01;
     background-color: $themeColor02;
   }
-}
-
-#image1 {
-  background-size: contain;
-  background-position: center;
-  background-image: url("../images/2명/6.png");
-}
-#image2 {
-  background-size: contain;
-  background-position: center;
-  background-image: url("../images/2명/7.png");
-}
-#image3 {
-  background-size: contain;
-  background-position: center;
-  background-image: url("../images/2명/8.png");
-}
-#image4 {
-  background-size: contain;
-  background-position: center;
-  background-image: url("../images/2명/13.png");
-}
-#image5 {
-  background-size: contain;
-  background-position: center;
-  background-image: url("../images/2명/14.png");
 }

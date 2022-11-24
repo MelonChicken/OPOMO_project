@@ -163,22 +163,25 @@
                   <form class="publicPage__filterContainer" id="search-form">
                     <button
                       class="publicPage__filterContainer__choose"
-                      id="searchBtn"
+                      id="customSearchBtn"
                     >
                       <i class="fa-solid fa-hashtag"></i>
                     </button>
                     <input
                       class="publicPage__filterContainer__filters"
                       type="text"
-                      id="search"
+                      id="customSearch"
                       placeholder="#와 함께 입력하고 공백으로 구분해주세요!"
                     />
                   </form>
                 </div>
               </div>
-              <div class="customPage__navMenu__collapse__grid" id="cnt_drag">
+              <div
+                class="customPage__navMenu__collapse__grid list"
+                id="cnt_drag"
+              >
                 <!--드래그존-->
-                <div
+                <!-- <div
                   class="posePictureBox"
                   id="image1"
                   draggable="true"
@@ -241,7 +244,7 @@
                       <i class="fa-regular fa-heart"></i>
                     </button>
                   </div>
-                </div>
+                </div> -->
 
                 <!--위시리스트 버튼들 위시 커튼과 분리된 곳에 있어야 함-->
               </div>
@@ -302,6 +305,6 @@
       </script>
     </div>
   </body>
-  <!-- <script src="./js/customSearch.js"></script> -->
+  <script src="./js/search_move.js"></script>
   <!-- <script src="./js/mobileDetector.js"></script> -->
 </html>

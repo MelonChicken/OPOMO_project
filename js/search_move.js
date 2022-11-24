@@ -120,7 +120,7 @@ const sibalBasic = [
     id: "b20",
     name: "마음 빼고 다 맞는 우리",
     tag: ["#3명", "신나게", "#친구와"],
-    url: "./images/Basic/img (6) PNG",
+    url: "./images/Basic/img (6) .PNG",
   },
   {
     id: "b21",
@@ -134,82 +134,82 @@ const sibalCustom = [
   {
     id: "c1",
     tag: ["#2명"],
-    url: "./images/2명/패트와 매트 포즈 조합/after/img (1).jpg",
+    url: "./images/2명/패트와_매트_포즈_조합/after/img_(1).jpg",
   },
   {
     id: "c2",
     tag: ["#2명"],
-    url: "./images/2명/패트와 매트 포즈 조합/after/img (2).jpg",
+    url: "./images/2명/패트와_매트_포즈_조합/after/img_(2).jpg",
   },
   {
     id: "c3",
     tag: ["#2명"],
-    url: "./images/2명/패트와 매트 포즈 조합/after/img (3).jpg",
+    url: "./images/2명/패트와_매트_포즈_조합/after/img_(3).jpg",
   },
   {
     id: "c4",
     tag: ["#2명"],
-    url: "./images/2명/패트와 매트 포즈 조합/after/img (4).jpg",
+    url: "./images/2명/패트와_매트_포즈_조합/after/img_(4).jpg",
   },
   {
     id: "c5",
     tag: ["#2명"],
-    url: "./images/2명/패트와 매트 포즈 조합/after/img (5).jpg",
+    url: "./images/2명/패트와_매트_포즈_조합/after/img_(5).jpg",
   },
   {
     id: "c6",
     tag: ["#2명"],
-    url: "./images/2명/패트와 매트 포즈 조합/after/img (6).jpg",
+    url: "./images/2명/패트와_매트_포즈_조합/after/img_(6).jpg",
   },
   {
     id: "c7",
     tag: ["#2명"],
-    url: "./images/2명/패트와 매트 포즈 조합/after/img (7).jpg",
+    url: "./images/2명/패트와_매트_포즈_조합/after/img_(7).jpg",
   },
   {
     id: "c8",
     tag: ["#2명"],
-    url: "./images/2명/패트와 매트 포즈 조합/after/img (8).jpg",
+    url: "./images/2명/패트와_매트_포즈_조합/after/img_(8).jpg",
   },
   {
     id: "c9",
     tag: ["#2명"],
-    url: "./images/2명/패트와 매트 포즈 조합/after/img (9).jpg",
+    url: "./images/2명/패트와_매트_포즈_조합/after/img_(9).jpg",
   },
   {
     id: "c10",
     tag: ["#2명"],
-    url: "./images/2명/패트와 매트 포즈 조합/after/img (10).jpg",
+    url: "./images/2명/패트와_매트_포즈_조합/after/img_(10).jpg",
   },
   {
     id: "c11",
     tag: ["#2명"],
-    url: "./images/2명/패트와 매트 포즈 조합/after/img (11).jpg",
+    url: "./images/2명/패트와_매트_포즈_조합/after/img_(11).jpg",
   },
   {
     id: "c12",
     tag: ["#2명"],
-    url: "./images/2명/패트와 매트 포즈 조합/after/img (12).jpg",
+    url: "./images/2명/패트와_매트_포즈_조합/after/img_(12).jpg",
   },
   {
     id: "c13",
     tag: ["#2명"],
-    url: "./images/2명/패트와 매트 포즈 조합/after/img (13).jpg",
+    url: "./images/2명/패트와_매트_포즈_조합/after/img_(13).jpg",
   },
   {
     id: "c14",
     tag: ["#2명"],
-    url: "./images/2명/패트와 매트 포즈 조합/after/img (14).jpg",
+    url: "./images/2명/패트와_매트_포즈_조합/after/img_(14).jpg",
   },
   {
     id: "c15",
     tag: ["#2명"],
-    url: "./images/2명/패트와 매트 포즈 조합/after/img (15).jpg",
+    url: "./images/2명/패트와_매트_포즈_조합/after/img_(15).jpg",
   },
   {
     id: "c16",
     tag: ["#2명"],
-    url: "./images/2명/패트와 매트 포즈 조합/after/img (16).jpg",
+    url: "./images/2명/패트와_매트_포즈_조합/after/img_(16).jpg",
   },
   {
     id: "c17",
@@ -446,7 +446,7 @@ function showListBasic(val = "") {
       li.classList.add("publicPictureBox");
       li.innerHTML = `
                   <div class="publicPicture__container">
-                    <img class="pic" onclick="saving(this)" id='${pose.id}' url='${pose.url}' alt='${pose.tag}' />
+                    <img class="pic" onclick="saving(this)" id='${pose.id}' src='${pose.url}' alt='${pose.tag}' />
                   </div>
                   <p class="tag">이름: ${pose.name}</p>
                   <p class="tag"> ${pose.tag}</p>
@@ -465,30 +465,32 @@ function showListCustom(val = "") {
     //만약 원하는 태그들을 모두 포함한다면
     if (pose.tag.includes(wantedtag)) {
       const li = document.createElement("li");
+      console.log(pose.url);
       li.classList.add("publicPictureBox");
-      li.innerHTML = `<div class="posePictureBox" id="image1" draggable="true" ondragstart="drag(event)" style="background-image: url(${pose.url});">
+      li.innerHTML = `<div class="posePictureBox" id="image${cnt}" draggable="true" ondragstart="drag(event)" style="background-image: url('${pose.url}');">
       <div class="hbtns hearts">
         <button type="button" class="hbtn" id="hbtn_${cnt}">
           <i class="fa-regular fa-heart"></i>
         </button></div></div>
               `;
       gridContainer.appendChild(li);
-      cnt += 1;
+      console.log(cnt);
+      cnt = cnt + 1;
     }
   }); //end showList
 }
-showListCustom();
+// showListCustom();
 
 //검색기능
 const basicSearchInput = document.getElementById("basicSearch");
 const basicSearchBtn = document.getElementById("basicSearchBtn");
-// console.log(basicSearchInput);
-// console.log(basicSearchBtn);
+console.log(basicSearchInput);
+console.log(basicSearchBtn);
 
 const customSearchInput = document.getElementById("customSearch");
 const customSearchBtn = document.getElementById("customSearchBtn");
-// console.log(customSearchInput);
-// console.log(customSearchBtn);
+console.log(customSearchInput);
+console.log(customSearchBtn);
 
 if (basicSearchInput == null) {
   customSearchBtn.addEventListener("click", (e) => {
