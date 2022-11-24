@@ -4,39 +4,38 @@ const sibal = [
     id: 1,
     name: "베어스",
     tag: ["#3명", "#신나게", "#친구와"],
-    url: "./images/베어스.png",
+    src: "./images/베어스.png",
   },
   {
     id: 2,
     name: "세서미",
     tag: ["#2명", "#친구와"],
-    url: "./images/세서미.png",
+    src: "./images/세서미.png",
   },
   {
     //2x2 테스트용으로 추가했어.
     id: 3,
     name: "콩순이",
     tag: ["#1명", "#귀엽게"],
-    url: "./images/콩순이.png",
+    src: "./images/콩순이.png",
   },
   {
     id: 4, //다중 태그 입력 되는지 테스트 용
-
     name: "쿠로미",
     tag: ["#2명", "#친구와", "#귀엽게"],
-    url: "./images/쿠로미.png",
+    src: "./images/쿠로미.png",
   },
   {
     id: 5,
     name: "스폰지밥1",
     tag: ["#2명", "#신나게"],
-    url: "./images/스폰지밥1.png",
+    src: "./images/스폰지밥1.png",
   },
   {
     id: 6,
     name: "스폰지밥2",
     tag: ["#2명", "#웃기게", "#친구와"],
-    url: "./images/스폰지밥2.png",
+    src: "./images/스폰지밥2.png",
   },
 ];
 
@@ -45,7 +44,7 @@ const list = document.getElementById("list");
 function showList(val = "") {
   list.innerHTML = "";
   //여러개의 태그들을 리스트화
-  wantedtags = val.split(",");
+  wantedtags = val.split(" ");
 
   const res = sibal.forEach((pose) => {
     let flag = 0;
@@ -61,7 +60,7 @@ function showList(val = "") {
       li.classList.add("publicPictureBox");
       li.innerHTML = `
                 <div class="publicPicture__container">
-                  <img class="pic" onclick="saving(this)" id='${pose.id}' src='${pose.url}' alt='${pose.tag}' />
+                  <img class="pic" onclick="saving(this)" id='${pose.id}' src='${pose.src}' alt='${pose.tag}' />
                 </div>
                 <p class="tag">이름: ${pose.name}</p>
                 <p class="tag"> ${pose.tag}</p>
@@ -105,3 +104,24 @@ function saving(element) {
 function moveExport() {
   location.href = "/basicExport.html";
 }
+
+//js파일 안에 js파일 넣음
+document.write(
+  '<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>'
+);
+document.write(
+  '<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>'
+);
+document.write(
+  '<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-analytics.js"></script>'
+);
+document.write(
+  '<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-auth.js"></script>'
+);
+document.write(
+  '<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-firestore.js"></script>'
+);
+document.write(
+  '<script type="module"> import { initializeApp } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";</script>'
+);
+document.write('<script src="./js/firebaseUpload.js"></script>');

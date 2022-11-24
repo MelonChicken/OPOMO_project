@@ -443,6 +443,7 @@ section {
 
       display: flex;
       justify-content: flex-end;
+      touch-action: none;
 
       @include responsive("mobile") {
         top: 15vh;
@@ -474,6 +475,7 @@ section {
       transition: all 0.5s ease-in-out;
 
       position: absolute;
+      touch-action: none;
 
       display: flex;
       flex-direction: column;
@@ -493,6 +495,7 @@ section {
         padding-left: 5%;
         display: grid;
         overflow-y: scroll;
+        touch-action: none;
 
         gap: 4%;
         &::-webkit-scrollbar {
@@ -575,6 +578,7 @@ section {
 
       display: flex;
       justify-content: flex-end;
+      touch-action: none;
 
       @include responsive("mobile") {
         top: 15vh;
@@ -605,6 +609,7 @@ section {
         transition: all 0.5s ease-in-out;
 
         position: absolute;
+        touch-action: none;
 
         display: flex;
         flex-direction: column;
@@ -624,6 +629,7 @@ section {
 
           display: grid;
           overflow-y: scroll;
+          touch-action: none;
 
           gap: 4%;
           &::-webkit-scrollbar {
@@ -715,6 +721,7 @@ section {
   height: max-content;
 
   position: absolute;
+  z-index: 4;
   top: 30%;
   left: 30%;
 }
