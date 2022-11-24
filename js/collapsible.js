@@ -3,6 +3,10 @@ function collapseUpDown(element) {
   if (before && document.getElementsByClassName("active")[0] != element) {
     // 자신 이외에 이미 활성화된 버튼이 있으면
     before.nextElementSibling.style.maxwidth = null; // 기존에 펼쳐진 내용 접고
+    setTimeout(() => {
+      document.querySelector(".customPage__wishList").style.display = null;
+      document.querySelector(".customPage__wishList").style.display = "none";
+    }, 500);
     before.classList.remove("active"); // 버튼 비활성화
   }
   element.classList.toggle("active"); // 활성화 여부 toggle
@@ -24,6 +28,10 @@ function collapseRightLeftS(element) {
     // 자신 이외에 이미 활성화된 버튼이 있으면
 
     document.querySelector(".child01").style.maxWidth = null; // 기존에 펼쳐진 내용 접고
+    setTimeout(() => {
+      document.querySelector(".customPage__navMenu").style.display = null;
+      document.querySelector(".customPage__navMenu").style.display = "none";
+    }, 500);
 
     before.classList.remove("active"); // 버튼 비활성화
   }
@@ -39,18 +47,18 @@ function collapseRightLeftS(element) {
     setTimeout(() => {
       document.querySelector(".customPage__navMenu").style.display = null;
       document.querySelector(".customPage__navMenu").style.display = "none";
-    }, 1000);
+    }, 500);
   } else {
     document.querySelector(".child02").style.maxWidth = null;
     setTimeout(() => {
       document.querySelector(".customPage__wishList").style.display = null;
       document.querySelector(".customPage__wishList").style.display = "none";
-    }, 1000); // 다른 걸 접고
+    }, 500); // 다른 걸 접고
 
     document.querySelector(".customPage__navMenu").style.display = "flex";
     setTimeout(() => {
       child.style.maxWidth = 100 + "%";
-    }, 1000); // 접혀있는 경우 펼치기
+    }, 500); // 접혀있는 경우 펼치기
   }
 }
 
@@ -75,17 +83,17 @@ function collapseRightLeftW(element) {
     setTimeout(() => {
       document.querySelector(".customPage__wishList").style.display = null;
       document.querySelector(".customPage__wishList").style.display = "none";
-    }, 1000);
+    }, 500);
   } else {
     document.querySelector(".child01").style.maxWidth = null;
     setTimeout(() => {
       document.querySelector(".customPage__navMenu").style.display = null;
       document.querySelector(".customPage__navMenu").style.display = "none";
-    }, 1000); //다른 걸 접고
+    }, 500); //다른 걸 접고
 
     document.querySelector(".customPage__wishList").style.display = "flex";
     setTimeout(() => {
       child.style.maxWidth = 100 + "%";
-    }, 1000); // 접혀있는 경우 펼치기
+    }, 500); // 접혀있는 경우 펼치기
   }
 }
