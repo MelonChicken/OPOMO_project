@@ -11,7 +11,7 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 //DB에 새로 쓰기(추가 아님)
-function writePoseData(value) {
+export function writePoseData(value) {
   firebase.database().ref("poses/").set(value);
 }
 

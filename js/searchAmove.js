@@ -18,7 +18,8 @@ document.write(
   '<script type="module"> import { initializeApp } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";</script>'
 );
 //이미지
-document.write('<script src="./js/firebaseUpload.js"></script>');
+// document.write('<script src="./js/firebaseUpload.js"></script>');
+import getWhichData from "js/firebaseUpload.js";
 const sibal = getWhichData("poses", "basic");
 
 const list = document.getElementById("list");
