@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Sass/customPageStyles.css" />
+    <script
+      src="https://kit.fontawesome.com/8da0f3b785.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!--jQuery-->
+    <link
+      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-1.12.4.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+    <!--jQuery-->
+
+    <script src="js/DnD.js"></script>
+    <!--드래그, 순서변경, 삭제버튼-->
+    <script src="js/DnD_touch.js"></script>
+    <!--모바일 드래그-->
+    <script src="js/wishlist.js"></script>
+    <!--위시리스트-->
+    <script src="js/collapsible.js"></script>
+    <!--커튼-->
+    <script src="js/mobileDetector.js"></script>
+    <!--모바일에서 커튼 접고 펼치기-->
+
+    <title>OPOMO</title>
+  </head>
+  <body>
+    <div class="customPage">
+      <header>
+        <span
+          OnClick="location.href='/index'"
+          class="linkbtns"
+          id="header__titleLogo"
+          draggable="true"
+          ><p>OPOMO</p></span
+        >
+        <ul id="header__icons">
+          <li>
+            <a href="https://lifefourcuts.com/" class="linkbtns"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+          </li>
+          <li>
+            <a href="" class="linkbtns"
+              ><i class="fa-solid fa-circle-info"></i
+            ></a>
+          </li>
+          <li>
+            <a href="" class="linkbtns"
+              ><i class="fa-solid fa-circle-user"></i
+            ></a>
+          </li>
+        </ul>
+      </header>
+      <section>
+        <span class="customPage__choosePoseText">
+          <p>원하는 포즈를 선택해주세요!</p>
+        </span>
+        <div class="cover">
+          <div class="customPage__myPoseContainer">
+            <div class="customPage__myPoseContainer__picBox">
+              <div class="customPage__myPoseContainer__picBox__grid">
+                <div class="customPage__myPoseContainer__picBox__grid__pic">
+                  <div
+                    class="customPage__myPoseContainer__picBox__grid__pic__innerText"
+                  >
+                    <i class="fa-regular fa-square-plus"></i>
+                  </div>
+                </div>
+                <div class="customPage__myPoseContainer__picBox__grid__pic">
+                  <div
+                    class="customPage__myPoseContainer__picBox__grid__pic__innerText"
+                  >
+                    <i class="fa-regular fa-square-plus"></i>
+                  </div>
+                </div>
+                <div class="customPage__myPoseContainer__picBox__grid__pic">
+                  <div
+                    class="customPage__myPoseContainer__picBox__grid__pic__innerText"
+                  >
+                    <i class="fa-regular fa-square-plus"></i>
+                  </div>
+                </div>
+                <div class="customPage__myPoseContainer__picBox__grid__pic">
+                  <div
+                    class="customPage__myPoseContainer__picBox__grid__pic__innerText"
+                  >
+                    <i class="fa-regular fa-square-plus"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="buttons"></div>
+          <!--삭제버튼이 생성되는 곳-->
+
+          <div class="customPage__myPoseContainerCover">
+            <div
+              class="customPage__myPoseContainerCover__picBox"
+              id="capture_area"
+            >
+              <div
+                class="customPage__myPoseContainerCover__picBox__grid"
+                id="cnt_drop"
+              >
+                <!--실질적 드롭존-->
+                <div
+                  class="customPage__myPoseContainerCover__picBox__grid__pic"
+                  id="frame1"
+                  ondrop="drop(event)"
+                  ondragover="allowDrop(event)"
+                ></div>
+                <div
+                  class="customPage__myPoseContainerCover__picBox__grid__pic"
+                  id="frame2"
+                  ondrop="drop(event)"
+                  ondragover="allowDrop(event)"
+                ></div>
+                <div
+                  class="customPage__myPoseContainerCover__picBox__grid__pic"
+                  id="frame3"
+                  ondrop="drop(event)"
+                  ondragover="allowDrop(event)"
+                ></div>
+                <div
+                  class="customPage__myPoseContainerCover__picBox__grid__pic"
+                  id="frame4"
+                  ondrop="drop(event)"
+                  ondragover="allowDrop(event)"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="customPage__searchPic">
+          <!--태그 검색 및 사진 페이지 열고 닫는 버튼-->
+          <div
+            class="customPage__searchPic__nav"
+            onclick="collapseRightLeftS(this)"
+          ></div>
+          <div class="customPage__navMenu">
+            <!--태그 검색 및 사진 페이지 -->
+            <div class="customPage__navMenu__collapse child01">
+              <div class="customPage__navMenu__collapse__categories"></div>
+              <div class="customPage__navMenu__collapse__grid" id="cnt_drag">
+                <!--드래그존-->
+                <div class="container">
+                  <img
+                    class="posePictureBox"
+                    id="image1"
+                    src="./images/2명/6.png"
+                    draggable="true"
+                    ondragstart="drag(event)"
+                  />
+                  <div class="hbtns hearts">
+                    <button type="button" class="hbtn" id="hbtn_1">
+                      <i class="fa-regular fa-heart"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="container">
+                  <img
+                    class="posePictureBox"
+                    id="image2"
+                    src="./images/2명/7.png"
+                    draggable="true"
+                    ondragstart="drag(event)"
+                  />
+                  <div class="hbtns hearts">
+                    <button type="button" class="hbtn" id="hbtn_2">
+                      <i class="fa-regular fa-heart"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="container">
+                  <img
+                    class="posePictureBox"
+                    id="image3"
+                    src="./images/2명/8.png"
+                    draggable="true"
+                    ondragstart="drag(event)"
+                  />
+                  <div class="hbtns hearts">
+                    <button type="button" class="hbtn" id="hbtn_3">
+                      <i class="fa-regular fa-heart"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="container">
+                  <img
+                    class="posePictureBox"
+                    id="image4"
+                    src="./images/2명/13.png"
+                    draggable="true"
+                    ondragstart="drag(event)"
+                  />
+                  <div class="hbtns hearts">
+                    <button type="button" class="hbtn" id="hbtn_4">
+                      <i class="fa-regular fa-heart"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="container">
+                  <img
+                    class="posePictureBox"
+                    id="image5"
+                    src="./images/2명/14.png"
+                    draggable="true"
+                    ondragstart="drag(event)"
+                  />
+                  <div class="hbtns hearts">
+                    <button type="button" class="hbtn" id="hbtn_5">
+                      <i class="fa-regular fa-heart"></i>
+                    </button>
+                  </div>
+                </div>
+                <!--위시리스트 버튼들 위시 커튼과 분리된 곳에 있어야 함-->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="customPage__wishPic">
+          <div
+            class="customPage__wishList__nav"
+            onclick="collapseRightLeftW(this)"
+          ></div>
+          <div class="customPage__wishList">
+            <div class="customPage__wishList__collapse child02">
+              <div class="customPage__wishList__collapse__categories"></div>
+              <div class="customPage__wishList__collapse__grid" id="wishlist">
+                <!--위시 커튼-->
+
+                <!--위시로 선택된 아이들이 들어가는 곳-->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div OnClick="location.href='/selection'" class="navArrow_left">
+        <i class="fa-solid fa-caret-left"></i>
+      </div>
+      <!--오른쪽으로 넘어가는 버튼-->
+      <div OnClick="saving2()" class="navArrow_right">
+        <i class="fa-solid fa-caret-right"></i>
+      </div>
+      <script>
+        $(function () {
+          $(".navArrow_right").click(function (e) {
+            html2canvas(document.getElementById("capture_area")).then(function (
+              canvas
+            ) {
+              var el = document.createElement("a");
+              el.href = canvas.toDataURL("image/jpeg");
+            });
+          });
+        });
+      </script>
+
+      <script>
+        console.log(el.href);
+        function saving2() {
+          console.dir();
+
+          localStorage.setItem(1, "image/jpeg");
+          setTimeout(moveExport(), 3000);
+          location.href = "/basicExport";
+        }
+      </script>
+    </div>
+  </body>
+  <!-- <script src="./js/customSearch.js"></script> -->
+  <!-- <script src="./js/mobileDetector.js"></script> -->
+  <script src="js/html2canvas.min.js"></script>
+</html>
