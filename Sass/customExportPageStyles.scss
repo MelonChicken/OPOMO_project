@@ -119,19 +119,19 @@ section {
   background-color: $themeColor01;
   .exportPage__picContainer {
     @include responsive("mobile") {
-      width: 50%;
+      height: 80%;
       aspect-ratio: 1 / 3;
     }
     @include responsive("mobile-l") {
-      width: 35%;
+      height: 80%;
       aspect-ratio: 1 / 3;
     }
     @include responsive("tablet") {
-      width: 35%;
+      height: 80%;
       aspect-ratio: 1 / 3;
     }
     @include responsive("window") {
-      width: 12%;
+      height: 80%;
       aspect-ratio: 1 / 3;
     }
 
