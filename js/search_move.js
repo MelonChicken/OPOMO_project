@@ -526,10 +526,10 @@ function enterkey() {
 //
 function saving(element) {
   console.dir(element);
-  console.log(element.url);
+  console.log(element.src);
 
-  localStorage.setItem(1, element.url);
-  setTimeout(moveExport(), 3000);
+  localStorage.setItem(1, element.src);
+  // setTimeout(moveExport(), 3000);
 }
 
 //이미지 누르면 다운로드pg로 이동
