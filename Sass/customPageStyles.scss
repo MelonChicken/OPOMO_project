@@ -444,6 +444,7 @@ section {
 
       display: flex;
       justify-content: flex-end;
+      pointer-events: none;
 
       @include responsive("mobile") {
         top: 15vh;
@@ -482,11 +483,13 @@ section {
       align-items: center;
       background-color: $themeColor03;
       box-shadow: 2px 10px 5px 1px rgb(0, 0, 0, 0.2);
+      pointer-events: none;
 
       cursor: pointer;
       .customPage__navMenu__collapse__categories {
         width: 92%;
         height: 18%;
+        pointer-events: none;
       }
       .customPage__navMenu__collapse__grid {
         width: 92%;
@@ -494,6 +497,7 @@ section {
         padding-left: 5%;
         display: grid;
         overflow-y: scroll;
+        pointer-events: none;
 
         gap: 4%;
         &::-webkit-scrollbar {
@@ -576,6 +580,7 @@ section {
 
       display: flex;
       justify-content: flex-end;
+      pointer-events: none;
 
       @include responsive("mobile") {
         top: 15vh;
@@ -613,11 +618,13 @@ section {
         align-items: center;
         background-color: $themeColor06;
         box-shadow: 2px 10px 5px 1px rgb(0, 0, 0, 0.2);
+        pointer-events: none;
 
         cursor: pointer;
         .customPage__wishList__collapse__categories {
           width: 92%;
           height: 18%;
+          pointer-events: none;
         }
         .customPage__wishList__collapse__grid {
           width: 92%;
@@ -625,6 +632,7 @@ section {
 
           display: grid;
           overflow-y: scroll;
+          pointer-events: none;
 
           gap: 4%;
           &::-webkit-scrollbar {
