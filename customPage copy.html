@@ -158,35 +158,17 @@
           <div class="customPage__navMenu">
             <!--태그 검색 및 사진 페이지 -->
             <div class="customPage__navMenu__collapse child01">
-              <div class="customPage__navMenu__collapse__categories">
-                <div class="container">
-                  <form class="publicPage__filterContainer" id="search-form">
-                    <button
-                      class="publicPage__filterContainer__choose"
-                      id="customSearchBtn"
-                    >
-                      <i class="fa-solid fa-hashtag"></i>
-                    </button>
-                    <input
-                      class="publicPage__filterContainer__filters"
-                      type="text"
-                      id="customSearch"
-                      placeholder="#와 함께 입력하고 공백으로 구분해주세요!"
-                    />
-                  </form>
-                </div>
-              </div>
-              <div
-                class="customPage__navMenu__collapse__grid list"
-                id="cnt_drag"
-              >
+              <div class="customPage__navMenu__collapse__categories"></div>
+              <div class="customPage__navMenu__collapse__grid" id="cnt_drag">
                 <!--드래그존-->
-                <!-- <div
-                  class="posePictureBox"
-                  id="image1"
-                  draggable="true"
-                  ondragstart="drag(event)"
-                >
+                <div class="container">
+                  <img
+                    class="posePictureBox"
+                    id="image1"
+                    src="./images/2명/6.png"
+                    draggable="true"
+                    ondragstart="drag(event)"
+                  />
                   <div class="hbtns hearts">
                     <button type="button" class="hbtn" id="hbtn_1">
                       <i class="fa-regular fa-heart"></i>
@@ -194,12 +176,14 @@
                   </div>
                 </div>
 
-                <div
-                  class="posePictureBox"
-                  id="image2"
-                  draggable="true"
-                  ondragstart="drag(event)"
-                >
+                <div class="container">
+                  <img
+                    class="posePictureBox"
+                    id="image2"
+                    src="./images/2명/7.png"
+                    draggable="true"
+                    ondragstart="drag(event)"
+                  />
                   <div class="hbtns hearts">
                     <button type="button" class="hbtn" id="hbtn_2">
                       <i class="fa-regular fa-heart"></i>
@@ -207,12 +191,14 @@
                   </div>
                 </div>
 
-                <div
-                  class="posePictureBox"
-                  id="image3"
-                  draggable="true"
-                  ondragstart="drag(event)"
-                >
+                <div class="container">
+                  <img
+                    class="posePictureBox"
+                    id="image3"
+                    src="./images/2명/8.png"
+                    draggable="true"
+                    ondragstart="drag(event)"
+                  />
                   <div class="hbtns hearts">
                     <button type="button" class="hbtn" id="hbtn_3">
                       <i class="fa-regular fa-heart"></i>
@@ -220,12 +206,14 @@
                   </div>
                 </div>
 
-                <div
-                  class="posePictureBox"
-                  id="image4"
-                  draggable="true"
-                  ondragstart="drag(event)"
-                >
+                <div class="container">
+                  <img
+                    class="posePictureBox"
+                    id="image4"
+                    src="./images/2명/13.png"
+                    draggable="true"
+                    ondragstart="drag(event)"
+                  />
                   <div class="hbtns hearts">
                     <button type="button" class="hbtn" id="hbtn_4">
                       <i class="fa-regular fa-heart"></i>
@@ -233,19 +221,20 @@
                   </div>
                 </div>
 
-                <div
-                  class="posePictureBox"
-                  id="image5"
-                  draggable="true"
-                  ondragstart="drag(event)"
-                >
+                <div class="container">
+                  <img
+                    class="posePictureBox"
+                    id="image5"
+                    src="./images/2명/14.png"
+                    draggable="true"
+                    ondragstart="drag(event)"
+                  />
                   <div class="hbtns hearts">
                     <button type="button" class="hbtn" id="hbtn_5">
                       <i class="fa-regular fa-heart"></i>
                     </button>
                   </div>
-                </div> -->
-
+                </div>
                 <!--위시리스트 버튼들 위시 커튼과 분리된 곳에 있어야 함-->
               </div>
             </div>
@@ -272,40 +261,35 @@
         <i class="fa-solid fa-caret-left"></i>
       </div>
       <!--오른쪽으로 넘어가는 버튼-->
-      <div OnClick="location.href = '/basicExport'" class="navArrow_right">
+      <div OnClick="saving2()" class="navArrow_right">
         <i class="fa-solid fa-caret-right"></i>
       </div>
-
-      <script src="js/html2canvas.min.js"></script>
-      <script>
-        function saving(element) {
-          console.log(element);
-          localStorage.setItem(1, element);
-        }
-      </script>
-      <!--확인 버튼 NEW-->
-      <button type="button" class="confirm" onclick="alert('확인!')">
-        <p>확인</p>
-      </button>
       <script>
         $(function () {
-          $(".confirm").click(function (e) {
-            console.dir(document.getElementById("capture_area"));
+          $(".navArrow_right").click(function (e) {
             html2canvas(document.getElementById("capture_area")).then(function (
               canvas
             ) {
-              var myImage = document.createElement("img");
-              myImage.crossOrigin = "*";
-              myImage.src = canvas.toDataURL("image/jpg");
-              // el.download = "이미지.jpg"; //다운로드 할 파일명 설정
-              // el.click();
-              saving(myImage.src);
+              var el = document.createElement("a");
+              el.href = canvas.toDataURL("image/jpeg");
             });
           });
         });
+      </script>
+
+      <script>
+        console.log(el.href);
+        function saving2() {
+          console.dir();
+
+          localStorage.setItem(1, "image/jpeg");
+          setTimeout(moveExport(), 3000);
+          location.href = "/basicExport";
+        }
       </script>
     </div>
   </body>
   <!-- <script src="./js/customSearch.js"></script> -->
   <!-- <script src="./js/mobileDetector.js"></script> -->
+  <script src="js/html2canvas.min.js"></script>
 </html>

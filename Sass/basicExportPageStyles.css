@@ -127,8 +127,9 @@ section {
 }
 section .exportPage__picContainer {
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   background-color: #d5cff5;
 }
 @media screen and (max-width: 480px) {
