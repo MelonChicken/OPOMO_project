@@ -341,6 +341,7 @@ section .customPage__myPoseContainer .customPage__myPoseContainer__picBox .custo
 }
 section .customPage__myPoseContainerCover {
   position: absolute;
+  z-index: 1;
   left: 0;
   width: 100%;
 }
@@ -385,7 +386,6 @@ section .customPage__myPoseContainerCover .customPage__myPoseContainerCover__pic
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1;
 }
 @media screen and (max-width: 480px) {
   section .customPage__myPoseContainerCover .customPage__myPoseContainerCover__picBox {
@@ -500,11 +500,11 @@ section .customPage__searchPic__nav {
 }
 section .customPage__searchPic .customPage__navMenu {
   position: absolute;
-  right: 0;
   z-index: 3;
+  right: 0;
   display: flex;
   justify-content: flex-end;
-  pointer-events: none;
+  touch-action: none;
 }
 @media screen and (max-width: 480px) {
   section .customPage__searchPic .customPage__navMenu {
@@ -541,19 +541,18 @@ section .customPage__searchPic .customPage__navMenu__collapse {
   border-radius: 6% 0% 0% 6%;
   transition: all 0.5s ease-in-out;
   position: absolute;
+  touch-action: none;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #a5a6e9;
   box-shadow: 2px 10px 5px 1px rgba(0, 0, 0, 0.2);
-  pointer-events: none;
   cursor: pointer;
 }
 section .customPage__searchPic .customPage__navMenu__collapse .customPage__navMenu__collapse__categories {
   width: 92%;
   height: 18%;
-  pointer-events: none;
 }
 section .customPage__searchPic .customPage__navMenu__collapse .customPage__navMenu__collapse__grid {
   width: 92%;
@@ -561,7 +560,7 @@ section .customPage__searchPic .customPage__navMenu__collapse .customPage__navMe
   padding-left: 5%;
   display: grid;
   overflow-y: scroll;
-  pointer-events: none;
+  touch-action: none;
   gap: 4%;
 }
 section .customPage__searchPic .customPage__navMenu__collapse .customPage__navMenu__collapse__grid::-webkit-scrollbar {
@@ -634,11 +633,11 @@ section .customPage__wishPic .customPage__wishList__nav {
 }
 section .customPage__wishPic .customPage__wishList {
   position: absolute;
-  right: 0;
   z-index: 3;
+  right: 0;
   display: flex;
   justify-content: flex-end;
-  pointer-events: none;
+  touch-action: none;
 }
 @media screen and (max-width: 480px) {
   section .customPage__wishPic .customPage__wishList {
@@ -675,26 +674,25 @@ section .customPage__wishPic .customPage__wishList .customPage__wishList__collap
   border-radius: 6% 0% 0% 6%;
   transition: all 0.5s ease-in-out;
   position: absolute;
+  touch-action: none;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #ffd9a8;
   box-shadow: 2px 10px 5px 1px rgba(0, 0, 0, 0.2);
-  pointer-events: none;
   cursor: pointer;
 }
 section .customPage__wishPic .customPage__wishList .customPage__wishList__collapse .customPage__wishList__collapse__categories {
   width: 92%;
   height: 18%;
-  pointer-events: none;
 }
 section .customPage__wishPic .customPage__wishList .customPage__wishList__collapse .customPage__wishList__collapse__grid {
   width: 92%;
   height: 80%;
   display: grid;
   overflow-y: scroll;
-  pointer-events: none;
+  touch-action: none;
   gap: 4%;
 }
 section .customPage__wishPic .customPage__wishList .customPage__wishList__collapse .customPage__wishList__collapse__grid::-webkit-scrollbar {
@@ -756,8 +754,8 @@ section .customPage__wishPic .customPage__wishList .customPage__wishList__collap
   width: max-content;
   height: 60px;
   top: 8%;
-  z-index: 2;
   position: absolute;
+  z-index: 5;
   font-size: 3em;
   color: #d5cff5;
   cursor: pointer;
@@ -786,7 +784,7 @@ section .customPage__wishPic .customPage__wishList .customPage__wishList__collap
   height: -moz-max-content;
   height: max-content;
   position: absolute;
+  z-index: 4;
   top: 30%;
   left: 30%;
-  z-index: 5;
 }/*# sourceMappingURL=customPageStyles.css.map */
