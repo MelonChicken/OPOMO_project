@@ -26,7 +26,7 @@ function noticeTouch() {
   let wishNav = document.querySelector(".customPage__wishList__nav");
 
   console.log("HI")
-
+  console.log(e.target.id)
   if (
     true &&
     //nav가 active 된 경우에만 다음으로 진행한다.
@@ -38,13 +38,13 @@ function noticeTouch() {
     let nowMenu = nowActivated.nextElementSibling;
     let nowOpened = nowMenu.getElementsByTagName("div")[0];
     //드래그 이벤트 발생시 떠오른다.
-    nowMenu.addEventListener("touch", (event) => {
+    nowMenu.addEventListener("touchstart", (event) => {
       //커튼을 닫고 박스를 치운다.
       nowOpened.style.maxWidth = null;
       nowMenu.style.width = null;
       console.log(nowMenu.style.width);
     });
-    document.addEventListener("dragend", (event) => {
+    document.addEventListener("touchend", (event) => {
       //박스를 다시 꺼내고 커튼도 연다.
       nowMenu.style.display = null;
       nowMenu.style.display = "flex";
