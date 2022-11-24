@@ -19,13 +19,14 @@ const isMobile = /iPhone|Android/i.test(window.navigator.userAgent);
 
 const searchNav = document.querySelector(".customPage__searchPic__nav");
 const wishNav = document.querySelector(".customPage__wishList__nav");
-
+//상시 대기를 위해서 이벤트 추가한다.
 document.addEventListener("touchstart", (event) => noticeTouch());
 
 function noticeTouch() {
   console.log("HI");
   if (
     true &&
+    //nav가 active 된 경우에만 다음으로 진행한다.
     (searchNav.classList.contains("active") ||
       wishNav.classList.contains("active"))
   ) {
