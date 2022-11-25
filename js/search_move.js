@@ -529,10 +529,10 @@ function saving(element) {
   console.log(element.src);
 
   localStorage.setItem(1, element.src);
-  // setTimeout(moveExport(), 3000);
+  setTimeout(moveExport(), 3000);
 }
 
 //이미지 누르면 다운로드pg로 이동
 function moveExport() {
-  location.href = "/basicExport.html";
+  location.href = "/basicExport";
 }

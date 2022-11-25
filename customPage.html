@@ -278,7 +278,7 @@
 
       <script src="js/html2canvas.min.js"></script>
       <script>
-        function saving(element) {
+        function saving2(element) {
           console.log(element);
           localStorage.setItem(1, element);
         }
@@ -290,7 +290,7 @@
       <script>
         $(function () {
           $(".confirm").click(function (e) {
-            html2canvas(document.getElementById("capture_area")).then(function (
+            html2canvas(document.getElementById("cnt_drop")).then(function (
               canvas
             ) {
               var myImage = document.createElement("img");
@@ -298,7 +298,7 @@
               myImage.src = canvas.toDataURL("image/jpg");
               // el.download = "이미지.jpg"; //다운로드 할 파일명 설정
               // el.click();
-              saving(myImage.src);
+              saving2(myImage.src);
             });
           });
         });
