@@ -534,5 +534,5 @@ function saving(element) {
 
 //이미지 누르면 다운로드pg로 이동
 function moveExport() {
-  location.href = "/basicExport.html";
+  location.href = "/basicExport";
 }
