@@ -525,7 +525,7 @@ function enterkey() {
 
 //
 function saving(element) {
-  console.dir(element);
+  console.log(element);
   console.log(element.src);
 
   localStorage.setItem(1, element.src);
