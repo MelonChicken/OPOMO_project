@@ -61,10 +61,7 @@ $(function(){
   $(".customPage__myPoseContainerCover__picBox__grid__pic").on({ // class: dropzone기준 ->이벤트 등록
       'drop':function(e){ // dropzone에 drop되었을 때
           e.preventDefault();
-          let target_id = e.target.id;
-          let regex = /[^0-9]/g;
-          let seq = target_id.replace(regex, ""); // frame번호에서 숫자 가져오기
-          console.log(seq)
+          let seq = e.target.id[5]; // frame번호에서 숫자 가져오기
           let id_name = "btnDel_"+seq; // 버튼 id명 만들기
           if((document.getElementById(id_name) == null)) { // 버튼 중복 방지
             let html = `<button type="button" id="${id_name}"> ${seq}번 삭제 </button>`; //html변수에 삭제버튼을 대입
@@ -74,26 +71,26 @@ $(function(){
   });
   
   $("#buttons").on("click", "#btnDel_1", function() { // 아이디 안의 btnDel_1을 선택
-      let imported_image = $("#frame1").children(); // this의 자식 선택 (이미지)
+      let frames = $("#cnt_drop").children(); // 프레임들 선택
+      let imported_image = frames[0]; // 프레임들 선택
       $('#cnt_drag').prepend(imported_image); // 목록으로 다시 되돌리기 (첫번째 위치로)
-      $('button').remove('#btnDel_1') // 삭제 버튼도 삭제
   });  
 
   $("#buttons").on("click", "#btnDel_2", function() {
-      let imported_image = $("#frame2").children();
+      let frames = $("#cnt_drop").children(); // 프레임들 선택
+      let imported_image = frames[1]; // 프레임들 선택
       $('#cnt_drag').prepend(imported_image);
-      $('button').remove('#btnDel_2')
   });  
 
   $("#buttons").on("click", "#btnDel_3", function() {
-      let imported_image = $("#frame3").children();
+      let frames = $("#cnt_drop").children(); // 프레임들 선택
+      let imported_image = frames[2]; // 프레임들 선택
       $('#cnt_drag').prepend(imported_image);
-      $('button').remove('#btnDel_3')
   });  
 
   $("#buttons").on("click", "#btnDel_4", function() {
-      let imported_image = $("#frame4").children();
+      let frames = $("#cnt_drop").children(); // 프레임들 선택
+      let imported_image = frames[3]; // 프레임들 선택
       $('#cnt_drag').prepend(imported_image);
-      $('button').remove('#btnDel_4')
   });
 });
