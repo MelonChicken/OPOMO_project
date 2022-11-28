@@ -71,26 +71,26 @@ $(function(){
   });
   
   $("#buttons").on("click", "#btnDel_1", function() { // 아이디 안의 btnDel_1을 선택
-      let frames = $("#cnt_drop").children(); // 프레임들 선택
-      let imported_image = frames[0]; // 프레임들 선택
+      let imported_image = $("#frame1").children(); // this의 자식 선택 (이미지)
       $('#cnt_drag').prepend(imported_image); // 목록으로 다시 되돌리기 (첫번째 위치로)
+      $('button').remove('#btnDel_1') // 삭제 버튼도 삭제
   });  
 
   $("#buttons").on("click", "#btnDel_2", function() {
-      let frames = $("#cnt_drop").children(); // 프레임들 선택
-      let imported_image = frames[1]; // 프레임들 선택
+      let imported_image = $("#frame2").children();
       $('#cnt_drag').prepend(imported_image);
+      $('button').remove('#btnDel_2')
   });  
 
   $("#buttons").on("click", "#btnDel_3", function() {
-      let frames = $("#cnt_drop").children(); // 프레임들 선택
-      let imported_image = frames[2]; // 프레임들 선택
+      let imported_image = $("#frame3").children();
       $('#cnt_drag').prepend(imported_image);
+      $('button').remove('#btnDel_3')
   });  
 
   $("#buttons").on("click", "#btnDel_4", function() {
-      let frames = $("#cnt_drop").children(); // 프레임들 선택
-      let imported_image = frames[3]; // 프레임들 선택
+      let imported_image = $("#frame4").children();
       $('#cnt_drag').prepend(imported_image);
+      $('button').remove('#btnDel_4')
   });
 });
