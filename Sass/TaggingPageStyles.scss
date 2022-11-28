@@ -108,13 +108,11 @@ body {
     padding-top: 7vh;
     width: 100%;
     height: 95vh;
-
     .publicPage__picContainer {
       width: 100%;
       height: 100%;
       margin: 0;
       padding: 0;
-      overflow-y: auto;
       @extend %scrollbar;
 
       display: grid;
@@ -136,7 +134,7 @@ body {
       }
       @include responsive("window") {
         grid-template-columns: repeat(5, 1fr);
-        grid-auto-rows: 55vh;
+        grid-auto-rows: 40vh;
       }
       .publicPictureBox {
         grid-row: span 1;

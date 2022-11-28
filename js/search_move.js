@@ -472,7 +472,8 @@ function showListCustom(val = "") {
       <div class="hbtns hearts">
         <button type="button" class="hbtn" id="hbtn_${cnt}">
           <i class="fa-regular fa-heart"></i>
-        </button></div></div>
+        </button></div>
+        </div>
               `;
       gridContainer.appendChild(li);
       console.log(cnt);
