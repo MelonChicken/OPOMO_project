@@ -189,7 +189,7 @@ body {
 @media screen and (min-width: 1024px) {
   .publicPage section .publicPage__picContainer {
     grid-template-columns: repeat(5, 1fr);
-    grid-auto-rows: 40vh;
+    grid-auto-rows: 42vh;
   }
 }
 .publicPage section .publicPage__picContainer .publicPictureBox {

@@ -134,7 +134,7 @@ body {
       }
       @include responsive("window") {
         grid-template-columns: repeat(5, 1fr);
-        grid-auto-rows: 40vh;
+        grid-auto-rows: 42vh;
       }
       .publicPictureBox {
         grid-row: span 1;
